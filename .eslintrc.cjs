@@ -3,7 +3,15 @@
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
-  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:@typescript-eslint/recommended-requiring-type-checking", "plugin:react-hooks/recommended"],
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react-hooks/recommended",
+    "react-app",
+    "react-app/jest",
+    "prettier",
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
@@ -15,5 +23,12 @@ module.exports = {
   rules: {
     "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
     "@typescript-eslint/no-non-null-assertion": "off",
+    indent: "off",
+    "no-var": "error",
+    "require-await": "error",
+    eqeqeq: "warn",
+    "react/prop-types": 0,
+    "no-unused-vars": "off",
   },
+  ignorePatterns: [".eslintrc.cjs"],
 };
