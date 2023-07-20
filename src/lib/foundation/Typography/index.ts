@@ -1,4 +1,9 @@
-import * as TypoStyle from './Style/typoStyle';
-import * as FontFamily from './FontFamily/fontFamily';
+import * as TypoStyleExports from './Style/typoStyle';
+import * as FontFamilyExports from './FontFamily/fontFamily';
 
-export { TypoStyle, FontFamily };
+const CombinedExports = {
+  typoStyle: TypoStyleExports,
+  fontFamily: FontFamilyExports,
+};
+
+export default CombinedExports;
