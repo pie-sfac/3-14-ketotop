@@ -1,3 +1,3 @@
 export interface ListProps {
-  itemList: string[];
+  itemList: [string?] | [string?, string?] | [string?, string?, string?] | [string?, string?, string?, string?];
 }
