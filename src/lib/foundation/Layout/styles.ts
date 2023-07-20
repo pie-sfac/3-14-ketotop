@@ -5,6 +5,4 @@ export const LayoutContainer = styled.div<ILayout>`
   margin: 24px;
   height: ${(props) => props.size === 'tablet' && '640px'};
   width: ${(props) => props.size === 'tablet' && '1024px'};
-  // 아래는 임시 border
-  border: 1px black solid;
 `;
