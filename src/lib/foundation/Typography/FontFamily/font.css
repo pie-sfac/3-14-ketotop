@@ -1,0 +1,7 @@
+@import './Pretendard/css/pretendard.css';
+@import './Roboto/css/roboto/roboto-fontface.css';
+
+*,
+body {
+  font-family: 'Roboto', 'Pretendard';
+}
