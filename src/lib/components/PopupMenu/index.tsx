@@ -1,14 +1,14 @@
 import { FC } from 'react';
 import { PopupMenuProps } from './type';
-import { PopupMenuStyles } from './styles';
+import * as St from './styles';
 import PopupMenuList from './PopupMenuList';
 
-const PopupMenuDisplay: FC<PopupMenuProps> = ({ header, itemList }) => {
+const PopupMenuDisplay: FC<PopupMenuProps> = ({ headerType, itemList }) => {
   return (
     <>
-      <PopupMenuStyles header={header} itemList={itemList}>
+      <St.PopupMenuStyles headerType={headerType} itemList={itemList}>
         <PopupMenuList itemList={itemList} />
-      </PopupMenuStyles>
+      </St.PopupMenuStyles>
     </>
   );
 };

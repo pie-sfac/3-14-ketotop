@@ -13,7 +13,7 @@ export const PopupMenuStyles = styled.section<PopupMenuProps>`
 
   /** 조건부 렌더링 */
   ${(props) => {
-    switch (props.header) {
+    switch (props.headerType) {
       case 'NavigationBar':
         return 'margin-top: 6px;';
       case 'AppBar':
