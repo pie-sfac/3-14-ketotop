@@ -20,6 +20,7 @@ const TypographyStyles = Typography;
 /** Icon 스타일 ( props : IconName , height , width )*/
 const IconStyles = Icon;
 
+/** SelectionControls 스타일 ( props : type , selected , disabled ) */
 const SelectionControlsStyles = SelectionControls;
 
 // 모든 스타일 export
