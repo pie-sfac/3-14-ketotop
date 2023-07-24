@@ -46,6 +46,7 @@ type IconName =
   | 'thumbnails_checkcircle'
   | 'thumbnails_deletecircle'
   | 'thumbnails_playcircle'
+  | 'thumbnails_errorcircle'
   | 'appbar_center'
   | 'appbar_center_gray'
   | 'appbar_home'
