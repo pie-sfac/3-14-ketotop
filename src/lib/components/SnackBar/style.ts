@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-export const StyledSnackBar = styled.div<{ duration: number; isAppbar: boolean }>`
+export const SnackBar = styled.div<{ duration: number; isAppbar: boolean }>`
   /* Color */
   background-color: var(--Gray_800);
   color: var(--Text_Wh);

@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react';
 import { TypographyStyles as Typo } from '@lib/foundation';
-import { StyledSnackBar } from './style';
+import * as St from './style';
 import { SnackBarProps } from './type';
 import { useSnackbar } from './useSanckbar';
 export { useSnackbar };
@@ -21,9 +21,9 @@ export const SnackBar: FC<SnackBarProps> = ({ message, duration, setMessage, isA
   return (
     <>
       {message.length ? (
-        <StyledSnackBar key={Math.random()} duration={duration} isAppbar={isAppbar}>
+        <St.SnackBar key={Math.random()} duration={duration} isAppbar={isAppbar}>
           <Typo.Caption1>{message}</Typo.Caption1>
-        </StyledSnackBar>
+        </St.SnackBar>
       ) : null}
     </>
   );
