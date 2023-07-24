@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { TabListProps } from './type';
 import TabComponent from './TabComponent';
-import { TabWrapper } from './styles';
+import * as St from './styles';
 
 /** 사용법
  * tapList: 탭메뉴 리스트 ( string[] )
@@ -16,7 +16,7 @@ const TabDisplay: FC<TabListProps> = ({ tapList, selected, showMenuIdx }) => {
     throw new Error('선택된 탭메뉴가 존재하지 않습니다.');
   }
   return (
-    <TabWrapper>
+    <St.TabWrapper>
       {tapList.map((item, index) => {
         const isVisible = showMenuIdx.includes(index);
         const instanceType = selected === index ? 'Select' : 'Unselect';
@@ -27,7 +27,7 @@ const TabDisplay: FC<TabListProps> = ({ tapList, selected, showMenuIdx }) => {
           </TabComponent>
         );
       })}
-    </TabWrapper>
+    </St.TabWrapper>
   );
 };
 
