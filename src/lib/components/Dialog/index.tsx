@@ -22,12 +22,14 @@ export const Dialog: FC<DialogProps> = ({
             <Icon name='close' width={16} height={16} />
           </St.Icon>
           <St.Contents>
-            <St.TextWrapper>
-              <St.TitleWrapper>
-                <Typo.Title6>{title}</Typo.Title6>
-              </St.TitleWrapper>
-              {description ? <Typo.Body4>{description}</Typo.Body4> : null}
-            </St.TextWrapper>
+            <St.TitleWrapper>
+              <Typo.Title6 title={title}>{title}</Typo.Title6>
+            </St.TitleWrapper>
+            {description ? (
+              <St.SubTextWrapper>
+                <Typo.Body4 title={description}>{description}</Typo.Body4>
+              </St.SubTextWrapper>
+            ) : null}
             <St.BtnWrapper>
               <St.GrayBtn marginNeed={priButtonName !== undefined} onClick={onGrayEffect}>
                 <Typo.Body4 as={'span'}>{grayButtonName}</Typo.Body4>

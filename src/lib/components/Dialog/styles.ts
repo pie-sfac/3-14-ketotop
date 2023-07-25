@@ -32,12 +32,26 @@ export const Contents = styled.div`
   margin: 40px 20px 16px;
   color: var(--Text_900);
 `;
-export const TextWrapper = styled.div`
-  max-height: 120px;
+
+const Ellipsis = css`
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 `;
 
 export const TitleWrapper = styled.div`
   margin-bottom: 8px;
+  /* Ellipsis */
+  ${Ellipsis}
+  -webkit-line-clamp: 2;
+`;
+
+export const SubTextWrapper = styled.div`
+  /* Ellipsis */
+  ${Ellipsis}
+  -webkit-line-clamp: 3;
 `;
 
 const BtnStyle = css`
