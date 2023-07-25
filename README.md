@@ -13,6 +13,16 @@
 
 <br/>
 
+## 🏷️ 환경변수
+
+- **VITE_SERVER_URL** : 이미지 업로드 서버 URL 
+
+<br/>
+
+<p align="right"><a href="#top">(Top)</a></p>
+
+<br/>
+
 ## 💜 적용 방법
 
 **Foundation 과 Component 파트 나누어 제작하였습니다**
