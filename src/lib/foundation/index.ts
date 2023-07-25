@@ -1,6 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
-import { ColorStyles } from './Color';
 import './Typography/FontFamily/font.css';
+import { createGlobalStyle } from 'styled-components';
+import { ColorStyles } from './Color/styles';
+import { ResetCSS } from './Reset/styles';
 import Layout from './Layout';
 import { Typography } from './Typography';
 import Icon from '@lib/foundation/Icon';
@@ -8,6 +9,7 @@ import SelectionControls from '@lib/foundation/SelectionControls';
 
 /** Foundation 글로벌 스타일 */
 const FoundationStyles = createGlobalStyle`
+  ${ResetCSS}
   ${ColorStyles}
 `;
 
