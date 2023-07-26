@@ -1,22 +1,15 @@
-export interface IThumbnails {
-  type?: 'video' | 'image';
+export interface IVideo {
+  type?: 'video';
   src?: string;
   state?: VideoState;
   runningtime?: number;
 }
 
-type VideoState = 'normal' | 'delete' | 'select' | 'video_play' | 'error';
-
-/**
-export interface IVideo extends IThumbnails {
-  state?: VideoState;
-}
-
-export interface IImage extends IThumbnails {
+export interface IImage {
+  type?: 'image';
+  src?: string;
   state?: ImageState;
 }
 
 type VideoState = 'normal' | 'delete' | 'select' | 'video_play' | 'error';
 type ImageState = 'normal' | 'delete' | 'select' | 'error';
-
- */
