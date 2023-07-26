@@ -12,8 +12,8 @@ const Thumbnails = ({ state, type, src, runningtime }: IThumbnails) => {
       <ST.VideoRunningTime>
         {runningTimeMin}:{runningTimeSec}
       </ST.VideoRunningTime>
-      <ST.BackgroundColor state={state}></ST.BackgroundColor>
-      <ST.StateIcon>
+      <ST.BackgroundColor state={state} />
+      <ST.StateIcon state={state}>
         {state === 'delete' && <Icon name='thumbnails_deletecircle' />}
         {state === 'select' && <Icon name='thumbnails_checkcircle' />}
         {state === 'video_play' && <Icon name='thumbnails_playcircle' />}
