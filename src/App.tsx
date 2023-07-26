@@ -1,4 +1,4 @@
-import { FoundationStyles, LayoutStyles, TypographyStyles } from '@lib/foundation';
+import { FoundationStyles } from './lib/foundation';
 
 function App() {
   return (
