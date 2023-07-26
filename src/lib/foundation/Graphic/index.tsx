@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { IIcon } from './type';
+import { Image } from './type';
 
-const Icon = ({ name, extension = 'svg', height, width }: IIcon) => {
+const Graphic = ({ name, extension = 'svg', height, width, category }: Image) => {
   const [loadError, setLoadError] = useState(false);
-  const baseIconURL = `${import.meta.env.VITE_SERVER_URL}/uploads/icons/`;
+  const baseIconURL = `${import.meta.env.VITE_SERVER_URL}/uploads/images/`;
 
   const handleImageError = () => {
     setLoadError(true);
@@ -15,4 +15,4 @@ const Icon = ({ name, extension = 'svg', height, width }: IIcon) => {
   return <img src={imageUrl} alt={altText} height={height} width={width} onError={handleImageError} />;
 };
 
-export default Icon;
+export default Graphic;
