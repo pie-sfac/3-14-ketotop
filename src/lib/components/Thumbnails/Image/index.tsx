@@ -1,29 +1,29 @@
 import Icon from '@lib/foundation/Icon';
-import * as ST from '../styles';
+import * as St from '../styles';
 import { IImage } from '../type';
 
 const ImageThumbnails = ({ state = 'normal', type = 'image', src }: IImage) => {
   return (
-    <ST.ThumbnailsContainer src={src} state={state}>
-      <ST.BackgroundColor state={state} />
+    <St.ThumbnailsContainer src={src} state={state}>
+      <St.BackgroundColor state={state} />
 
       {state === 'delete' && (
-        <ST.DeleteState>
+        <St.DeleteState>
           <Icon name='thumbnails_deletecircle' />
-        </ST.DeleteState>
+        </St.DeleteState>
       )}
       {state === 'select' && (
-        <ST.SelectState>
+        <St.SelectState>
           <Icon name='thumbnails_checkcircle' />
-        </ST.SelectState>
+        </St.SelectState>
       )}
       {state === 'error' && (
-        <ST.ErrorState>
+        <St.ErrorState>
           <Icon name='thumbnails_errorcircle' />
           <p>원본 파일 삭제됨</p>
-        </ST.ErrorState>
+        </St.ErrorState>
       )}
-    </ST.ThumbnailsContainer>
+    </St.ThumbnailsContainer>
   );
 };
 
