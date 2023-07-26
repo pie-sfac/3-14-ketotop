@@ -2,9 +2,9 @@ import Icon from '@lib/foundation/Icon';
 import * as St from '../styles';
 import { IImage } from '../type';
 
-const ImageThumbnails = ({ state = 'normal', type = 'image', src }: IImage) => {
+const ImageThumbnail = ({ state = 'normal', type = 'image', src }: IImage) => {
   return (
-    <St.ThumbnailsContainer src={src} state={state}>
+    <St.ThumbnailContainer src={src} state={state}>
       <St.BackgroundColor state={state} />
 
       {state === 'delete' && (
@@ -23,8 +23,8 @@ const ImageThumbnails = ({ state = 'normal', type = 'image', src }: IImage) => {
           <p>원본 파일 삭제됨</p>
         </St.ErrorState>
       )}
-    </St.ThumbnailsContainer>
+    </St.ThumbnailContainer>
   );
 };
 
-export default ImageThumbnails;
+export default ImageThumbnail;

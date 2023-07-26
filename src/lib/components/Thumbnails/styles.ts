@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { IImage, IVideo } from './type';
 
-export const ThumbnailsContainer = styled.div<IVideo | IImage>`
+export const ThumbnailContainer = styled.div<IVideo | IImage>`
   position: relative;
 
   width: 100px;

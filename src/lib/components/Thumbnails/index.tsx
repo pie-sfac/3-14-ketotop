@@ -1,4 +1,4 @@
-import ImageThumbnails from './Image';
-import VideoThumbnails from './Video';
+import ImageThumbnail from './Image';
+import VideoThumbnail from './Video';
 
-export { ImageThumbnails, VideoThumbnails };
+export { ImageThumbnail, VideoThumbnail };

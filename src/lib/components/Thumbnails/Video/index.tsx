@@ -2,12 +2,12 @@ import Icon from '@lib/foundation/Icon';
 import * as St from '../styles';
 import { IVideo } from '../type';
 
-const VideoThumbnails = ({ state = 'normal', type = 'video', src, runningtime = 0 }: IVideo) => {
+const VideoThumbnail = ({ state = 'normal', type = 'video', src, runningtime = 0 }: IVideo) => {
   const runningTimeMin = runningtime && String(Math.floor(runningtime / 60000));
   const runningTimeSec = (runningtime && String(Math.floor((runningtime / 1000) % 60)).padStart(2, '0')) || '00';
 
   return (
-    <St.ThumbnailsContainer src={src} state={state}>
+    <St.ThumbnailContainer src={src} state={state}>
       <St.VideoRunningTime>
         {runningTimeMin}:{runningTimeSec}
       </St.VideoRunningTime>
@@ -34,8 +34,8 @@ const VideoThumbnails = ({ state = 'normal', type = 'video', src, runningtime = 
           <Icon name='thumbnails_playcircle' />
         </St.PlayState>
       )}
-    </St.ThumbnailsContainer>
+    </St.ThumbnailContainer>
   );
 };
 
-export default VideoThumbnails;
+export default VideoThumbnail;
