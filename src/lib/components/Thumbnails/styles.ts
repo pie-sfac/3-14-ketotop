@@ -12,6 +12,7 @@ export const ThumbnailsContainer = styled.div<IVideo | IImage>`
   border-radius: 4px;
   background-image: url(${(props) => props.src});
   background-size: cover;
+  background-position: center;
 
   color: var(--Bg_300);
   font-size: 0.75rem;
