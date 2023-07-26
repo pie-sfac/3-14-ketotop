@@ -1,15 +1,20 @@
 import styled from 'styled-components';
-import { IThumbnails } from './type';
+import { IImage, IVideo } from './type';
 
-export const ThumbnailsContainer = styled.div<IThumbnails>`
+export const ThumbnailsContainer = styled.div<IVideo | IImage>`
   position: relative;
 
   width: 100px;
   height: 100px;
 
+  margin: ${({ state }) => (state === 'delete' ? '10px 10px 0 0' : null)};
+
   border-radius: 4px;
   background-image: url(${(props) => props.src});
   background-size: cover;
+
+  color: var(--Bg_300);
+  font-size: 0.75rem;
 `;
 
 export const VideoRunningTime = styled.div`
@@ -31,7 +36,7 @@ export const VideoRunningTime = styled.div`
   background-color: rgba(40, 40, 40, 0.6);
 `;
 
-export const BackgroundColor = styled.div<IThumbnails>`
+export const BackgroundColor = styled.div<IVideo | IImage>`
   position: absolute;
 
   width: 100%;
@@ -57,48 +62,42 @@ export const BackgroundColor = styled.div<IThumbnails>`
   cursor: ${({ state }) => (state === 'video_play' ? 'pointer' : null)};
 `;
 
-export const StateIcon = styled.div<IThumbnails>`
+export const DeleteState = styled.div`
   position: absolute;
-  top: ${({ state }) => {
-    switch (state) {
-      case 'delete':
-        return '-12px';
-      case 'select':
-        return '50%';
-      case 'video_play':
-        return '50%';
-      case 'error':
-        return '50%';
-      default:
-        return '';
-    }
-  }};
-  left: ${({ state }) => {
-    switch (state) {
-      case 'select':
-        return '50%';
-      case 'video_play':
-        return '50%';
-      case 'error':
-        return '50%';
-      default:
-        return '';
-    }
-  }};
-  right: ${({ state }) => (state === 'delete' ? '-12px' : null)};
-  transform: ${({ state }) => (state === 'delete' ? null : 'translate(-50%, -50%)')};
-
-  cursor: ${({ state }) => (state === 'delete' || state === 'video_play' ? 'pointer' : null)};
-  background-color: aliceblue;
-  div {
-    background-color: yellow;
-    p {
-      width: 100%;
-      display: inline-block;
-      background-color: blue;
-    }
+  top: -12px;
+  right: -12px;
+  img {
+    cursor: pointer;
   }
-  color: var(--Bg_300);
-  font-size: 0.75rem;
-  z-index: 99;
+`;
+
+export const SelectState = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+export const ErrorState = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    margin: 4px 0 0 0;
+  }
+`;
+
+export const PlayState = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  cursor: pointer;
 `;
