@@ -1,4 +1,6 @@
-export interface TextFieldType extends Partial<HTMLInputElement> {
+import { InputHTMLAttributes } from 'react';
+
+export interface TextFieldType extends Partial<InputHTMLAttributes<HTMLInputElement>> {
   label: string;
   message?: string;
   errorMessage?: string;
