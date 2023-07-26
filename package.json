@@ -1,9 +1,8 @@
 {
   "name": "3-14-ketotop",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "lib/index.ts",
   "private": false,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
