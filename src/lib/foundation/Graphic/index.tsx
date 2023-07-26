@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Image } from './type';
 
-const Graphic = ({ name, extension = 'svg', height, width, category }: Image) => {
+const Graphic = ({ name, extension = 'svg', height, width }: Image) => {
   const [loadError, setLoadError] = useState(false);
   const baseIconURL = `${import.meta.env.VITE_SERVER_URL}/uploads/images/`;
 

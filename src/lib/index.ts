@@ -1,1 +1,1 @@
-export * as Fnd from '@lib/foundation';
+export * as Fnd from './foundation';
