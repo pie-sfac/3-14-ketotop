@@ -28,7 +28,7 @@
 라이브러리를 다운 받아서 사용하시면 됩니다.
 
 ```bash
-npm i psd-3-14
+npm i pds-3-14
 ```
 
 **📌 Foundation 과 Component 파트 나누어 제작하였습니다**
