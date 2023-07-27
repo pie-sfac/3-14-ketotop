@@ -7,8 +7,6 @@ export default defineConfig({
     alias: [{ find: '@lib', replacement: '/src/lib' }],
   },
   define: {
-    'import.meta.env.VITE_SERVER_URL': JSON.stringify(
-      process.env.VITE_SERVER_URL || 'https://port-0-psd-asset-server-eg4e2alkf2i7md.sel4.cloudtype.app',
-    ),
+    'import.meta.env.VITE_SERVER_URL': JSON.stringify(process.env.VITE_SERVER_URL),
   },
 });
