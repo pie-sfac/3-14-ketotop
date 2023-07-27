@@ -40,7 +40,7 @@ export const Title6 = styled.strong`
 `;
 
 export const Body1 = styled.p`
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.44;
 `;
@@ -57,19 +57,19 @@ export const Body3 = styled.p`
   line-height: 1.44;
 `;
 export const Body4 = styled.p`
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.44;
 `;
 
 export const Caption1 = styled.p`
-  font-weight: 500;
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.28;
 `;
 
 export const Caption2 = styled.p`
-  font-weight: 500;
+  font-weight: 400;
   font-size: 10px;
   line-height: 1.28;
 `;
