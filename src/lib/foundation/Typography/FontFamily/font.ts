@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
-import { RobotoFontFace } from './Roboto/css/roboto';
-import { PretendardFontFace } from './Pretendard/css/pretendard';
+import { RobotoFontFace } from './Roboto/styles';
+import { PretendardFontFace } from './Pretendard/styles';
 
 export const FontFamilyStyle = css`
   ${RobotoFontFace}
