@@ -45,7 +45,10 @@ export const ItemsList = styled.ul`
 export const UserInfo = styled.div`
   display: flex;
   align-items: center;
+
   margin: 0 16px;
+
+  cursor: pointer;
 
   // 구독상태
   div {
@@ -65,6 +68,7 @@ export const UserInfo = styled.div`
   // 사용자 이름
   span {
     display: inline-block;
+
     margin: 0 8px;
   }
 `;
@@ -73,10 +77,14 @@ export const UserInfo = styled.div`
 export const Line100 = styled.div`
   height: 22px;
   width: 1px;
+
   background-color: var(--Line_200);
 `;
 
 // 아이콘 마진 설정
 export const IconWrapper = styled.div`
   margin-left: 12px;
+  img {
+    cursor: pointer;
+  }
 `;

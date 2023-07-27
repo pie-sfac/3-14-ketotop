@@ -1,12 +1,12 @@
 import { GraphicStyles, TypographyStyles } from '@lib/foundation';
 import * as St from './style';
-import { INavTop } from './type';
+import { INavBar } from '../type';
 import Icon from '@lib/foundation/Icon';
 import { useState } from 'react';
 
-const NavigationBarTop = ({ page = 'home' }: INavTop) => {
+const NavigationBarTop = ({ page = 'home' }: INavBar) => {
   const centerList = ['직원 관리', '수강권 관리', '기록 관리', '미디어 관리', '운영 데이터', '알림메시지', '센터 정보'];
-  const mypage = ['내 정보', '공지사항', '앱 설정', '운영데이터'];
+  const mypageList = ['내 정보', '공지사항', '앱 설정', '운영데이터'];
   const memberName = '박관리자01';
 
   const [currentTab, setCurrentTab] = useState(0);
@@ -15,7 +15,6 @@ const NavigationBarTop = ({ page = 'home' }: INavTop) => {
     <St.NavTopContainer>
       <GraphicStyles name='logo' extension='svg' />
 
-      {/* 타이포그래피 바디3 세미볼드 적용시켜야 함 */}
       <TypographyStyles.Body3 as={'div'}>
         <St.ItemsList>
           {page === 'center' &&
@@ -25,7 +24,7 @@ const NavigationBarTop = ({ page = 'home' }: INavTop) => {
               </li>
             ))}
           {page === 'mypage' &&
-            mypage.map((item, index) => (
+            mypageList.map((item, index) => (
               <li key={item} onClick={() => setCurrentTab(index)} className={currentTab === index ? ' focused' : ''}>
                 {item}
               </li>
