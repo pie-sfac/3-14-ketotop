@@ -1,10 +1,12 @@
-import { FoundationStyles } from './lib/foundation';
-
+import { Fnd } from 'psd-3-14';
 function App() {
   return (
     <>
-      <FoundationStyles />
-      <h1>hello</h1>
+      <Fnd.FoundationGlobalStyles />
+      <Fnd.LayoutStyles>
+        <Fnd.IconStyles name={'add'} />
+        <h1>hello</h1>
+      </Fnd.LayoutStyles>
     </>
   );
 }
