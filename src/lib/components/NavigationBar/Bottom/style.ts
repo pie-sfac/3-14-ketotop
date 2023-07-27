@@ -11,6 +11,7 @@ export const NavBottomContainer = styled.div`
   border-top: 1px solid var(--Line_200);
   background-color: white;
 
+  padding-bottom: 36px;
   // 임시 스타일
   margin-bottom: 10px;
 `;
@@ -23,7 +24,7 @@ export const MenuList = styled.div`
   justify-content: space-between;
 `;
 
-// 각 메뉴
+// 각
 export const Menu = styled.div`
   width: 56px;
 
