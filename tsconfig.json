@@ -10,20 +10,20 @@
     "isolatedModules": true,
     "noEmit": false,
     "emitDeclarationOnly": false,
-    "outDir": "./dist",
+    "outDir": "dist",
     "declaration": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
       "@lib/*": ["src/lib/*"]
     },
-
+    // "typeRoots": ["index.d.ts", "node_modules/@types"],
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "**/*.ts", "**/*.tsx", "vite.config.ts"],
+  "include": ["./src/lib/**/*.tsx", "./src/lib/**/*.ts", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
