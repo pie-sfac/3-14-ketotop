@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { TabComponentProps } from './type';
 import * as St from './styles';
-import { TypographyStyles } from '@lib/foundation';
+import { Fnd } from '@lib/index';
 
 const TabComponent: FC<TabComponentProps> = ({ instance, children, isVisible = false }) => {
   if (!isVisible) return null;
@@ -9,9 +9,9 @@ const TabComponent: FC<TabComponentProps> = ({ instance, children, isVisible = f
   return (
     <St.TabComponentWrapper instance={instance}>
       {instance === 'Select' ? (
-        <TypographyStyles.Body2>{children}</TypographyStyles.Body2>
+        <Fnd.TypographyStyles.Body2>{children}</Fnd.TypographyStyles.Body2>
       ) : (
-        <TypographyStyles.Body3>{children}</TypographyStyles.Body3>
+        <Fnd.TypographyStyles.Body3>{children}</Fnd.TypographyStyles.Body3>
       )}
     </St.TabComponentWrapper>
   );
