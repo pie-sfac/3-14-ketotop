@@ -1,12 +1,13 @@
-import { useState } from 'react';
-import './App.css';
-import GlobalStyle from './styles/GlobalStyle';
 
+import { Fnd } from 'psd-3-14';
 function App() {
-
   return (
     <>
-    <GlobalStyle/>
+      <Fnd.FoundationGlobalStyles />
+      <Fnd.LayoutStyles>
+        <Fnd.IconStyles name={'add'} />
+        <h1>hello</h1>
+      </Fnd.LayoutStyles>
     </>
   );
 }
