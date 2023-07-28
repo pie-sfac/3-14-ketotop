@@ -6,12 +6,13 @@ import { Typography, FontFamilyStyle } from './Typography';
 import Icon from './Icon';
 import SelectionControls from './SelectionControls';
 import Graphic from './Graphic';
+import ShadowBox from './Shadow/styled';
 
 /** Foundation 글로벌 스타일 */
 const FoundationGlobalStyles = createGlobalStyle`
   ${ResetCSS}
-  ${ColorStyles}
   ${FontFamilyStyle}
+  ${ColorStyles}
 `;
 
 /** Layout 스타일 ( props : children , size (tablet) , system (android) ) */
@@ -29,5 +30,16 @@ const GraphicStyles = Graphic;
 /** SelectionControls 스타일 ( props : type (필수) , selected , disabled ) */
 const SelectionControlsStyles = SelectionControls;
 
+/** ShadowBoxStyles 스타일 ( css 파일에 ${Fnd.ShadowBoxStyles} 를 넣으면 적용가능 ) */
+const ShadowBoxStyles = ShadowBox;
+
 // 모든 스타일 export
-export { FoundationGlobalStyles, LayoutStyles, TypographyStyles, IconStyles, GraphicStyles, SelectionControlsStyles };
+export {
+  FoundationGlobalStyles,
+  LayoutStyles,
+  TypographyStyles,
+  IconStyles,
+  GraphicStyles,
+  SelectionControlsStyles,
+  ShadowBoxStyles,
+};

@@ -6,7 +6,7 @@ export const FontFamilyStyle = css`
   ${RobotoFontFace}
   ${PretendardFontFace}
   *,
-  body {
+  body & {
     font-family: 'Roboto', 'Pretendard';
   }
 `;

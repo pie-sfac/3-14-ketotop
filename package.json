@@ -1,6 +1,6 @@
 {
   "name": "pds-3-14",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "main": "dist/src/lib/index.js",
   "module": "dist/src/lib/index.js",
   "types": "dist/src/lib/index.d.ts",
@@ -12,10 +12,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "pds-3-14": "^1.0.4",
     "pretendard": "^1.3.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-season-component": "^0.3.7",
     "roboto-fontface": "^0.10.0",
     "styled-components": "^6.0.4"
   },

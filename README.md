@@ -140,6 +140,18 @@ Foundation 모듈에 전역적으로 Font 설정
 ...
 ```
 
+### 👉 ShadowBoxStyles
+
+쉐도우 박스 속성을 css 에 적용하면 원하는 형태를 불러올수있습니다.
+
+```jsx
+...
+const Test = styled.div`
+  ${Fnd.ShadowBoxStyles}
+`;
+...
+```
+
 <br/>
 
 <p align="right"><a href="#top">(Top)</a></p>
