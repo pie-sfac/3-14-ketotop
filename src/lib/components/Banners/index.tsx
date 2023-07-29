@@ -1,9 +1,9 @@
 import { BannersContainer, BoldText, NormalText, TextStyles } from './styles';
 import { IBanners } from './type';
 
-const Banners = ({ type = 'fill', boldText, normalText, src, $reverse = false }: IBanners) => {
+const Banners = ({ type = 'fill', boldText, normalText, src, $reverse = false, $manual = true }: IBanners) => {
   return (
-    <BannersContainer type={type} $reverse={$reverse}>
+    <BannersContainer type={type} $reverse={$reverse} $manual={$manual}>
       {/* 실제 주어진 디자인 폰트는 나무고딕으로 되어있음 */}
       {(normalText || boldText) && (
         <TextStyles as={'div'}>
