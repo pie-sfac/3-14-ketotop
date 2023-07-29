@@ -24,8 +24,6 @@ export const BannersContainer = styled.div<IBanners>`
     width: ${({ $manual }) => ($manual ? null : '100%')};
     height: ${({ $manual }) => ($manual ? null : '100%')};
   }
-
-  margin-bottom: 10px;
 `;
 
 export const TextStyles = styled(TypographyStyles.Caption1)`
