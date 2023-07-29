@@ -1,41 +1,44 @@
 import styled from 'styled-components';
 import { IBanners } from './type';
-// import { PopupMenuProps } from './type';
+import { TypographyStyles } from '@lib/foundation';
 
 export const BannersContainer = styled.div<IBanners>`
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  flex-direction: ${({ $reverse }) => ($reverse ? 'row-reverse' : null)};
 
   width: 312px;
   height: 80px;
+
+  // 색상 스타일
+  color: ${({ type }) => (type === 'fill' ? 'var(--Text_Wh)' : '  var(--Text_900)')};
+  background-color: ${({ type }) => (type === 'fill' ? 'var(--Pri_500)' : 'white')};
+  // 보더 스타일
+  border: 1px solid ${({ type }) => (type === 'outline' ? 'var(--Line_200)' : null)};
   border-radius: 10px;
 
-  color: white;
   cursor: pointer;
-
-  background-color: blue;
 `;
-//   /** Style */
-//   display: inline-flex;
-//   flex-direction: column;
-//   border-radius: 10px;
-//   border: 1px solid var(--Line_200);
-//   background: var(--Bg_Wh);
-//   /** Shadow */
-//   box-shadow: 0px 0px 8px 2px var(--Shadow);
-//   /** 조건부 렌더링 */
-//   ${(props) => {
-//     switch (props.header) {
-//       case 'NavigationBar':
-//         return 'margin-top: 6px;';
-//       case 'AppBar':
-//         return 'margin-top: 8px;';
-//       default:
-//         return '';
-//     }
-//   }}
-// `;
 
+export const TextStyles = styled(TypographyStyles.Caption1)`
+  max-height: 80px;
+`;
+
+export const NormalText = styled.p<IBanners>`
+  // 글자수 초과시
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+`;
+
+export const BoldText = styled(NormalText)`
+  font-weight: bold;
+
+  margin-top: 2px;
+`;
 // 박스 (높이, 넓이)
 // 바탕색 (색변화)
 // 이미지 (사이즈조절,위치조정??)
