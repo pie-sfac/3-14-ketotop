@@ -4,5 +4,5 @@ export interface ButtonType {
   children: React.ReactNode;
 }
 
-type ButtonSize = 'x-small' | 'small' | 'medium' | 'large' | 'x-large' | 'full';
-type ButtonState = 'normal' | 'enabled' | 'disabled';
+export type ButtonSize = 'x-small' | 'small' | 'medium' | 'large' | 'x-large' | 'full';
+export type ButtonState = 'normal' | 'enabled' | 'disabled';
