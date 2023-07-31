@@ -14,7 +14,7 @@ interface IIconGeneral {
 
 export type IIcon = IIconStrict | IIconGeneral;
 
-type IconName =
+export type IconName =
   | 'notice'
   | 'search'
   | 'close'
