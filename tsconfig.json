@@ -13,17 +13,18 @@
     "outDir": "dist",
     "declaration": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
+      "@src/*": ["src/*"],
       "@lib/*": ["src/lib/*"]
     },
-    // "typeRoots": ["index.d.ts", "node_modules/@types"],
-    /* Linting */
+
     "strict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": false,
+    "allowUmdGlobalAccess": true,
+    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["./src/lib/**/*.tsx", "./src/lib/**/*.ts", "vite.config.ts"],
+  "include": ["./src/**/*.tsx", "./src/**/*.ts", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

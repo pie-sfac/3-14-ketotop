@@ -1,8 +1,9 @@
-import { Outline } from './Outline';
-import { Contained } from './Contained';
+import Outline from '@lib/components/Button/Outline';
+import Contained from '@lib/components/Button/Contained';
 
 /** Button.Outline 혹은 Contained 사용가능 */
-export const Button = {
+const Button = {
   Outline,
   Contained,
 };
+export default Button;

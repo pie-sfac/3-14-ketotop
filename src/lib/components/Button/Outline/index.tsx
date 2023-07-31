@@ -3,7 +3,7 @@ import { Fnd } from '@lib/index';
 import { ButtonType } from '@lib/components/Button/type';
 
 /** Props = size , state('normal','enabled','disabled')  */
-export const Outline = ({ size, state, children }: ButtonType) => {
+const Outline = ({ size, state, children }: ButtonType) => {
   let TypographyComponent;
 
   switch (size) {
@@ -32,3 +32,4 @@ export const Outline = ({ size, state, children }: ButtonType) => {
     </>
   );
 };
+export default Outline;

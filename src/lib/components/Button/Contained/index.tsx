@@ -1,9 +1,9 @@
 import * as St from './styles';
-import { Fnd } from '@lib/index';
-import { ButtonType } from '@lib/components/Button/type';
+import { Fnd } from '../../../index';
+import { ButtonType } from '../type';
 
 /** Props = size , state('normal','enabled','disabled')  */
-export const Contained = ({ size, state, children }: ButtonType) => {
+const Contained = ({ size, state, children }: ButtonType) => {
   let TypographyComponent;
 
   switch (size) {
@@ -30,3 +30,4 @@ export const Contained = ({ size, state, children }: ButtonType) => {
     </>
   );
 };
+export default Contained;
