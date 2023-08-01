@@ -11,7 +11,7 @@ import {
 } from './styles';
 import { IAppBar } from './type';
 
-const AppBar = ({ pagename = '페이지네임', size, type }: IAppBar) => {
+const AppBar = ({ pagename = '페이지네임', size = 'large', type }: IAppBar) => {
   return (
     <AppBarContainer size={size}>
       {
