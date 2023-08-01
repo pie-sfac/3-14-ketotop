@@ -6,7 +6,7 @@ export const AppBarContainer = styled.div<IAppBar>`
   height: ${(props) => (props.size === 'full' ? '56px' : '48px')};
   box-sizing: border-box;
 
-  background-color: gray;
+  background-color: white;
 
   //임시스타일
   margin-bottom: 10px;
