@@ -1,6 +1,6 @@
 {
   "name": "pds-3-14",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "main": "dist/src/lib/index.js",
   "module": "dist/src/lib/index.js",
   "types": "dist/src/lib/index.d.ts",
