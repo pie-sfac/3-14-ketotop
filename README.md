@@ -388,8 +388,8 @@ import { Cmp } from 'psd-3-14';
 
 ```jsx
 ...
-<Fnd.NavigationTop page='center' />
-<Fnd.NavigationBottom page='home' />
+<Cmp.NavigationTop page='center' />
+<Cmp.NavigationBottom page='home' />
 ...
 ```
 
@@ -407,7 +407,7 @@ import { Cmp } from 'psd-3-14';
 
 ```jsx
 ...
-<AppBar
+<Cmp.AppBar
   size='large'
   pagename='페이지네임'
   type={{
@@ -432,7 +432,7 @@ import { Cmp } from 'psd-3-14';
 
 ```jsx
 ...
-<Banners
+<Cmp.Banners
   normalText='시리어스 근적외선'
   boldText='대량구매 특별할인 최대 40%'
   src={이미지파일}
@@ -461,8 +461,8 @@ import { Cmp } from 'psd-3-14';
 
 ```jsx
 ...
-<VideoThumbnails src={이미지주소} state='normal' runningtime={65200} />
-<ImageThumbnails src={이미지주소} state='error' />
+<Cmp.VideoThumbnails src={이미지주소} state='normal' runningtime={65200} />
+<Cmp.ImageThumbnails src={이미지주소} state='error' />
 ...
 ```
 
