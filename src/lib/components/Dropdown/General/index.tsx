@@ -10,7 +10,7 @@ export const Dropdown: FC<DropdownProps> = ({ items, onChange, value, title, pla
     setIsVisible((prevVisibleState) => !prevVisibleState);
   };
 
-  const onClickValue = (e: any, value: string) => {
+  const onClickValue = (value: string) => {
     toggleValuesVisible();
     onChange(value);
   };
@@ -26,11 +26,11 @@ export const Dropdown: FC<DropdownProps> = ({ items, onChange, value, title, pla
           </St.IconWrapper>
         </St.DropdownButton>
         <St.DropdownValueWrapper isVisible={isVisible}>
-          {items.map((item: string, idx: number) => (
+          {items.map((item: string) => (
             <St.DropdownValue
               key={item}
               as={'li'}
-              onClick={(e) => onClickValue(e, item)}
+              onClick={() => onClickValue(item)}
               className={item === value ? 'selected' : ''}
             >
               {item}

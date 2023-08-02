@@ -2,7 +2,7 @@ import Icon from '@lib/foundation/Icon';
 import * as St from '../styles';
 import { IVideo } from '../type';
 
-const VideoThumbnail = ({ state = 'normal', type = 'video', src, runningtime = 0 }: IVideo) => {
+const VideoThumbnail = ({ state = 'normal', src, runningtime = 0 }: IVideo) => {
   const runningTimeMin = runningtime && String(Math.floor(runningtime / 60000));
   const runningTimeSec = (runningtime && String(Math.floor((runningtime / 1000) % 60)).padStart(2, '0')) || '00';
 

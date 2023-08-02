@@ -2,7 +2,7 @@ import Icon from '@lib/foundation/Icon';
 import * as St from '../styles';
 import { IImage } from '../type';
 
-const ImageThumbnail = ({ state = 'normal', type = 'image', src }: IImage) => {
+const ImageThumbnail = ({ state = 'normal', src }: IImage) => {
   return (
     <St.ThumbnailContainer src={src} state={state}>
       <St.BackgroundColor state={state} />
