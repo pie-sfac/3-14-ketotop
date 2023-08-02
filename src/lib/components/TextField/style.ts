@@ -20,7 +20,7 @@ export const TextField = styled.input<Temp>`
   border-style: solid;
 
   &:focus {
-    border-color: var(--Pri_500);
+    border-color: ${({ $error }) => ($error ? 'var(--System_Error)' : 'var(--Pri_500)')};
   }
 
   &:disabled {
