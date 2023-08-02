@@ -1,6 +1,6 @@
-import Icon from '@lib/foundation/Icon';
+import Icon from '../../foundation/Icon';
 import * as St from './styles';
-import { TypographyStyles as Typo } from '@lib/foundation';
+import { TypographyStyles as Typo } from '../../foundation';
 import { DialogProps } from './type';
 import { FC } from 'react';
 

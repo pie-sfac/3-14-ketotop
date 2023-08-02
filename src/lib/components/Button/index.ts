@@ -1,6 +1,5 @@
-import Outline from '@lib/components/Button/Outline';
-import Contained from '@lib/components/Button/Contained';
-
+import Outline from './Outline/index';
+import Contained from './Contained/index';
 /** Button.Outline 혹은 Contained 사용가능 */
 const Button = {
   Outline,
