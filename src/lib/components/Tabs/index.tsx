@@ -8,7 +8,7 @@ import * as St from './styles';
  * selected: 선택된 탭메뉴 인덱스 ( number )
  * showMenuIdx: 보여질 탭메뉴 인덱스 리스트 ( number[] )
  */
-const TabDisplay: FC<TabListProps> = ({ tapList, selected, showMenuIdx }) => {
+const Tabs: FC<TabListProps> = ({ tapList, selected, showMenuIdx }) => {
   if (tapList.length > 10) {
     throw new Error('10개 이상의 탭메뉴를 포함할 수 없습니다..');
   }
@@ -31,4 +31,4 @@ const TabDisplay: FC<TabListProps> = ({ tapList, selected, showMenuIdx }) => {
   );
 };
 
-export default TabDisplay;
+export default Tabs;
