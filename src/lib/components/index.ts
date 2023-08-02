@@ -6,7 +6,7 @@ import { Dropdown, ListDropdown } from './Dropdown/index';
 import Item from './Item/index';
 import { NavigationBarBottom, NavigationBarTop } from './NavigationBar';
 import PopupMenu from './PopupMenu/index';
-import { SnackBar } from './SnackBar/index';
+import { SnackBar, useSnackbar } from './SnackBar/index';
 import Tabs from './Tabs/index';
 import { TextField } from './TextField/index';
 import { ImageThumbnail, VideoThumbnail } from './Thumbnails/index';
@@ -23,6 +23,7 @@ export {
   NavigationBarTop,
   PopupMenu,
   SnackBar,
+  useSnackbar,
   Tabs,
   TextField,
   ImageThumbnail,
