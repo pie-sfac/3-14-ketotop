@@ -1,69 +1,60 @@
 import { IconStyles } from '@lib/foundation';
-import {
-  AppBarContainer,
-  DefalutLayout,
-  FixedItems,
-  FullPopupLayout,
-  IconBox,
-  IconBoxNomargin,
-  IconItems,
-  TextBox,
-} from './styles';
+import * as St from './styles';
 import { IAppBar } from './type';
 
 const AppBar = ({ pagename = '페이지네임', size = 'large', type }: IAppBar) => {
   return (
-    <AppBarContainer size={size}>
+    <St.AppBarContainer size={size}>
       {
         // full (페이지네임 + X 아이콘)
         size === 'full' ? (
-          <FullPopupLayout>
+          <St.FullPopupLayout>
             <div>{pagename}</div>
-            <IconBoxNomargin>
+            <St.IconBoxNomargin>
               <IconStyles name={'delete'} />
-            </IconBoxNomargin>
-          </FullPopupLayout>
+            </St.IconBoxNomargin>
+          </St.FullPopupLayout>
         ) : (
           // large or medium (<뒤로가기아이콘 + 페이지네임 + 아이콘||텍스트)
-          <DefalutLayout>
-            <FixedItems>
-              <IconBox>
+          <St.DefalutLayout>
+            <St.FixedItems>
+              <St.IconBox>
                 <IconStyles name={`back`} />
-              </IconBox>
+              </St.IconBox>
               <div>{pagename}</div>
-            </FixedItems>
+            </St.FixedItems>
 
             {type?.icon && (
-              <IconItems>
+              <St.IconItems>
                 {type?.icon.icon_L && (
-                  <IconBox>
+                  <St.IconBox>
                     <IconStyles name={`${type.icon?.icon_L}`} />
-                  </IconBox>
+                  </St.IconBox>
                 )}
                 {type.icon.icon_R && (
-                  <IconBoxNomargin>
+                  <St.IconBoxNomargin>
                     <IconStyles name={`${type.icon?.icon_R}`} />
-                  </IconBoxNomargin>
+                  </St.IconBoxNomargin>
                 )}
-              </IconItems>
+              </St.IconItems>
             )}
 
             {type?.text && (
-              <IconItems>
-                {type?.text.text_L && <TextBox>{type?.text?.text_L}</TextBox>}
-                {type?.text.text_R && <TextBox>{type?.text?.text_R}</TextBox>}
-              </IconItems>
+              <St.IconItems>
+                {type?.text.text_L && <St.TextBox>{type?.text?.text_L}</St.TextBox>}
+                {type?.text.text_R && <St.TextBox>{type?.text?.text_R}</St.TextBox>}
+              </St.IconItems>
             )}
 
             {type?.count && (
-              <TextBox>
+              <St.TextBox>
                 {type?.count.text}({type?.count.count})
-              </TextBox>
+              </St.TextBox>
             )}
-          </DefalutLayout>
+          </St.DefalutLayout>
         )
       }
-    </AppBarContainer>
+    </St.AppBarContainer>
   );
 };
 
