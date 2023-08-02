@@ -43,8 +43,8 @@ import TheraphyCenter from './TheraphyCenter';
  * isOutlined (boolean),
  * @TheraphyCenter - TheraphyCenter 스타일 ( props :
  * publishDate(배열안에 3개의 숫자 , 가장 앞자리 0 입력불가),
- * text(string),
- * starRating(number),
+ * videoName(string),
+ * uploadCount(number),
  * isOutlined (boolean),
  */
 const Item = {

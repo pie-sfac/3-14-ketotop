@@ -3,7 +3,7 @@ import { Fnd } from '@src/lib';
 import { IMemberThreeStrict } from './type';
 
 const MemberThree = ({
-  profImgUrl,
+  profImgUrl = '',
   name,
   phoneNumber,
   starRating,
@@ -19,15 +19,21 @@ const MemberThree = ({
   const [phoneNumber1, phoneNumber2, phoneNumber3] = phoneNumber;
   const formattedPhoneNumber = `${phoneNumber1}-${phoneNumber2}-${phoneNumber3}`;
 
-  const starRatingText = `${starRating}/5.0점`;
+  const handleError = (event: any) => {
+    event.target.style.display = 'none';
+  };
+
+  const formattedStarRating = starRating.toFixed(1);
+
+  const starRatingText = `${formattedStarRating}/5.0점`;
 
   const fullStars = Math.floor(starRating);
   const halfStars = Math.ceil(starRating) - fullStars;
   const emptyStars = 5 - fullStars - halfStars;
 
-  const handleError = (event: any) => {
-    event.target.style.display = 'none';
-  };
+  if (starRating < 0 || starRating > 5) {
+    throw new Error('별점 숫자는 0 이상, 5이하 의 숫자만 가능합니다.');
+  }
   return (
     <>
       <Fnd.FoundationGlobalStyles />

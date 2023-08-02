@@ -1,6 +1,5 @@
 import * as St from '@lib/components/Item/Message/styles';
 import { Fnd } from '@src/lib';
-import styled from 'styled-components';
 import { IMessageStrict } from './type';
 
 const Message = ({ publishDate, text, starRating, isOutlined }: IMessageStrict) => {
@@ -13,6 +12,9 @@ const Message = ({ publishDate, text, starRating, isOutlined }: IMessageStrict) 
   const halfStars = Math.ceil(starRating) - fullStars;
   const emptyStars = 5 - fullStars - halfStars;
 
+  if (starRating < 0 || starRating > 5) {
+    throw new Error('별점 숫자는 0 이상, 5이하 의 숫자만 가능합니다.');
+  }
   return (
     <>
       <Fnd.FoundationGlobalStyles />

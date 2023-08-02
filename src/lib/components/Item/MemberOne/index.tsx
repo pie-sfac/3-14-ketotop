@@ -3,7 +3,7 @@ import { Fnd } from '@src/lib';
 import { IMemberOneStrict } from './type';
 
 const MemberOne = ({
-  profImgUrl,
+  profImgUrl = '',
   name,
   isMale,
   membershipDuration,
