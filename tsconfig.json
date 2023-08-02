@@ -13,11 +13,6 @@
     "outDir": "dist",
     "declaration": true,
     "jsx": "react-jsx",
-    "baseUrl": "./",
-    "paths": {
-      "@src/*": ["src/*"],
-      "@lib/*": ["src/lib/*"]
-    },
 
     "strict": true,
     "noUnusedLocals": true,
