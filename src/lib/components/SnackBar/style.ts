@@ -1,18 +1,20 @@
 import { styled } from 'styled-components';
 
-export const SnackBar = styled.div<{ duration: number; isAppbar: boolean }>`
+export const SnackBar = styled.div<{ duration: number; isAppbar: boolean; width: string }>`
   /* Color */
   background-color: var(--Gray_800);
   color: var(--Text_Wh);
   /* Layout */
   box-sizing: border-box;
-  width: 100%;
+  width: ${({ width }) => width};
   border-radius: 4px;
   padding: 12px;
   text-align: start;
+  opacity: 0;
   /* Show */
   @keyframes moving {
     0% {
+      opacity: 1;
       transform: translateY(24px);
     }
     90% {
