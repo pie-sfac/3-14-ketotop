@@ -83,4 +83,9 @@ export const Item = styled(Fnd.TypographyStyles.Body4)`
 
 export const CloseButtonWrapper = styled.div`
   cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
