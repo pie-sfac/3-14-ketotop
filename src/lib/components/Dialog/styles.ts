@@ -14,6 +14,7 @@ export const Dialog = styled.div`
   background-color: var(--Bg_Wh);
   /* Position */
   position: relative;
+  text-align: center;
 `;
 
 export const Icon = styled.div`
@@ -57,6 +58,9 @@ export const SubTextWrapper = styled.div`
 const BtnStyle = css`
   padding: 8px 12px;
   border-radius: 4px;
+  /* TODO: reset CSS 수정 */
+  border: none;
+  width: 145px;
 `;
 export const BtnWrapper = styled.div`
   margin-top: 28px;
