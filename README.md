@@ -388,8 +388,8 @@ import { Cmp } from 'psd-3-14';
 
 ```jsx
 ...
-<Cmp.NavigationTop page='center' />
-<Cmp.NavigationBottom page='home' />
+<Cmp.NavigationBarTop page='center' />
+<Cmp.NavigationBarBottom page='home' />
 ...
 ```
 
