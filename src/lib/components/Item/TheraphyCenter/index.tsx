@@ -1,5 +1,5 @@
-import * as St from '@lib/components/Item/TheraphyCenter/styles';
-import { Fnd } from '@src/lib';
+import { Fnd } from '../../..';
+import * as St from './styles';
 import { ITheraphyCenterStrict } from './type';
 
 const TheraphyCenter = ({ publishDate, videoName, uploadCount, isOutlined }: ITheraphyCenterStrict) => {

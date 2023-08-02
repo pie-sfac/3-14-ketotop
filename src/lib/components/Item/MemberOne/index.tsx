@@ -1,5 +1,5 @@
 import * as St from './styles'; // 분리된 스타일 파일에서 스타일을 불러옵니다.
-import { Fnd } from '@src/lib';
+import { Fnd } from '../../..';
 import { IMemberOneStrict } from './type';
 
 const MemberOne = ({

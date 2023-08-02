@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import { Fnd } from '@lib/index';
+import { Fnd } from '../../../';
 
 export const ListDropdownWrapper = styled.div`
   display: flex;

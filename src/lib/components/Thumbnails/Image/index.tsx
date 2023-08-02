@@ -1,4 +1,4 @@
-import Icon from '@lib/foundation/Icon';
+import Icon from '../../../foundation/Icon';
 import * as St from '../styles';
 import { IImage } from '../type';
 

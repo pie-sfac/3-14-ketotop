@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { TypographyStyles as Typo } from '@lib/foundation';
+import { TypographyStyles as Typo } from '../../foundation';
 import * as St from './style';
 import { SnackBarProps } from './type';
 import { useSnackbar } from './useSanckbar';

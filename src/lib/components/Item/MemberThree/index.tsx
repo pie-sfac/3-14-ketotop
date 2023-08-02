@@ -1,5 +1,6 @@
-import * as St from '@lib/components/Item/MemberThree/styles';
-import { Fnd } from '@src/lib';
+import { Fnd } from '../../..';
+import * as St from './styles';
+
 import { IMemberThreeStrict } from './type';
 
 const MemberThree = ({
@@ -18,7 +19,6 @@ const MemberThree = ({
 
   const [phoneNumber1, phoneNumber2, phoneNumber3] = phoneNumber;
   const formattedPhoneNumber = `${phoneNumber1}-${phoneNumber2}-${phoneNumber3}`;
-
   const handleError = (event: any) => {
     event.target.style.display = 'none';
   };

@@ -1,5 +1,5 @@
-import * as St from '@lib/components/Item/StaffOne/styles';
-import { Fnd } from '@src/lib';
+import { Fnd } from '../../..';
+import * as St from './styles';
 import { IStaffStrict } from './type';
 
 const StaffOne = ({ profImgUrl = '', name, phoneNumber, starRating, memberCount, memo, isOutlined }: IStaffStrict) => {

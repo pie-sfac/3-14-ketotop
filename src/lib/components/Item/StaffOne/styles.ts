@@ -1,6 +1,6 @@
-import * as OriginalStyles from '@lib/components/Item/styles';
-import { Fnd } from '@src/lib';
 import styled from 'styled-components';
+import * as OriginalStyles from '../../../components/Item/styles';
+import { Fnd } from '../../../index';
 
 export const StaffLayoutStyles = styled(OriginalStyles.ItemLayout)`
   gap: 252px;

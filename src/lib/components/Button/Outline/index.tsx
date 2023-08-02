@@ -1,6 +1,6 @@
 import * as St from './styles';
-import { Fnd } from '@lib/index';
-import { ButtonType } from '@lib/components/Button/type';
+import { Fnd } from '../../..';
+import { ButtonType } from '../type';
 
 /** Props = size , state('normal','enabled','disabled')  */
 const Outline = ({ size, state, children }: ButtonType) => {

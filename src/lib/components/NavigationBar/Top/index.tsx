@@ -1,7 +1,7 @@
-import { GraphicStyles, TypographyStyles } from '@lib/foundation';
+import { GraphicStyles, TypographyStyles } from '../../../foundation';
 import * as St from './style';
 import { INavBar } from '../type';
-import Icon from '@lib/foundation/Icon';
+import Icon from '../../../foundation/Icon';
 import { useState } from 'react';
 
 const NavigationBarTop = ({ page = 'home' }: INavBar) => {

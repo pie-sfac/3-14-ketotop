@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ButtonState, ButtonSize } from '@lib/components/Button/type';
+import { ButtonState, ButtonSize } from '../type';
 
 const StateStyles = ({ $state }: { $state: ButtonState }) => {
   switch ($state) {

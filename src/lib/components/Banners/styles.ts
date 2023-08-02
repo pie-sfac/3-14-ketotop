@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { IBanners } from './type';
-import { TypographyStyles } from '@lib/foundation';
+import { Fnd } from '../../index';
 
 export const BannersContainer = styled.div<IBanners>`
   display: flex;
@@ -26,7 +26,7 @@ export const BannersContainer = styled.div<IBanners>`
   }
 `;
 
-export const TextStyles = styled(TypographyStyles.Caption1)`
+export const TextStyles = styled(Fnd.TypographyStyles.Caption1)`
   max-height: 80px;
 `;
 

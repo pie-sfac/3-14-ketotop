@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import * as St from './styles';
-import { Fnd } from '@lib/index';
+import { Fnd } from '../../..';
 import { DropdownProps } from './type';
 
 export const Dropdown: FC<DropdownProps> = ({ items, onChange, value, title, placeholder, width }) => {

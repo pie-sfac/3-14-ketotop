@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { TabComponentProps } from './type';
 import * as St from './styles';
-import { Fnd } from '@lib/index';
+import { Fnd } from '../../../';
 
 const TabComponent: FC<TabComponentProps> = ({ instance, children, isVisible = false }) => {
   if (!isVisible) return null;

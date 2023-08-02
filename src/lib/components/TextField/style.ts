@@ -1,4 +1,4 @@
-import { TypographyStyles } from '@lib/foundation';
+import { TypographyStyles } from '../../foundation';
 import { styled } from 'styled-components';
 import { TextFieldType } from './type';
 

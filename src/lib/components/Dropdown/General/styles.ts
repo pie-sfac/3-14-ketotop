@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import { Fnd } from '@lib/index';
+import { Fnd } from '../../..';
 
 export const DropdownWrapper = styled.div<{ width: string }>`
   /* Custom Desing from Figma */

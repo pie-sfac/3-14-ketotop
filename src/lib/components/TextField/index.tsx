@@ -1,4 +1,4 @@
-import { TypographyStyles as Typo } from '@lib/foundation';
+import { TypographyStyles as Typo } from '../../foundation';
 import * as St from './style';
 import { FC } from 'react';
 import { TextFieldType } from './type';

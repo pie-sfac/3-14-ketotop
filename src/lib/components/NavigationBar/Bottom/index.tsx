@@ -1,4 +1,4 @@
-import { IconStyles, TypographyStyles } from '@lib/foundation';
+import { IconStyles, TypographyStyles } from '../../../foundation';
 import { INavBar } from '../type';
 import * as St from './style';
 

@@ -1,4 +1,4 @@
-import { IconName } from '@lib/foundation/Icon/type';
+import { IconName } from '../../foundation/Icon/type';
 
 export interface IAppBar {
   size?: 'large' | 'medium' | 'full';

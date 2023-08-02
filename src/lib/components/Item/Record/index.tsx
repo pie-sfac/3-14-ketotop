@@ -1,10 +1,9 @@
-import * as St from '@lib/components/Item/Record/styles';
-import { Fnd } from '@src/lib';
+import { Fnd } from '../../..';
+import * as St from './styles';
 import { IRecordStrict } from './type';
 
 const Record = ({ publishDate, templateName, attendingPhysician, isOutlined }: IRecordStrict) => {
   const padNumber = (num: number) => (num < 10 ? `0${num}` : `${num}`);
-
   const [publishYear, publishMonth, publishDay] = publishDate;
   const formattedPublishDate = `${publishYear}-${padNumber(publishMonth)}-${padNumber(publishDay)}`;
   return (

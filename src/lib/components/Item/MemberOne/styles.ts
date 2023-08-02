@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import * as OriginalStyles from '@lib/components/Item/styles';
-import { Fnd } from '@src/lib';
+import * as OriginalStyles from '../../../components/Item/styles';
+import { Fnd } from '../../../index';
 
 export const ItemLayout = styled(OriginalStyles.ItemLayout)`
   // 필요한 오버라이딩 스타일이 있으면 여기에 작성

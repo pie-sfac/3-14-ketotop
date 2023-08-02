@@ -1,5 +1,5 @@
-import * as St from '@lib/components/Item/Message/styles';
-import { Fnd } from '@src/lib';
+import { Fnd } from '../../..';
+import * as St from './styles';
 import { IMessageStrict } from './type';
 
 const Message = ({ publishDate, text, starRating, isOutlined }: IMessageStrict) => {

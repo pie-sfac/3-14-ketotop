@@ -1,6 +1,6 @@
 import { useState, FC } from 'react';
 import * as St from './styles';
-import { Fnd } from '@lib/index';
+import { Fnd } from '../../..';
 import { ListDropdownProps } from './type';
 
 export const ListDropdown: FC<ListDropdownProps> = ({ category, items, value, onChange, onClose, width }) => {
