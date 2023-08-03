@@ -157,7 +157,7 @@ const Test = styled.div`
 Cmp ( Component ) Import 하여 사용 , 전역에 글로벌 스타일 추가 필수!
 
 ```jsx
-import { Cmp } from 'psd-3-14';
+import { Cmp , Fnd } from 'psd-3-14';
 ...
   <Fnd.FoundationGlobalStyles/>
 ...
