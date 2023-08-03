@@ -2,6 +2,14 @@ import { Fnd } from '../../index';
 import * as St from './styles';
 import { IAppBar } from './type';
 
+/** @description AppBar 스타일의 컴포넌트
+ * @params
+ * {size : 'large' | 'medium' | 'full'}
+ * @params
+ * {pagename : string}
+ * @params
+ * {type : {icon : {icon_R : string, icon_L : string}}, {text : {text_R : string, text_L : string}}, {count : {count : number, text : string}}} */
+
 const AppBar = ({ pagename = '페이지네임', size = 'large', type }: IAppBar) => {
   return (
     <St.AppBarContainer size={size}>

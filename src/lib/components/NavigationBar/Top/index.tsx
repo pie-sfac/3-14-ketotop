@@ -4,6 +4,11 @@ import { INavBar } from '../type';
 import Icon from '../../../foundation/Icon';
 import { useState } from 'react';
 
+/** @description NavigationBarTop 스타일의 컴포넌트
+ * @params
+ * {page : 'home' | 'reserve' | 'member' | 'center' | 'mypage'}
+ *  */
+
 const NavigationBarTop = ({ page = 'home' }: INavBar) => {
   const centerList = ['직원 관리', '수강권 관리', '기록 관리', '미디어 관리', '운영 데이터', '알림메시지', '센터 정보'];
   const mypageList = ['내 정보', '공지사항', '앱 설정', '운영데이터'];

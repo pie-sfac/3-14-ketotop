@@ -2,6 +2,15 @@ import Icon from '../../../foundation/Icon';
 import * as St from '../styles';
 import { IVideo } from '../type';
 
+/** @description ImageThumbnail 스타일의 컴포넌트
+ * @params
+ * {src : string}
+ * @params
+ * {state : 'normal' | 'delete' | 'select' | 'video_play' | 'error'}
+ * @params
+ * {runningtime : number}
+ * */
+
 const VideoThumbnail = ({ state = 'normal', src, runningtime = 0 }: IVideo) => {
   const runningTimeMin = runningtime && String(Math.floor(runningtime / 60000));
   const runningTimeSec = (runningtime && String(Math.floor((runningtime / 1000) % 60)).padStart(2, '0')) || '00';

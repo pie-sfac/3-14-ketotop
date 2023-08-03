@@ -2,6 +2,11 @@ import { IconStyles, TypographyStyles } from '../../../foundation';
 import { INavBar } from '../type';
 import * as St from './style';
 
+/** @description NavigationBarBottom 스타일의 컴포넌트
+ * @params
+ * {page : 'home' | 'reserve' | 'member' | 'center' | 'mypage'}
+ *  */
+
 const NavigationBarBottom = ({ page = 'home' }: INavBar) => {
   return (
     <St.NavBottomContainer>

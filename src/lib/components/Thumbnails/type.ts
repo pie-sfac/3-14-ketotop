@@ -1,12 +1,10 @@
 export interface IVideo {
-  type?: 'video';
   src?: string;
   state?: VideoState;
   runningtime?: number;
 }
 
 export interface IImage {
-  type?: 'image';
   src?: string;
   state?: ImageState;
 }
