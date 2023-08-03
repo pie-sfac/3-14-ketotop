@@ -444,7 +444,7 @@ import { Cmp } from 'psd-3-14';
 
 원하는 유형의 비디오/이미지의 썸네일을 만들수 있습니다.
 
-#### 1️⃣ VideoThumbnails
+#### 1️⃣ VideoThumbnail
 
 | props           | value                                                                   | meaning                                                                                                                     |
 | --------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -452,7 +452,7 @@ import { Cmp } from 'psd-3-14';
 | **src**         | string                                                                  | 원하는 이미지 주소를 입력하면 이미지가 나타납니다. ( 필수❌ )                                                               |
 | **runningtime** | number                                                                  | `ms`단위로 숫자가 입력되면 `분:초`의 형태로 썸네일 우측 하단에 표시됩니다. 값이 없을경우 `0:00` 으로 표시됩니다. ( 필수❌ ) |
 
-#### 2️⃣ ImageThumbnails
+#### 2️⃣ ImageThumbnail
 
 | props     | value                                                     | meaning                                                                            |
 | --------- | --------------------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -461,8 +461,8 @@ import { Cmp } from 'psd-3-14';
 
 ```jsx
 ...
-<Cmp.VideoThumbnails src={이미지주소} state='normal' runningtime={65200} />
-<Cmp.ImageThumbnails src={이미지주소} state='error' />
+<Cmp.VideoThumbnail src={이미지주소} state='normal' runningtime={65200} />
+<Cmp.ImageThumbnail src={이미지주소} state='error' />
 ...
 ```
 
