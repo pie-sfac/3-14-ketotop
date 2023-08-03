@@ -4,6 +4,10 @@ import { TypographyStyles as Typo } from '../../foundation';
 import { DialogProps } from './type';
 import { FC } from 'react';
 
+/**
+ * @description boolean 상태에 따라 렌더되는 Dialog 컴포넌트
+ * @type {title: string; description: string, grayButtonName: string, priButtonName: string, onCloseEffect: () => void, onGrayEffect: () => void, onPriEffect: () => void, isOpen: boolean}
+ */
 export const Dialog: FC<DialogProps> = ({
   title,
   description,
