@@ -582,6 +582,17 @@ import { Cmp , Fnd } from 'psd-3-14';
 
 사용자에게 알림사항을 하단에서 표시해주는 `Snackbar` 컴포넌트 입니다.<br/>
 제공되는 커스텀 훅인 `useSnackbar`와 함께 사용해야 합니다.(인자로는 `duration`을 받습니다)<br/>
+
+```ts
+/**
+ * 사용자가 스낵바 컴포넌트를 쉽게 쓸 수 있도록 만든 커스텀 훅입니다
+ * Cmp에 같이 export되니 Cmp.useSnackbar로 사용할 수 있습니다
+ * @param {number} ms - 스낵바의 알림 지속시간 입니다
+ * @returns {[string, (string) => void]} [snackbarMessage, setSnackbarMessage] - [렌더할 메세지, 문자열을 입력받는 세터함수]
+ */
+function useSnackbar(ms) {}
+```
+
 컴포넌트에 제공되는 `duration`과 `useSnackbar`의 인자는 같은 값을 가져야 예상대로 동작합니다.<br/>
 `setSnackbarMessage`는 `string`을 인자로 받습니다.
 |props | value | meaning |
@@ -592,10 +603,16 @@ import { Cmp , Fnd } from 'psd-3-14';
 |**width**|`string`|스낵바가 가지는 너비값입니다. 설정이 없다면 `1024px`을 가집니다.( 필수❌ )|
 
 ```jsx
+import { Cmp } from 'pds-3-14';
+
+// 사용자애 따라서 destructuring을 사용하여도 좋습니다
+// const { Snackbar, useSnackbar } = Cmp;
+
+// 안전한 렌더를 위한 전역상수 선언을 권고합니다
 const SNACKBAR_DURATION = 5000;
 
 const App = () => {
-  const [snackbarMessage, setSnackbarMessage] = useSnackbar(SNACKBAR_DURATION);
+  const [snackbarMessage, setSnackbarMessage] = Cmp.useSnackbar(SNACKBAR_DURATION);
 
   ...
   return (
