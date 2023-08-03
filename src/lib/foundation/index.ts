@@ -16,28 +16,54 @@ const FoundationGlobalStyles = createGlobalStyle`
 `;
 
 /**
- * @description Layout 스타일
- * @type {(children : ReactNode) , (size : 'android' | 'ios' ( 기본:tablet )) , (system : 'tablet' | 'pc' | 'phone' ( 기본:android ))} ) */
+ * @description - Layout 스타일
+ * @params
+ * {ReactNode} children 자식 노드
+ * @params
+ * { 'android' | 'ios' } size 크기 ( 기본: tablet )
+ * @params
+ * { 'tablet' | 'pc' | 'phone' } system 시스템 ( 기본: android )
+ */
 const LayoutStyles = Layout;
 
-/** @description Typography 스타일 */
+/** @description - Typography 스타일 */
 const TypographyStyles = Typography;
 
 /**
- * @description Icon 스타일
- * @type {( name : string (필수) , 자동완성 사용시 name={''} 형태로 사용해야함) , (extension : string ( 기본:svg )) , (height : number) , (width : number)}
+ * @description - Icon 스타일
+ * @params
+ * {string} name 이름 (필수, 자동완성 사용시 name={''} 형태로 사용해야함)
+ * @params
+ * {string} extension 확장자 ( 기본: svg )
+ * @params
+ * {number} height 높이
+ * @params
+ * {number} width 너비
  */
 const IconStyles = Icon;
 
 /**
- * @description Graphic 스타일
- * @type {( name : string (필수) , 자동완성 사용시 name={''} 형태로 사용해야함) , (extension : string ( 기본:svg )) , (height : number) , (width : number)}
+ * @description - Graphic 스타일
+ * @params
+ * {string} name 이름 (필수, 자동완성 사용시 name={''} 형태로 사용해야함)
+ * @params
+ * {string} extension 확장자 ( 기본: svg )
+ * @params
+ * {number} height 높이
+ * @params
+ * {number} width 너비
  */
 const GraphicStyles = Graphic;
 
 /**
- * @description SelectionControls 스타일
- * @type {( type : 'checkbox' | 'radio' (필수) , selected : boolean , disabled : boolean)} */
+ * @description - SelectionControls 스타일
+ * @params
+ * { 'checkbox' | 'radio' } type 타입 (필수)
+ * @params
+ * {boolean} selected 선택됨
+ * @params
+ * {boolean} disabled 비활성화됨
+ */
 const SelectionControlsStyles = SelectionControls;
 
 /**

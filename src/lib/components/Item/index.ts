@@ -6,53 +6,105 @@ import StaffOne from './StaffOne';
 import TheraphyCenter from './TheraphyCenter';
 
 /**
- * @MemberOne - Member_1 스타일 ( props :
- * profImgUrl (따로 url 작성하지 않으면 기본 프로필 설정 , 필수아님) );
- * name(string),
- * isMale(boolean),
- * membershipDuration(배열안에 6개의 숫자 , 가장 앞자리 0 입력불가),
- * membershipUses(배열안에 2개의 숫자 , 가장 앞자리 0 입력불가),
- * attendingPhysician(string),
- * publishDate(배열안에 3개의 숫자 , 가장 앞자리 0 입력불가),
- * isOutlined (이하 필수조건),
- * @MemberThree - - Member_3 스타일 ( props :
- * profImgUrl (따로 url 작성하지 않으면 기본 프로필 설정 , 필수아님) );
- * name(string),
- * phoneNumber(배열안에 3개의 문자열),
- * starRating(number),
- * attendingPhysician(string),
- * publishDate(배열안에 3개의 숫자 , 가장 앞자리 0 입력불가),
- * isOutlined (boolean),
- * @Message - Message 스타일 ( props :
- * publishDate(배열안에 3개의 숫자 , 가장 앞자리 0 입력불가),
- * text(string),
- * starRating(number),
- * isOutlined (boolean),
- * @Record - Record 스타일 ( props :
- * publishDate(배열안에 3개의 숫자 , 가장 앞자리 0 입력불가),
- * templateName(string),
- * attendingPhysician(string),
- * isOutlined (boolean),
- * @StaffOne - Staff_1 스타일 ( props :
- * profImgUrl (따로 url 작성하지 않으면 기본 프로필 설정 , 필수아님) );
- * name(string),
- * phoneNumber(배열안에 3개의 문자열),
- * memberCount(number),
- * starRating(number),
- * memo(string),
- * isOutlined (boolean),
- * @TheraphyCenter - TheraphyCenter 스타일 ( props :
- * publishDate(배열안에 3개의 숫자 , 가장 앞자리 0 입력불가),
- * videoName(string),
- * uploadCount(number),
- * isOutlined (boolean),
+ * @description Item 스타일 ( MemberOne , MemberThree , Message , Record , StaffOne , TheraphyCenter )
  */
 const Item = {
+  /**
+   * @description - Member_1 스타일 ( profImgUrl 제외 props 전부 필수 )
+   * @params
+   * {string} profImgUrl 이미지 url ( 기본:'' )
+   * @params
+   * {string} name 이름
+   * @params
+   * {boolean} isMale 성별
+   * @params
+   * {[nuber,nuber,nuber,nuber,nuber,nuber]} membershipDuration  멤버쉽 기간 ( 각 숫자의 앞자리는 0 불가 )
+   * @params
+   * {[nuber,nuber]} membershipUses 멤버쉽 남은 횟수 와 총 횟수 ( 각 숫자의 앞자리는 0 불가 )
+   * @params
+   * {string} attendingPhysician 담당의사
+   * @params
+   * {[nuber,nuber,nuber]} publishDate 작성일 ( 각 숫자의 앞자리는 0 불가 ),
+   * @params
+   * {boolean} isOutlined 아웃라인 여부
+   */
   MemberOne,
+
+  /**
+   * @description - Member_3 스타일 ( profImgUrl 제외 props 전부 필수 )
+   * @params
+   * {string} profImgUrl 이미지 url ( 기본:'' )
+   * @params
+   * {string} name 이름
+   * @params
+   * {[string, string, string]} phoneNumber 전화번호
+   * @params
+   * {number} starRating 별점
+   * @params
+   * {string} attendingPhysician 담당의사
+   * @params
+   * {[number,number,number]} publishDate 작성일 ( 각 숫자의 앞자리는 0 불가 ),
+   * @params
+   * {boolean} isOutlined 아웃라인 여부
+   */
   MemberThree,
+
+  /**
+   * @description - Message 스타일 ( props 전부 필수 )
+   * @params
+   * {[number,number,number]} publishDate 작성일 ( 각 숫자의 앞자리는 0 불가 )
+   * @params
+   * {string} text 텍스트
+   * @params
+   * {number} starRating 별점
+   * @params
+   * {boolean} isOutlined 아웃라인 여부
+   */
   Message,
+
+  /**
+   * @description - Record 스타일 ( props 전부 필수 )
+   * @params
+   * {[number,number,number]} publishDate 작성일 ( 각 숫자의 앞자리는 0 불가 )
+   * @params
+   * {string} templateName 템플릿 이름
+   * @params
+   * {string} attendingPhysician 담당의사
+   * @params
+   * {boolean} isOutlined 아웃라인 여부
+   */
   Record,
+
+  /**
+   * @description - Staff_1 스타일 ( profImgUrl 제외 props 전부 필수 )
+   * @params
+   * {string} profImgUrl 이미지 url ( 기본:'' )
+   * @params
+   * {string} name 이름
+   * @params
+   * {[string, string, string]} phoneNumber 전화번호
+   * @params
+   * {number} starRating 별점
+   * @params
+   * {number} memberCount 멤버 수
+   * @params
+   * {string} memo 메모
+   * @params
+   * {boolean} isOutlined 아웃라인 여부
+   */
   StaffOne,
+
+  /**
+   * @description - TheraphyCenter 스타일 ( props 전부 필수 )
+   * @params
+   * {[number, number, number]} publishDate 작성일
+   * @params
+   * {string} videoName 비디오 이름
+   * @params
+   * {number} uploadCount 업로드 횟수
+   * @params
+   * {boolean} isOutlined 아웃라인 여부
+   */
   TheraphyCenter,
 };
 

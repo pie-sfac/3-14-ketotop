@@ -1,8 +1,13 @@
 import * as St from './styles';
 import { Fnd } from '../../../index';
 import { ButtonType } from '../type';
-
-/** Props = size , state('normal','enabled','disabled')  */
+/**
+ * @description - Contained 스타일의 버튼 (모든 props 필수)
+ * @params
+ * { 'x-small' | 'small' | 'medium' | 'large' | 'x-large' | 'full' } size 버튼 크기
+ * @params
+ * { 'normal' | 'enabled' | 'disabled' } state 버튼 상태
+ */
 const Contained = ({ size, state, children }: ButtonType) => {
   let TypographyComponent;
 

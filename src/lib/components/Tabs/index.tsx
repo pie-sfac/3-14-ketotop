@@ -8,6 +8,16 @@ import * as St from './styles';
  * selected: 선택된 탭메뉴 인덱스 ( number )
  * showMenuIdx: 보여질 탭메뉴 인덱스 리스트 ( number[] )
  */
+/**
+ * @description - Tab 스타일
+ * @params
+ * {(string | undefined)[]} tapList 탭메뉴 리스트
+ * @params
+ * {number} selected 선택된 탭메뉴 인덱스
+ * @params
+ * {number[]} showMenuIdx 보여질 탭메뉴 인덱스 리스트
+ */
+
 const Tabs: FC<TabListProps> = ({ tapList, selected, showMenuIdx }) => {
   if (tapList.length > 10) {
     throw new Error('10개 이상의 탭메뉴를 포함할 수 없습니다..');

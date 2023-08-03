@@ -1,8 +1,24 @@
 import Outline from './Outline/index';
 import Contained from './Contained/index';
-/** Button.Outline 혹은 Contained 사용가능 */
+/**
+ * @description Button 스타일 ( Outline , Contained )
+ */
 const Button = {
+  /**
+   * @description - Outline 스타일의 버튼 (모든 props 필수)
+   * @params
+   * { 'x-small' | 'small' | 'medium' | 'large' | 'x-large' | 'full' } size 버튼 크기
+   * @params
+   * { 'normal' | 'enabled' | 'disabled' } state 버튼 상태
+   */
   Outline,
+  /**
+   * @description - Contained 스타일의 버튼 (모든 props 필수)
+   * @params
+   * { 'x-small' | 'small' | 'medium' | 'large' | 'x-large' | 'full' } size 버튼 크기
+   * @params
+   * { 'normal' | 'enabled' | 'disabled' } state 버튼 상태
+   */
   Contained,
 };
 export default Button;
