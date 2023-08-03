@@ -5,6 +5,10 @@ import { SnackBarProps } from './type';
 import { useSnackbar } from './useSanckbar';
 export { useSnackbar };
 
+/**
+ * @description 사용자에게 전달받은 문자열 값을 알리는 Snackbar 컴포넌트
+ * @type {message: string, duration: number, isAppbar: boolean, width: string}
+ */
 export const SnackBar: FC<SnackBarProps> = ({ message, duration, isAppbar, width = '1024px' }) => {
   return (
     <>

@@ -3,6 +3,10 @@ import * as St from './styles';
 import { Fnd } from '../../..';
 import { ListDropdownProps } from './type';
 
+/**
+ * @description 큰 분류의 문자열 값과 배열을 받아야하는 ListDropdown 컴포넌트
+ * @type {category: string, items: string[], value: string, onChange: (string) => void, onClose: () => void, width: string}
+ */
 export const ListDropdown: FC<ListDropdownProps> = ({ category, items, value, onChange, onClose, width }) => {
   const [isVisible, setIsVisible] = useState(false);
 

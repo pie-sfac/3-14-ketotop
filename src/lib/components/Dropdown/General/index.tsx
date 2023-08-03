@@ -3,6 +3,10 @@ import * as St from './styles';
 import { Fnd } from '../../..';
 import { DropdownProps } from './type';
 
+/**
+ * @description 배열만을 values로 받는 기본형태의 Dropdown 컴포넌트
+ * @type {items: string[], onChange: (string) => void, value: string, title: string, placeholder: string, width: string}
+ */
 export const Dropdown: FC<DropdownProps> = ({ items, onChange, value, title, placeholder, width }) => {
   const [isVisible, setIsVisible] = useState(false);
 
