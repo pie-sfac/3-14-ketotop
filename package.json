@@ -1,6 +1,7 @@
 {
   "name": "pds-3-14",
-  "version": "1.1.1",
+  "version": "1.1.2",
+  "description": "Point Design System 3분류 14팀 라이브러리 ( 업데이트 1.1.2 : JS 파일에서 Icon, Graphic 컴포넌트를 사용할 수 있도록 수정 )",
   "main": "dist/src/lib/index.js",
   "module": "dist/src/lib/index.js",
   "types": "dist/src/lib/index.d.ts",
