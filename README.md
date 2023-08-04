@@ -38,7 +38,7 @@ npm i pds-3-14
 Fnd ( Foundation ) Import 하여 사용
 
 ```jsx
-import { Fnd } from 'psd-3-14';
+import { Fnd } from 'pds-3-14';
 ```
 
 ### 👉 Color
@@ -157,7 +157,7 @@ const Test = styled.div`
 Cmp ( Component ) Import 하여 사용 , 전역에 글로벌 스타일 추가 필수!
 
 ```jsx
-import { Cmp , Fnd } from 'psd-3-14';
+import { Cmp , Fnd } from 'pds-3-14';
 ...
   <Fnd.FoundationGlobalStyles/>
 ...
