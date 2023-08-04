@@ -1,20 +1,13 @@
-import { styled } from 'styled-components';
-import { Fnd } from 'pds-3-14';
+// import { Fnd, Cmp } from 'pds-3-14'; // For Testing NPM package
+import { Fnd, Cmp } from './lib/index'; // For Testing Local Files
+
 function App() {
   return (
     <>
       <Fnd.FoundationGlobalStyles />
-      <Fnd.LayoutStyles>
-        <Fnd.IconStyles name={'add'} />
-        <Test>hello</Test>
-        <h1>hello</h1>
-      </Fnd.LayoutStyles>
+      <Fnd.LayoutStyles></Fnd.LayoutStyles>
     </>
   );
 }
 
 export default App;
-
-const Test = styled.div`
-  ${Fnd.ShadowBoxStyles}
-`;
