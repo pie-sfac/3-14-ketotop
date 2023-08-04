@@ -5,7 +5,6 @@ export const ResetCSS = css`
    v5.0.1 | 20191019
    License: none (public domain)
 */
-
   html,
   body,
   div,
@@ -89,7 +88,6 @@ export const ResetCSS = css`
   mark,
   audio,
   video {
-    font-size: 10px;
     margin: 0;
     padding: 0;
     border: 0;
@@ -138,5 +136,8 @@ export const ResetCSS = css`
   table {
     border-collapse: collapse;
     border-spacing: 0;
+  }
+  html {
+    font-size: 10px;
   }
 `;
