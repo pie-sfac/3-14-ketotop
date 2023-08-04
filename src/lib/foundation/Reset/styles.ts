@@ -89,6 +89,7 @@ export const ResetCSS = css`
   mark,
   audio,
   video {
+    font-size: 10px;
     margin: 0;
     padding: 0;
     border: 0;
@@ -117,7 +118,6 @@ export const ResetCSS = css`
   }
   body {
     line-height: 1;
-    font-size: 10px;
   }
   menu,
   ol,
