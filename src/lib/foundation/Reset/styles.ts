@@ -117,6 +117,7 @@ export const ResetCSS = css`
   }
   body {
     line-height: 1;
+    font-size: 10px;
   }
   menu,
   ol,
