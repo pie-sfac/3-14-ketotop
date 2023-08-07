@@ -49,9 +49,13 @@ const IconStyles = Icon;
  * @params
  * {string} extension 확장자 ( 기본: svg )
  * @params
- * {number} height 높이
+ * {number} areaHeight 선택영역 높이
  * @params
- * {number} width 너비
+ * {number} areaWidth 선택영역 너비
+ * @params
+ * {number} imgHeight 이미지 높이
+ * @params
+ * {number} imgWidth 이미지 너비
  */
 const GraphicStyles = Graphic;
 
