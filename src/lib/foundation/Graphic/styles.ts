@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const GraphicWrapper = styled.div<{ $height?: number; $width?: number }>`
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 
