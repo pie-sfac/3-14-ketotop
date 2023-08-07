@@ -8,7 +8,6 @@ import * as St from './styles';
  * @params
  * { string } item 리스트 항목
  */
-
 const List: FC<ListProps> = ({ item, ...rest }) => {
   return (
     <St.ListStyles key={item} {...rest}>
