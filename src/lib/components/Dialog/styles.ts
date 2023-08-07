@@ -1,17 +1,13 @@
 import { styled, css } from 'styled-components';
 
 export const Dialog = styled.div`
-  /* TODO: must delete lined_reset css 적용 시 지울 라인들 */
-  color: black;
-  & p {
-    margin: 0;
-  }
   /* Layout */
-  width: 340px;
-  border-radius: 10px;
+  width: 34rem;
+  border-radius: 1rem;
   box-sizing: border-box;
-  border: 1px solid var(--Gray_300);
+  border: 0.1rem solid var(--Gray_300);
   background-color: var(--Bg_Wh);
+  padding: 4rem 2rem 1.6rem;
   /* Position */
   position: relative;
   text-align: center;
@@ -19,10 +15,10 @@ export const Dialog = styled.div`
 
 export const Icon = styled.div`
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 24px;
-  height: 24px;
+  top: 1.6rem;
+  right: 1.6rem;
+  width: 2.4rem;
+  height: 2.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +26,6 @@ export const Icon = styled.div`
 `;
 
 export const Contents = styled.div`
-  margin: 40px 20px 16px;
   color: var(--Text_900);
 `;
 
@@ -43,7 +38,7 @@ const Ellipsis = css`
 `;
 
 export const TitleWrapper = styled.div`
-  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
   /* Ellipsis */
   ${Ellipsis}
   -webkit-line-clamp: 2;
@@ -56,21 +51,23 @@ export const SubTextWrapper = styled.div`
 `;
 
 const BtnStyle = css`
-  padding: 8px 12px;
-  border-radius: 4px;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.4rem;
   /* TODO: reset CSS 수정 */
   border: none;
-  width: 145px;
+  width: 14.5rem;
 `;
 export const BtnWrapper = styled.div`
-  margin-top: 28px;
+  margin-top: 2.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
 `;
 
-export const GrayBtn = styled.button<{ marginNeed: boolean }>`
+export const GrayBtn = styled.button`
   ${BtnStyle}
   background-color: var(--Bg_100);
   color: inherit;
-  margin-right: ${({ marginNeed }) => (marginNeed ? '8px' : '')};
 `;
 
 export const PriBtn = styled.button`
