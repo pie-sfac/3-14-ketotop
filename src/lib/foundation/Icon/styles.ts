@@ -5,8 +5,6 @@ export const IconContainer = styled.div<{ height: number; width: number; iconSiz
   justify-content: center;
   align-items: center;
 
-  background-color: yellow;
-
   height: ${(props) => `${props.height}rem`};
   width: ${(props) => `${props.width}rem`};
 
