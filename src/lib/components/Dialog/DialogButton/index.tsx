@@ -1,8 +1,8 @@
 import * as St from './styles';
 import Button from '../../Button';
-import { Children } from './type';
+import { DialogButtonProps } from './type';
 
-export const DialogButtonWrapper = ({ children }: Children) => {
+export const DialogButtonWrapper = ({ children }: DialogButtonProps) => {
   return <St.DialogBtnWrapper>{children}</St.DialogBtnWrapper>;
 };
 
@@ -10,7 +10,7 @@ export const DialogButtonWrapper = ({ children }: Children) => {
  * @description 다이얼로그에 렌더되는 Gray버튼
  * @type {children: string}
  */
-export const GrayButton = ({ children, ...otherProps }: Children) => {
+export const GrayButton = ({ children, ...otherProps }: DialogButtonProps) => {
   if (!children) throw new Error('Please enter DialogButton name!');
 
   return (
@@ -24,7 +24,7 @@ export const GrayButton = ({ children, ...otherProps }: Children) => {
  * @description 다이얼로그에 렌더되는 Pri버튼
  * @type {children: string}
  */
-export const PriButton = ({ children, ...otherProps }: Children) => {
+export const PriButton = ({ children, ...otherProps }: DialogButtonProps) => {
   if (!children) throw new Error('Please enter DialogButton name!');
 
   return (
