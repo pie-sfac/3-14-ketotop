@@ -9,7 +9,7 @@ import { ButtonType } from '../type';
  * @params
  * { 'normal' | 'enabled' | 'disabled' } state 버튼 상태
  */
-const Outline = ({ size, state, children }: ButtonType) => {
+const Outline = ({ size, state, children, ...rest }: ButtonType) => {
   let TypographyComponent;
 
   switch (size) {
@@ -32,7 +32,7 @@ const Outline = ({ size, state, children }: ButtonType) => {
   return (
     <>
       <Fnd.FoundationGlobalStyles />
-      <St.ButtonWrapper $size={size} $state={state} disabled={isDisabled}>
+      <St.ButtonWrapper $size={size} $state={state} disabled={isDisabled} {...rest}>
         <TypographyComponent>{children}</TypographyComponent>
       </St.ButtonWrapper>
     </>
