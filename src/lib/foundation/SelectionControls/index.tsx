@@ -1,3 +1,4 @@
+import { Fnd } from '../..';
 import SelectionInput from './Input';
 import SelectionLabel from './Label';
 import * as St from './styles';
@@ -7,7 +8,7 @@ const SelectionControls = ({ inputAttr, labelAttr }: ISelection) => {
   return (
     <St.SelectionContainer>
       <SelectionInput {...inputAttr} />
-      {labelAttr && <SelectionLabel {...labelAttr} />}
+      <Fnd.TypographyStyles.Body4>{labelAttr && <SelectionLabel {...labelAttr} />}</Fnd.TypographyStyles.Body4>
     </St.SelectionContainer>
   );
 };
