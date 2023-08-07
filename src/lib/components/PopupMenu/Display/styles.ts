@@ -9,6 +9,8 @@ export const PopupMenuStyles = styled.section<PopupMenuProps>`
   border-radius: 1rem;
   border: 0.1rem solid var(--Line_200);
   background: var(--Bg_Wh);
+  color: var(--Text_900);
+
   /** Shadow */
   ${Fnd.ShadowBoxStyles}
 

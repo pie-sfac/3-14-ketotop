@@ -1,6 +1,7 @@
 import { Children, FC } from 'react';
 import { PopupMenuProps } from './type';
 import * as St from './styles';
+import { Fnd } from '../../..';
 
 /**
  * @description - PopupMenu Display 스타일
@@ -17,6 +18,7 @@ const Display: FC<PopupMenuProps> = ({ $headerType, children }) => {
 
   return (
     <>
+      <Fnd.FoundationGlobalStyles />
       <St.PopupMenuStyles $headerType={$headerType}>{children}</St.PopupMenuStyles>
     </>
   );
