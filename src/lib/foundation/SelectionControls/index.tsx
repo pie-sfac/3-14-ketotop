@@ -1,8 +1,15 @@
+import SelectionInput from './Input';
+import SelectionLabel from './Label';
+import * as St from './styles';
 import { ISelection } from './type';
-import { SelectionInput } from './styles';
 
-const SelectionControls = ({ type, selected, disabled }: ISelection) => {
-  return <SelectionInput type={type} defaultChecked={selected} disabled={disabled} />;
+const SelectionControls = ({ inputAttr, labelAttr }: ISelection) => {
+  return (
+    <St.SelectionContainer>
+      <SelectionInput {...inputAttr} />
+      {labelAttr && <SelectionLabel {...labelAttr} />}
+    </St.SelectionContainer>
+  );
 };
 
 export default SelectionControls;
