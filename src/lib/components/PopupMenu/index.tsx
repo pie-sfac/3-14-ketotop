@@ -1,24 +1,14 @@
-import { FC } from 'react';
-import { PopupMenuProps } from './type';
-import * as St from './styles';
-import PopupMenuList from './PopupMenuList';
+import Display from './Display';
+import List from './List';
 
 /**
- * @description - PopupMenu 스타일
- * @params
- * { 'NavigationBar' | 'AppBar' } headerType? 상단 컴포넌트 종류 (옵셔널)
- * @params
- * {[string?] | [string?, string?] | [string?, string?, string?] | [string?, string?, string?, string?]} itemList 항목 리스트
+ * @description - PopupMenu 컴포넌트
+ * @function Display - PopupMenu Display 스타일 ( 상위 컴포넌트 )
+ * @function List - PopupMenu List 스타일 ( 하위 컴포넌트 )
  */
-
-const PopupMenu: FC<PopupMenuProps> = ({ headerType, itemList }) => {
-  return (
-    <>
-      <St.PopupMenuStyles headerType={headerType} itemList={itemList}>
-        <PopupMenuList itemList={itemList} />
-      </St.PopupMenuStyles>
-    </>
-  );
+const PopupMenu = {
+  Display,
+  List,
 };
 
 export default PopupMenu;
