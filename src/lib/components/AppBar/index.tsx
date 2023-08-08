@@ -1,4 +1,7 @@
 import { Fnd } from '../../index';
+import AppBarButton from './Button';
+import AppBarIcon from './Icon';
+import AppBarPagename from './Page';
 import * as St from './styles';
 import { IAppBar } from './type';
 
@@ -10,17 +13,22 @@ import { IAppBar } from './type';
  * @params
  * {type : {icon : {icon_R : string, icon_L : string}}, {text : {text_R : string, text_L : string}}, {count : {count : number, text : string}}} */
 
-const AppBar = ({ pagename, size = 'large', type }: IAppBar) => {
+const AppBar = ({ pagename, size = 'large', type, iconAttr, buttonAttr, pagenameAttr }: IAppBar) => {
+  if (!pagename) throw new Error('pagename prop is required');
+  if (size !== 'full' && size !== 'large' && size !== 'medium')
+    throw new Error(`size prop should be 'large' | 'medium' | 'full'`);
+  // if (type) throw new Error(`size prop should be 'large' | 'medium' | 'full'`);
+
   return (
-    <Fnd.TypographyStyles.Body1>
+    <Fnd.TypographyStyles.Body1 as={'div'}>
       <St.AppBarContainer size={size}>
         {
           // full (페이지네임 + X 아이콘)
           size === 'full' ? (
             <St.FullPopupLayout>
-              <div>{pagename}</div>
+              <AppBarPagename pagename={pagename} {...pagenameAttr} />
               <St.IconBoxNomargin>
-                <Fnd.IconStyles name={'delete'} />
+                <AppBarIcon name={`delete`} />
               </St.IconBoxNomargin>
             </St.FullPopupLayout>
           ) : (
@@ -28,21 +36,21 @@ const AppBar = ({ pagename, size = 'large', type }: IAppBar) => {
             <St.DefalutLayout>
               <St.FixedItems>
                 <St.IconBox>
-                  <Fnd.IconStyles name={`back`} />
+                  <AppBarIcon name={`back`} />
                 </St.IconBox>
-                <div>{pagename}</div>
+                <AppBarPagename pagename={pagename} {...pagenameAttr} />
               </St.FixedItems>
 
               {type?.icon && (
                 <St.IconItems>
                   {type?.icon.icon_L && (
                     <St.IconBox>
-                      <Fnd.IconStyles name={`${type.icon?.icon_L}`} />
+                      <AppBarIcon name={`${type.icon?.icon_L}`} {...iconAttr} />
                     </St.IconBox>
                   )}
                   {type.icon.icon_R && (
                     <St.IconBoxNomargin>
-                      <Fnd.IconStyles name={`${type.icon?.icon_R}`} />
+                      <AppBarIcon name={`${type.icon?.icon_R}`} {...iconAttr} />
                     </St.IconBoxNomargin>
                   )}
                 </St.IconItems>
@@ -50,15 +58,13 @@ const AppBar = ({ pagename, size = 'large', type }: IAppBar) => {
 
               {type?.text && (
                 <St.IconItems>
-                  {type?.text.text_L && <St.TextBox>{type?.text?.text_L}</St.TextBox>}
-                  {type?.text.text_R && <St.TextBox>{type?.text?.text_R}</St.TextBox>}
+                  {type?.text.text_L && <AppBarButton text={`${type?.text?.text_L}`} {...buttonAttr} />}
+                  {type?.text.text_R && <AppBarButton text={`${type?.text?.text_R}`} {...buttonAttr} />}
                 </St.IconItems>
               )}
 
               {type?.count && (
-                <St.TextBox>
-                  {type?.count.text}({type?.count.count})
-                </St.TextBox>
+                <AppBarButton text={`${type?.count.text}`} count={`${type?.count.count}`} {...buttonAttr} />
               )}
             </St.DefalutLayout>
           )

@@ -15,7 +15,7 @@ interface IIconGeneral extends ICommon {
 
 export type IIcon = IIconStrict | IIconGeneral;
 
-type IconName =
+export type IconName =
   | 'add_24px'
   | 'arrowmore_24px'
   | 'back_24px'
