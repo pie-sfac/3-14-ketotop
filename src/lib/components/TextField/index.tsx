@@ -32,8 +32,6 @@ export const TextField: FC<TextFieldType> = ({
     // prettier-ignore
     throw new Error("If there's something you need to tell the user with successMessage, enter a message with leading and trailing spaces removed");
   }
-
-  console.log(inactiveMessage?.trim().length);
   return (
     <>
       <Typo.Body4 as={'label'} htmlFor={otherProps.id}>
