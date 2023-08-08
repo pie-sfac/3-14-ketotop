@@ -9,7 +9,6 @@ export const IconContainer = styled.div<ICommon>`
   height: ${({ $height }) => $height && `${$height}rem`};
   width: ${({ $width }) => $width && `${$width}rem`};
 
-  background-color: yellow;
   img {
     height: ${({ $iconSize }) => $iconSize && `${$iconSize}rem`};
   }
