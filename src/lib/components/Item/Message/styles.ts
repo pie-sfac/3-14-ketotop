@@ -7,13 +7,13 @@ export const ItemLayout = styled(OriginalStyles.ItemLayout)`
 `;
 
 export const ContentWrapperStyles = styled(OriginalStyles.ContentWrapperStyles)`
-  gap: 32px;
+  gap: 3.2rem;
 `;
 
 export const StarRatingWrapperStyles = styled.div`
   display: flex;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.4rem;
 `;
 
 export const TextFont = styled(Fnd.TypographyStyles.Body4)`
@@ -25,12 +25,12 @@ export const TextFieldsStyles = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 1.6rem;
 `;
 
 export const MessageFont = styled(Fnd.TypographyStyles.Body4)`
   color: var(--Text_900);
-  width: 645px;
+  width: 64.5rem;
   overflow: hidden;
   white-space: nowrap;
   // overflow가 되면 ...으로 표시

@@ -7,13 +7,13 @@ export const ItemLayout = styled(OriginalStyles.ItemLayout)`
 `;
 
 export const ContentWrapperStyles = styled(OriginalStyles.ContentWrapperStyles)`
-  gap: 32px;
+  gap: 3.2rem;
 `;
 
 export const TextFont = styled(Fnd.TypographyStyles.Body4)`
   color: var(--Text_900);
   text-align: center;
-  width: 80px;
+  width: 8rem;
   overflow: hidden;
   white-space: nowrap;
   // overflow가 되면 ...으로 표시
@@ -24,11 +24,11 @@ export const TextFieldsStyles = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 1.6rem;
 `;
 
 export const CountTextFont = styled(Fnd.TypographyStyles.Body4)`
   color: var(--Pri_500);
   text-align: center;
-  width: 24px;
+  width: 2.4rem;
 `;
