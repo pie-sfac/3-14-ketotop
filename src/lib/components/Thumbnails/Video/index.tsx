@@ -23,7 +23,9 @@ const VideoThumbnail = ({ $state = 'normal', src = ImgURL, runningtime = 0, ...o
     $state !== 'select' &&
     $state !== 'video_play'
   )
-    throw new Error('Enter the correct state prop name');
+    throw new Error(
+      `Enter the correct state prop name. It should be 'normal' | 'delete' | 'select' | 'video_play' | 'error'`,
+    );
 
   return (
     <St.ThumbnailContainer src={src} $state={$state}>
