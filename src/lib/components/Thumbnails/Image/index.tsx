@@ -1,4 +1,4 @@
-import Icon from '../../../foundation/Icon';
+import { Fnd } from '../../..';
 import * as St from '../styles';
 import { IImage } from '../type';
 
@@ -6,26 +6,26 @@ import { IImage } from '../type';
  * @params
  * {src : string}
  * @params
- * {state : 'normal' | 'delete' | 'select' | 'error'}  */
+ * {$state : 'normal' | 'delete' | 'select' | 'error'}  */
 
-const ImageThumbnail = ({ state = 'normal', src }: IImage) => {
+const ImageThumbnail = ({ $state = 'normal', src }: IImage) => {
   return (
-    <St.ThumbnailContainer src={src} state={state}>
-      <St.BackgroundColor state={state} />
+    <St.ThumbnailContainer src={src} $state={$state}>
+      <St.BackgroundColor $state={$state} />
 
-      {state === 'delete' && (
+      {$state === 'delete' && (
         <St.DeleteState>
-          <Icon name='thumbnails_deletecircle' />
+          <Fnd.IconStyles name='thumbnails_deletecircle_24px' />
         </St.DeleteState>
       )}
-      {state === 'select' && (
+      {$state === 'select' && (
         <St.SelectState>
-          <Icon name='thumbnails_checkcircle' />
+          <Fnd.IconStyles name='thumbnails_checkcircle_32px' />
         </St.SelectState>
       )}
-      {state === 'error' && (
+      {$state === 'error' && (
         <St.ErrorState>
-          <Icon name='thumbnails_errorcircle' />
+          <Fnd.IconStyles name='thumbnails_errorcircle_32px' />
           <p>원본 파일 삭제됨</p>
         </St.ErrorState>
       )}

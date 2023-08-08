@@ -1,4 +1,4 @@
-import Icon from '../../../foundation/Icon';
+import { Fnd } from '../../..';
 import * as St from '../styles';
 import { IVideo } from '../type';
 
@@ -6,41 +6,40 @@ import { IVideo } from '../type';
  * @params
  * {src : string}
  * @params
- * {state : 'normal' | 'delete' | 'select' | 'video_play' | 'error'}
+ * {$state : 'normal' | 'delete' | 'select' | 'video_play' | 'error'}
  * @params
  * {runningtime : number}
  * */
-
-const VideoThumbnail = ({ state = 'normal', src, runningtime = 0 }: IVideo) => {
+export const ImgURL = 'https://port-0-psd-asset-server-eg4e2alkf2i7md.sel4.cloudtype.app/uploads/images/Img_nomal.svg';
+const VideoThumbnail = ({ $state = 'normal', src = ImgURL, runningtime = 0 }: IVideo) => {
   const runningTimeMin = runningtime && String(Math.floor(runningtime / 60000));
   const runningTimeSec = (runningtime && String(Math.floor((runningtime / 1000) % 60)).padStart(2, '0')) || '00';
 
   return (
-    <St.ThumbnailContainer src={src} state={state}>
+    <St.ThumbnailContainer src={src} $state={$state}>
       <St.VideoRunningTime>
         {runningTimeMin}:{runningTimeSec}
       </St.VideoRunningTime>
-      <St.BackgroundColor state={state} />
-
-      {state === 'delete' && (
+      <St.BackgroundColor $state={$state} />
+      {$state === 'delete' && (
         <St.DeleteState>
-          <Icon name='thumbnails_deletecircle' />
+          <Fnd.IconStyles name='thumbnails_deletecircle_24px' />
         </St.DeleteState>
       )}
-      {state === 'select' && (
+      {$state === 'select' && (
         <St.SelectState>
-          <Icon name='thumbnails_checkcircle' />
+          <Fnd.IconStyles name='thumbnails_checkcircle_32px' />
         </St.SelectState>
       )}
-      {state === 'error' && (
+      {$state === 'error' && (
         <St.ErrorState>
-          <Icon name='thumbnails_errorcircle' />
+          <Fnd.IconStyles name='thumbnails_errorcircle_32px' />
           <p>원본 파일 삭제됨</p>
         </St.ErrorState>
       )}
-      {state === 'video_play' && (
+      {$state === 'video_play' && (
         <St.PlayState>
-          <Icon name='thumbnails_playcircle' />
+          <Fnd.IconStyles name='thumbnails_playcircle_32px' />
         </St.PlayState>
       )}
     </St.ThumbnailContainer>
