@@ -1,4 +1,3 @@
-import { TypographyStyles as Typo } from '../../foundation';
 import * as St from './style';
 import { FC } from 'react';
 import { TextFieldType } from './type';
@@ -33,14 +32,14 @@ export const TextField: FC<TextFieldType> = ({
     throw new Error("If there's something you need to tell the user with successMessage, enter a message with leading and trailing spaces removed");
   }
   return (
-    <>
-      <Typo.Body4 as={'label'} htmlFor={otherProps.id}>
+    <St.Wrapper>
+      <St.Label as={'label'} htmlFor={otherProps.id}>
         {labelText}
-      </Typo.Body4>
+      </St.Label>
       <St.TextField $error={isError} {...otherProps}></St.TextField>
       <St.Message $error={isError} $success={isSuccess}>
         {isError ? errorMessage : isSuccess ? successMessage : inactiveMessage}
       </St.Message>
-    </>
+    </St.Wrapper>
   );
 };
