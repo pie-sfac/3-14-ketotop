@@ -3,7 +3,7 @@ import { Image } from './type';
 import * as St from './styles';
 
 const baseURL = 'https://port-0-psd-asset-server-eg4e2alkf2i7md.sel4.cloudtype.app';
-const Graphic = ({ name, extension = 'svg', areaHeight = 2.4, areaWidth = 2.4, imgHeight, imgWidth }: Image) => {
+const Graphic = ({ name, extension = 'svg', areaHeight, areaWidth, imgHeight, imgWidth }: Image) => {
   const [loadError, setLoadError] = useState(false);
   const baseIconURL = `${baseURL}/uploads/images/`;
 
