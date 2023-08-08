@@ -5,7 +5,7 @@ import { TextFieldType } from './type';
 
 /**
  * @description 원하는 상태의 메세지와 스타일이 렌더되는 TextField 컴포넌트
- * @type {id: string, labelText: string, message: string, errorMessage: string, successMessage: string, $error: boolean, $success: boolean}
+ * @type {labelText: string, inactiveMessage: string, errorMessage: string, successMessage: string, isError: boolean, isSuccess: boolean}
  */
 export const TextField: FC<TextFieldType> = ({
   labelText,
