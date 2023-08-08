@@ -8,6 +8,16 @@ const prevBtn = 'https://port-0-psd-asset-server-eg4e2alkf2i7md.sel4.cloudtype.a
 const nextBtn = 'https://port-0-psd-asset-server-eg4e2alkf2i7md.sel4.cloudtype.app/uploads/icons/next_small_24px.svg';
 
 const Calendar: React.FC<CalendarProps> = ({ dates, setDates }): JSX.Element => {
+  if (!Array.isArray(dates) || dates.length !== 2 || !dates.every((date) => date === null || date instanceof Date)) {
+    throw new Error(
+      "'dates' prop 이 잘못되었습니다. [Date | null, Date | null] 형식이어야 합니다. (useState()의 state)",
+    );
+  }
+
+  if (typeof setDates !== 'function') {
+    throw new Error("'setDates' prop 이 잘못되었습니다. 함수 타입이어야 합니다. (useState()의 setState)");
+  }
+
   const handleChange = (updatedDates: [Date | null, Date | null], event: SyntheticEvent<any, Event> | undefined) => {
     setDates(updatedDates);
   };
