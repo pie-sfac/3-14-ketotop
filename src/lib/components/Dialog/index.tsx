@@ -8,7 +8,7 @@ import { DialogButtonWrapper, PriButton, GrayButton } from './DialogButton';
  * @description $isOpen 상태에 따라 렌더되는 Dialog 컴포넌트
  * @type {title: string, description?: string, onCloseEffect: () => void, isOpen: boolean, children: React.ReactNode}
  */
-export const Display: FC<DialogProps> = ({ title, description, onCloseEffect, isOpen, children: Buttons }) => {
+const Display: FC<DialogProps> = ({ title, description, onCloseEffect, isOpen, children: Buttons }) => {
   if (!title) throw new Error('Please enter DialogTitle!');
   if (!onCloseEffect) throw new Error('Please enter onCloseEffect, with handling isOpen state!');
 
