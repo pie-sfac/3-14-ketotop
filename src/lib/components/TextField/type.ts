@@ -26,3 +26,8 @@ export interface TextFieldType extends Partial<InputHTMLAttributes<HTMLInputElem
    */
   isSuccess?: boolean;
 }
+
+export interface StyledProps {
+  $error: boolean;
+  $success: boolean;
+}
