@@ -29,7 +29,7 @@ const VideoThumbnail = ({ $state = 'normal', src = ImgURL, runningtime = 0, ...o
 
   return (
     <St.ThumbnailContainer src={src} $state={$state}>
-      <Fnd.TypographyStyles.Caption1>
+      <Fnd.TypographyStyles.Caption1 as={'div'}>
         <St.VideoRunningTime>
           {runningTimeMin}:{runningTimeSec}
         </St.VideoRunningTime>

@@ -16,7 +16,7 @@ const ImageThumbnail = ({ $state = 'normal', src, ...otherProps }: IImage) => {
 
   return (
     <St.ThumbnailContainer src={src} $state={$state}>
-      <Fnd.TypographyStyles.Caption1>
+      <Fnd.TypographyStyles.Caption1 as={'div'}>
         <St.BackgroundColor $state={$state} />
 
         {$state === 'delete' && <DeleteThumbnail name='thumbnails_deletecircle_24px' {...otherProps} />}
