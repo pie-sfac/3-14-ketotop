@@ -29,6 +29,7 @@ export const MemoFont = styled(Fnd.TypographyStyles.Body4)`
   width: 120px;
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 
 export const NameTextFont = styled(Fnd.TypographyStyles.Body2)`

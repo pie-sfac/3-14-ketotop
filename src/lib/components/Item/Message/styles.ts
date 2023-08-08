@@ -31,4 +31,8 @@ export const TextFieldsStyles = styled.div`
 export const MessageFont = styled(Fnd.TypographyStyles.Body4)`
   color: var(--Text_900);
   width: 645px;
+  overflow: hidden;
+  white-space: nowrap;
+  // overflow가 되면 ...으로 표시
+  text-overflow: ellipsis;
 `;

@@ -13,6 +13,11 @@ export const ContentWrapperStyles = styled(OriginalStyles.ContentWrapperStyles)`
 export const TextFont = styled(Fnd.TypographyStyles.Body4)`
   color: var(--Text_900);
   text-align: center;
+  width: 80px;
+  overflow: hidden;
+  white-space: nowrap;
+  // overflow가 되면 ...으로 표시
+  text-overflow: ellipsis;
 `;
 
 export const TextFieldsStyles = styled.div`

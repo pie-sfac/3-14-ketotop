@@ -50,7 +50,12 @@ export const TextFont = styled(Fnd.TypographyStyles.Body4)`
 
 export const TemplateTextFont = styled(Fnd.TypographyStyles.Body4)`
   color: var(--Text_900);
-  width: 135px;
+  min-width: 135px;
+  max-width: 736px;
+  overflow: hidden;
+  white-space: nowrap;
+  // overflow가 되면 ...으로 표시
+  text-overflow: ellipsis;
 `;
 
 export const TextFieldsStyles = styled.div`
