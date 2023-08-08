@@ -1,5 +1,5 @@
 import * as St from './styles'; // 분리된 스타일 파일에서 스타일을 불러옵니다.
-import { Fnd } from '../../..';
+import { Fnd, Cmp } from '../../..';
 import { IMemberOneStrict } from './type';
 
 const MemberOne = ({
@@ -50,9 +50,10 @@ const MemberOne = ({
           </St.ContentStyles>
           <St.InfoWrapperStyles>
             <St.LabelWrapperStyles>
-              <St.LabelStyles>
+              <Cmp.Label type='Rectangle' bgcolor='Gray' fontcolor='Gray'>
+                {/* {attendingPhysician} */}
                 <St.LabelTextFont>{attendingPhysician}</St.LabelTextFont>
-              </St.LabelStyles>
+              </Cmp.Label>
             </St.LabelWrapperStyles>
             <St.TextFont>{formattedPublishDate}</St.TextFont>
           </St.InfoWrapperStyles>

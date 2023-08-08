@@ -1,4 +1,4 @@
-import { Fnd } from '../../..';
+import { Fnd, Cmp } from '../../..';
 import * as St from './styles';
 import { IRecordStrict } from './type';
 
@@ -17,9 +17,12 @@ const Record = ({ publishDate, templateName, attendingPhysician, isOutlined }: I
               <St.TemplateTextFont>{templateName}</St.TemplateTextFont>
             </St.TextFieldsStyles>
           </St.ContentStyles>
-          <St.LabelStyles>
-            <St.LabelTextFont>{attendingPhysician}</St.LabelTextFont>
-          </St.LabelStyles>
+          <St.LabelWrapperStyles>
+            <Cmp.Label type='Rectangle' bgcolor='Gray' fontcolor='Gray'>
+              {/* {attendingPhysician} */}
+              <St.LabelTextFont>{attendingPhysician}</St.LabelTextFont>
+            </Cmp.Label>
+          </St.LabelWrapperStyles>
         </St.ContentWrapperStyles>
       </St.ItemLayout>
     </>

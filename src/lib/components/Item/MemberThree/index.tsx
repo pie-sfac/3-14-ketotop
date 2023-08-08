@@ -1,4 +1,4 @@
-import { Fnd } from '../../..';
+import { Fnd, Cmp } from '../../..';
 import * as St from './styles';
 
 import { IMemberThreeStrict } from './type';
@@ -75,9 +75,10 @@ const MemberThree = ({
           </St.ContentStyles>
           <St.InfoWrapperStyles>
             <St.LabelWrapperStyles>
-              <St.LabelStyles>
+              <Cmp.Label type='Rectangle' bgcolor='Gray' fontcolor='Gray'>
+                {/* {attendingPhysician} */}
                 <St.LabelTextFont>{attendingPhysician}</St.LabelTextFont>
-              </St.LabelStyles>
+              </Cmp.Label>
             </St.LabelWrapperStyles>
             <St.TextFont>{formattedPublishDate}</St.TextFont>
           </St.InfoWrapperStyles>

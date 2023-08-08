@@ -10,8 +10,27 @@ export const ContentWrapperStyles = styled(OriginalStyles.ContentWrapperStyles)`
   gap: 32px;
 `;
 
+export const InfoWrapperStyles = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`;
+
+export const LabelWrapperStyles = styled.div`
+  display: flex;
+  height: 28px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  label {
+    height: 100%;
+    width: auto;
+  }
+`;
+
 export const LabelStyles = styled.div`
   display: flex;
+  width: 100%;
   padding: 4px 10px;
   justify-content: center;
   align-items: center;

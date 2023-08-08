@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import * as OriginalStyles from '../../../components/Item/styles';
 import { Fnd } from '../../../index';
-
 export const ItemLayout = styled(OriginalStyles.ItemLayout)`
   // 필요한 오버라이딩 스타일이 있으면 여기에 작성
 `;
@@ -13,19 +12,25 @@ export const ContentWrapperStyles = styled(OriginalStyles.ContentWrapperStyles)`
 export const InfoWrapperStyles = styled.div`
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 8px;
 `;
 
 export const LabelWrapperStyles = styled.div`
   display: flex;
   width: 81px;
+  height: 28px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  label {
+    height: 100%;
+    width: auto;
+  }
 `;
 
 export const LabelStyles = styled.div`
   display: flex;
+  width: 100%;
   padding: 4px 10px;
   justify-content: center;
   align-items: center;

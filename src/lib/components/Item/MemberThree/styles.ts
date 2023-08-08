@@ -26,17 +26,25 @@ export const StarRatingWrapperStyles = styled.div`
 export const InfoWrapperStyles = styled.div`
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 8px;
 `;
+
 export const LabelWrapperStyles = styled.div`
   display: flex;
   width: 81px;
+  height: 28px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  label {
+    height: 100%;
+    width: auto;
+  }
 `;
+
 export const LabelStyles = styled.div`
   display: flex;
+  width: 100%;
   padding: 4px 10px;
   justify-content: center;
   align-items: center;
