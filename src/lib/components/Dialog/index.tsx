@@ -10,7 +10,7 @@ import { DialogButtonWrapper, PriButton, GrayButton } from './DialogButton';
  */
 export const Display: FC<DialogProps> = ({ title, description, onCloseEffect, isOpen, children: Buttons }) => {
   if (!title) throw new Error('Please enter DialogTitle!');
-  if (!onCloseEffect) throw new Error('Please enter onCloseEffect, with handling $isOpen state!');
+  if (!onCloseEffect) throw new Error('Please enter onCloseEffect, with handling isOpen state!');
 
   return (
     <>
@@ -22,7 +22,7 @@ export const Display: FC<DialogProps> = ({ title, description, onCloseEffect, is
             <DialogButtonWrapper>{Buttons}</DialogButtonWrapper>
           </St.Contents>
           <St.Icon onClick={onCloseEffect}>
-            <Icon name='close_24px' width={2.4} height={2.4} iconSize={1.6} />s
+            <Icon name='close_24px' $width={2.4} $height={2.4} $iconSize={2.4} />
           </St.Icon>
         </St.Dialog>
       )}
