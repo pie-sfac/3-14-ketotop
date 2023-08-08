@@ -7,7 +7,7 @@ export interface IAppBar {
     text?: { text_L?: string; text_R?: string };
     count?: { text?: string; count?: number };
   };
-  pagename?: string;
+  pagename: string;
 }
 
 // export interface IAppBar {
