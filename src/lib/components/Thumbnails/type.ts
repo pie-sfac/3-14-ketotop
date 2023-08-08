@@ -1,13 +1,17 @@
+import { HTMLAttributes, HtmlHTMLAttributes } from 'react';
+
 export interface IVideo {
   src?: string;
-  state?: VideoState;
+  $state?: VideoState;
   runningtime?: number;
 }
 
 export interface IImage {
-  src?: string;
-  state?: ImageState;
+  src: string;
+  $state?: ImageState;
 }
 
 type VideoState = 'normal' | 'delete' | 'select' | 'video_play' | 'error';
 type ImageState = 'normal' | 'delete' | 'select' | 'error';
+
+export interface IDelete extends HTMLAttributes<HTMLElement> {}
