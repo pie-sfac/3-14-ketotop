@@ -10,6 +10,10 @@ import { IImage } from '../type';
  * {$state : 'normal' | 'delete' | 'select' | 'error'}  */
 
 const ImageThumbnail = ({ $state = 'normal', src, ...otherProps }: IImage) => {
+  if ($state !== 'delete' && $state !== 'error' && $state !== 'normal' && $state !== 'select')
+    throw new Error('Enter the correct state prop name');
+  if (!src) throw new Error('src prop is required');
+
   return (
     <St.ThumbnailContainer src={src} $state={$state}>
       <St.BackgroundColor $state={$state} />

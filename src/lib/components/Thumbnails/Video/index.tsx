@@ -16,6 +16,15 @@ const VideoThumbnail = ({ $state = 'normal', src = ImgURL, runningtime = 0, ...o
   const runningTimeMin = runningtime && String(Math.floor(runningtime / 60000));
   const runningTimeSec = (runningtime && String(Math.floor((runningtime / 1000) % 60)).padStart(2, '0')) || '00';
 
+  if (
+    $state !== 'delete' &&
+    $state !== 'error' &&
+    $state !== 'normal' &&
+    $state !== 'select' &&
+    $state !== 'video_play'
+  )
+    throw new Error('Enter the correct state prop name');
+
   return (
     <St.ThumbnailContainer src={src} $state={$state}>
       <St.VideoRunningTime>
