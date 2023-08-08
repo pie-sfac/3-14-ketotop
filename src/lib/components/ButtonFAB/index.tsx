@@ -1,16 +1,23 @@
 import * as St from './styles';
 import { Fnd } from '../..';
-import { Cmp } from '../..';
+import { FAB_Type } from './type';
 
-const FloatingActionButtons = () => {
+const FloatingActionButtons = ({ type, children }: FAB_Type) => {
+  let TypographyComponent;
+  switch (type) {
+    case 'Round':
+      TypographyComponent = Fnd.TypographyStyles.Body2;
+      break;
+    case 'Circle':
+      TypographyComponent = Fnd.TypographyStyles.Body2;
+      break;
+  }
   return(
     <>
     <Fnd.FoundationGlobalStyles />
-    <St.StFAB>
-      <Cmp.Button.Contained size={''} state={''}>
-        
-      </Cmp.Button.Contained>
-    </St.StFAB>
+      <St.FabWrapper $typename={type}>
+        <TypographyComponent>{children}</TypographyComponent>
+      </St.FabWrapper>
     </>
   );
 }
