@@ -1,6 +1,4 @@
-import Image from './Image';
-import Video from './Video';
+import ImageThumbnail from './Image';
+import VideoThumbnail from './Video';
 
-const Thumbnail = { Image, Video };
-
-export { Thumbnail };
+export { ImageThumbnail, VideoThumbnail };

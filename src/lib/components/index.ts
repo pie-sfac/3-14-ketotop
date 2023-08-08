@@ -9,7 +9,7 @@ import PopupMenu from './PopupMenu/index';
 import { SnackBar, useSnackbar } from './SnackBar/index';
 import Tabs from './Tabs/index';
 import { TextField } from './TextField/index';
-import { Thumbnail } from './Thumbnails/index';
+import { ImageThumbnail, VideoThumbnail } from './Thumbnails/index';
 import Label from './Label/index';
 
 export {
@@ -27,6 +27,7 @@ export {
   useSnackbar,
   Tabs,
   TextField,
-  Thumbnail,
+  ImageThumbnail,
+  VideoThumbnail,
   Label,
 };
