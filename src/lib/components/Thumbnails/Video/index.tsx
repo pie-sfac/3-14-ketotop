@@ -29,27 +29,30 @@ const VideoThumbnail = ({ $state = 'normal', src = ImgURL, runningtime = 0, ...o
 
   return (
     <St.ThumbnailContainer src={src} $state={$state}>
-      <St.VideoRunningTime>
-        {runningTimeMin}:{runningTimeSec}
-      </St.VideoRunningTime>
-      <St.BackgroundColor $state={$state} />
-      {$state === 'delete' && <DeleteThumbnail name='thumbnails_deletecircle_24px' {...otherProps} />}
-      {$state === 'select' && (
-        <St.SelectState>
-          <Fnd.IconStyles name='thumbnails_checkcircle_32px' />
-        </St.SelectState>
-      )}
-      {$state === 'error' && (
-        <St.ErrorState>
-          <Fnd.IconStyles name='thumbnails_errorcircle_32px' />
-          <p>원본 파일 삭제됨</p>
-        </St.ErrorState>
-      )}
-      {$state === 'video_play' && (
-        <St.PlayState>
-          <Fnd.IconStyles name='thumbnails_playcircle_32px' />
-        </St.PlayState>
-      )}
+      <Fnd.TypographyStyles.Caption1>
+        <St.VideoRunningTime>
+          {runningTimeMin}:{runningTimeSec}
+        </St.VideoRunningTime>
+
+        <St.BackgroundColor $state={$state} />
+        {$state === 'delete' && <DeleteThumbnail name='thumbnails_deletecircle_24px' {...otherProps} />}
+        {$state === 'select' && (
+          <St.SelectState>
+            <Fnd.IconStyles name='thumbnails_checkcircle_32px' />
+          </St.SelectState>
+        )}
+        {$state === 'error' && (
+          <St.ErrorState>
+            <Fnd.IconStyles name='thumbnails_errorcircle_32px' />
+            <p>원본 파일 삭제됨</p>
+          </St.ErrorState>
+        )}
+        {$state === 'video_play' && (
+          <St.PlayState>
+            <Fnd.IconStyles name='thumbnails_playcircle_32px' />
+          </St.PlayState>
+        )}
+      </Fnd.TypographyStyles.Caption1>
     </St.ThumbnailContainer>
   );
 };
