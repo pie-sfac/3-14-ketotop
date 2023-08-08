@@ -1,8 +1,8 @@
-interface ICommon {
+export interface ICommon {
   extension?: string;
-  height?: number;
-  width?: number;
-  iconSize?: number;
+  $height?: number | undefined;
+  $width?: number | undefined;
+  $iconSize?: number | undefined;
 }
 
 interface IIconStrict extends ICommon {

@@ -1,14 +1,16 @@
 import { styled } from 'styled-components';
+import { ICommon } from './type';
 
-export const IconContainer = styled.div<{ height: number; width: number; iconSize: number }>`
+export const IconContainer = styled.div<ICommon>`
   display: inline-flex;
   justify-content: center;
   align-items: center;
 
-  height: ${(props) => `${props.height}rem`};
-  width: ${(props) => `${props.width}rem`};
+  height: ${({ $height }) => $height && `${$height}rem`};
+  width: ${({ $width }) => $width && `${$width}rem`};
 
+  background-color: yellow;
   img {
-    height: ${(props) => `${props.iconSize}rem`};
+    height: ${({ $iconSize }) => $iconSize && `${$iconSize}rem`};
   }
 `;
