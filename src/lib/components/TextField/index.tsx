@@ -16,6 +16,24 @@ export const TextField: FC<TextFieldType> = ({
   isSuccess = false,
   ...otherProps
 }) => {
+  if (!otherProps.id) {
+    // prettier-ignore
+    console.warn('Please enter id props in TextField. This improves usability and accessibility because it is associated with the label.');
+  }
+  if (inactiveMessage?.trim().length === 0) {
+    // prettier-ignore
+    throw new Error("If there's something you need to tell the user with inactiveMessage, enter a message with leading and trailing spaces removed");
+  }
+  if (errorMessage?.trim().length === 0) {
+    // prettier-ignore
+    throw new Error("If there's something you need to tell the user with errorMessage, enter a message with leading and trailing spaces removed");
+  }
+  if (successMessage?.trim().length === 0) {
+    // prettier-ignore
+    throw new Error("If there's something you need to tell the user with successMessage, enter a message with leading and trailing spaces removed");
+  }
+
+  console.log(inactiveMessage?.trim().length);
   return (
     <>
       <Typo.Body4 as={'label'} htmlFor={otherProps.id}>
