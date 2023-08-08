@@ -1,4 +1,5 @@
 import { Fnd } from '../../..';
+import DeleteThumbnail from '../Delete';
 import * as St from '../styles';
 import { IVideo } from '../type';
 
@@ -11,7 +12,7 @@ import { IVideo } from '../type';
  * {runningtime : number}
  * */
 export const ImgURL = 'https://port-0-psd-asset-server-eg4e2alkf2i7md.sel4.cloudtype.app/uploads/images/Img_nomal.svg';
-const VideoThumbnail = ({ $state = 'normal', src = ImgURL, runningtime = 0 }: IVideo) => {
+const VideoThumbnail = ({ $state = 'normal', src = ImgURL, runningtime = 0, ...otherProps }: IVideo) => {
   const runningTimeMin = runningtime && String(Math.floor(runningtime / 60000));
   const runningTimeSec = (runningtime && String(Math.floor((runningtime / 1000) % 60)).padStart(2, '0')) || '00';
 
@@ -21,11 +22,7 @@ const VideoThumbnail = ({ $state = 'normal', src = ImgURL, runningtime = 0 }: IV
         {runningTimeMin}:{runningTimeSec}
       </St.VideoRunningTime>
       <St.BackgroundColor $state={$state} />
-      {$state === 'delete' && (
-        <St.DeleteState>
-          <Fnd.IconStyles name='thumbnails_deletecircle_24px' />
-        </St.DeleteState>
-      )}
+      {$state === 'delete' && <DeleteThumbnail name='thumbnails_deletecircle_24px' {...otherProps} />}
       {$state === 'select' && (
         <St.SelectState>
           <Fnd.IconStyles name='thumbnails_checkcircle_32px' />

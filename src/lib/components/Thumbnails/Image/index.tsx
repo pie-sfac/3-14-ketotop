@@ -1,4 +1,5 @@
 import { Fnd } from '../../..';
+import DeleteThumbnail from '../Delete';
 import * as St from '../styles';
 import { IImage } from '../type';
 
@@ -8,16 +9,12 @@ import { IImage } from '../type';
  * @params
  * {$state : 'normal' | 'delete' | 'select' | 'error'}  */
 
-const ImageThumbnail = ({ $state = 'normal', src }: IImage) => {
+const ImageThumbnail = ({ $state = 'normal', src, ...otherProps }: IImage) => {
   return (
     <St.ThumbnailContainer src={src} $state={$state}>
       <St.BackgroundColor $state={$state} />
 
-      {$state === 'delete' && (
-        <St.DeleteState>
-          <Fnd.IconStyles name='thumbnails_deletecircle_24px' />
-        </St.DeleteState>
-      )}
+      {$state === 'delete' && <DeleteThumbnail name='thumbnails_deletecircle_24px' {...otherProps} />}
       {$state === 'select' && (
         <St.SelectState>
           <Fnd.IconStyles name='thumbnails_checkcircle_32px' />
