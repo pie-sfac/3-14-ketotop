@@ -29,33 +29,33 @@ const SizeStyles = ({ $size }: { $size: ButtonSize }) => {
   switch ($size) {
     case 'x-small':
       return `
-        width: 48px;
-        padding: 8px;
+        width: 4.8rem;
+        padding: 0.8rem;
       `;
     case 'small':
       return `
-        width: 80px;
-        padding: 8px;
+        width: 8rem;
+        padding: 0.8rem;
       `;
     case 'medium':
       return `
-        width: 146px;
-        padding: 12px 8px;
+        width: 14.6rem;
+        padding: 1.2rem 0.8rem;
       `;
     case 'large':
       return `
-        width: 312px;
-        padding: 12px 16px;
+        width: 31.2rem;
+        padding: 1.2rem 1.6rem;
       `;
     case 'x-large':
       return `
-        width: 976px;
-        padding: 12px 16px;
+        width: 97.6rem;
+        padding: 1.2rem 1.6rem;
       `;
     case 'full':
       return `
         width: 100%;
-        padding: 12px 16px;
+        padding: 1.2rem 1.6rem;
       `;
     default:
       throw new Error('Size 가 지정되어있지 않습니다.');
@@ -66,8 +66,8 @@ export const ButtonWrapper = styled.button<{ $size: ButtonSize; $state: ButtonSt
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
-  gap: 10px;
+  border-radius: 0.4rem;
+  gap: 1rem;
   border: none;
 
   ${SizeStyles}
