@@ -40,6 +40,7 @@ export const FabWrapper = styled.button<{ $typename: TypeName }>`
   position: absolute;
   bottom: 3.2rem;
   right: 3.2rem;
+  cursor: pointer;
 
   ${ButtonFabType}
 `
