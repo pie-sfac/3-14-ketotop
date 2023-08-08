@@ -5,26 +5,25 @@ import { TextFieldType } from './type';
 
 /**
  * @description 원하는 상태의 메세지와 스타일이 렌더되는 TextField 컴포넌트
- * @type {id: string, label: string, message: string, errorMessage: string, successMessage: string, $error: boolean, $success: boolean}
+ * @type {id: string, labelText: string, message: string, errorMessage: string, successMessage: string, $error: boolean, $success: boolean}
  */
 export const TextField: FC<TextFieldType> = ({
-  id,
-  label,
-  message,
+  labelText,
+  inactiveMessage,
   errorMessage,
   successMessage,
-  $error = false,
-  $success = false,
+  isError = false,
+  isSuccess = false,
   ...otherProps
 }) => {
   return (
     <>
-      <Typo.Body4 as={'label'} htmlFor={label}>
-        {label}
+      <Typo.Body4 as={'label'} htmlFor={otherProps.id}>
+        {labelText}
       </Typo.Body4>
-      <St.TextField id={label} $error={$error} {...otherProps}></St.TextField>
-      <St.Message $error={$error} $success={$success}>
-        {$error ? errorMessage : $success ? successMessage : message}
+      <St.TextField $error={isError} {...otherProps}></St.TextField>
+      <St.Message $error={isError} $success={isSuccess}>
+        {isError ? errorMessage : isSuccess ? successMessage : inactiveMessage}
       </St.Message>
     </>
   );

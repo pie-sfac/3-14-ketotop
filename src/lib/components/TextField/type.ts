@@ -4,11 +4,11 @@ export interface TextFieldType extends Partial<InputHTMLAttributes<HTMLInputElem
   /**
    * 입력받아야 할 TextField의 주제
    */
-  label: string;
+  labelText: string;
   /**
    * 그레이 색상으로 표시되는 inactived 메세지
    */
-  message?: string;
+  inactiveMessage?: string;
   /**
    * 레드 색상으로 표시되는 error 메세지, $error가 true이면 렌더된다
    */
@@ -20,9 +20,9 @@ export interface TextFieldType extends Partial<InputHTMLAttributes<HTMLInputElem
   /**
    * 에러여부, default: false, onBlur나 onChnage등의 이벤트 핸들러로 조작을 권고
    */
-  $error?: boolean;
+  isError?: boolean;
   /**
    * 성공여부, default: false, onBlur나 onChnage등의 이벤트 핸들러로 조작을 권고
    */
-  $success?: boolean;
+  isSuccess?: boolean;
 }

@@ -2,9 +2,11 @@ import { TypographyStyles } from '../../foundation';
 import { styled } from 'styled-components';
 import { TextFieldType } from './type';
 
-interface Temp extends Partial<TextFieldType> {}
+interface CustomTextFieldProps extends Partial<TextFieldType> {
+  $error: boolean;
+}
 
-export const TextField = styled.input<Temp>`
+export const TextField = styled.input<CustomTextFieldProps>`
   /* TODO: reset적용시 삭제 */
   margin: 0;
   /* Layout */
