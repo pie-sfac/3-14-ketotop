@@ -20,4 +20,6 @@ const CalendarStyle = {
   ButtonWrapper,
 };
 
-export default CalendarStyle;
+const TimeStyle = {};
+
+export { CalendarStyle, TimeStyle };
