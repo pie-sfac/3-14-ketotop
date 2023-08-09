@@ -18,6 +18,7 @@ export const Dropdown: FC<DropdownProps> = ({ items, onChange, value, title, pla
   if (!onChange) throw new Error('[Dropdown] onChange must be handled with a value');
   if (typeof onChange !== 'function') throw new Error('[Dropdown] onChange must be a function');
   if (!width) throw new Error('[Dropdown] Please enter at least one item');
+  if (placeholder.trim().length === 0) console.warn('[Dropdown] Forgot to enter a placeholder?');
 
   // Custom Func
   const toggleValuesVisible = () => {
