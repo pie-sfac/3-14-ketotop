@@ -21,13 +21,19 @@ export const ListDropdown: FC<ListDropdownProps> = ({ category, items, value, on
 
   return (
     <St.ListDropdownWrapper>
-      <St.ContentWrapper as={'div'} value={value} width={width}>
+      <St.ContentWrapper as={'div'} $value={value} $width={width}>
         <h4>{category}</h4>
         <span>-</span>
         <St.SelectionWrapper>
           <St.DropdownButtonWrapper as={'button'} onClick={toggleValuesVisible}>
             <St.DropdownButtonText>{value.length ? value : '선택하세요'}</St.DropdownButtonText>
-            <Fnd.IconStyles name='more_small' extension='svg' width={24} height={24}></Fnd.IconStyles>
+            <Fnd.IconStyles
+              name='more_small_24px'
+              extension='svg'
+              $width={2.4}
+              $height={2.4}
+              $iconSize={2.4}
+            ></Fnd.IconStyles>
           </St.DropdownButtonWrapper>
           <St.ItemsWrapper $isVisible={isVisible}>
             {items.map((item: string) => (
@@ -44,7 +50,7 @@ export const ListDropdown: FC<ListDropdownProps> = ({ category, items, value, on
         </St.SelectionWrapper>
       </St.ContentWrapper>
       <St.CloseButtonWrapper onClick={() => onClose(value)}>
-        <Fnd.IconStyles name='close' extension='svg' width={16} height={16}></Fnd.IconStyles>
+        <Fnd.IconStyles name='close_24px' extension='svg' $width={2.4} $height={2.4} $iconSize={2.4}></Fnd.IconStyles>
       </St.CloseButtonWrapper>
     </St.ListDropdownWrapper>
   );

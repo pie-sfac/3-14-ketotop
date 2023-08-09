@@ -7,9 +7,9 @@ export const ListDropdownWrapper = styled.div`
   margin-bottom: 8px;
 `;
 
-export const ContentWrapper = styled(Fnd.TypographyStyles.Body2)<{ value: string; width: string }>`
+export const ContentWrapper = styled(Fnd.TypographyStyles.Body2)<{ $value: string; $width: string }>`
   /* Width By props */
-  width: ${({ width }) => width};
+  width: ${({ $width }) => $width};
   box-sizing: border-box;
   padding: 8px 22px;
   display: flex;
@@ -19,8 +19,8 @@ export const ContentWrapper = styled(Fnd.TypographyStyles.Body2)<{ value: string
   border: 1px solid var(--Pri_200);
   border-radius: 10px;
   /* Dynamic */
-  background-color: ${({ value }) => (value.length ? 'var(--Bgc_50)' : 'var(--Bgc_Wh)')};
-  color: ${({ value }) => (value.length ? 'var(--Pri_500)' : 'var(--Text_700)')};
+  background-color: ${({ $value }) => ($value.length ? 'var(--Bgc_50)' : 'var(--Bgc_Wh)')};
+  color: ${({ $value }) => ($value.length ? 'var(--Pri_500)' : 'var(--Text_700)')};
 `;
 
 export const SelectionWrapper = styled.div`
