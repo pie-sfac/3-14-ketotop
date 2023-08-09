@@ -3,6 +3,7 @@ export interface IBanners {
   normalText?: string;
   boldText?: string;
   src?: string;
+  alt?: string;
   $manual?: boolean;
   $reverse?: boolean;
 }
