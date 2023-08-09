@@ -9,18 +9,14 @@
 
 <br/>
 
-<p align="right"><a href="#top">(Top)</a></p>
-
-<br/>
-
 ## 🏷️ 환경변수
 
 - **VITE_SERVER_URL** : 이미지 업로드 서버 URL
-
 <br/>
 
-<p align="right"><a href="#top">(Top)</a></p>
+## 📖 사용법
 
+> 📎 <a href='https://pds-demo-site.vercel.app/'>사용법 사이트 URL</a> <br/>
 <br/>
 
 ## 💜 적용 방법
