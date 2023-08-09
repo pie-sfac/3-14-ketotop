@@ -11,6 +11,7 @@ export interface IAppBar {
   iconAttr?: IconProps;
   pagenameAttr?: PagenameProps;
   buttonAttr?: ButtonProps;
+  children?: React.ReactNode;
 }
 
 export interface IconProps extends React.HTMLAttributes<HTMLElement> {

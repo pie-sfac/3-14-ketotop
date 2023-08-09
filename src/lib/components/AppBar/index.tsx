@@ -13,7 +13,7 @@ import { IAppBar } from './type';
  * @params
  * {type : {icon : {icon_R : string, icon_L : string}}, {text : {text_R : string, text_L : string}}, {count : {count : number, text : string}}} */
 
-const AppBar = ({ pagename, size = 'large', type, iconAttr, buttonAttr, pagenameAttr }: IAppBar) => {
+const AppBar = ({ pagename, size = 'large', type, iconAttr, buttonAttr, pagenameAttr, children }: IAppBar) => {
   if (!pagename) throw new Error('pagename prop is required');
   if (size !== 'full' && size !== 'large' && size !== 'medium')
     throw new Error(`size prop should be 'large' | 'medium' | 'full'`);
@@ -23,6 +23,29 @@ const AppBar = ({ pagename, size = 'large', type, iconAttr, buttonAttr, pagename
     <Fnd.TypographyStyles.Body1 as={'div'}>
       <St.AppBarContainer size={size}>
         {
+          // full (페이지네임 + X 아이콘)
+          size === 'full' ? (
+            <St.FullPopupLayout>
+              {/* 받고싶은 children: 페이지네임 컴포넌트 */}
+              {children}
+            </St.FullPopupLayout>
+          ) : (
+            // large or medium (<뒤로가기아이콘 + 페이지네임 + 아이콘||텍스트)
+            <St.DefalutLayout>
+              <St.FixedItems>
+                <St.IconBox>
+                  <AppBarIcon name={`back`} />
+                </St.IconBox>
+                {/* 받고싶은 children: 페이지네임 컴포넌트 */}
+                {/* <AppBarPagename pagename={pagename} {...pagenameAttr} /> */}
+                {children}
+              </St.FixedItems>
+              {/* 받고싶은 children: 아이콘 컴포넌트 */}
+              <St.IconItems>{children}</St.IconItems>
+            </St.DefalutLayout>
+          )
+        }
+        {/* {
           // full (페이지네임 + X 아이콘)
           size === 'full' ? (
             <St.FullPopupLayout>
@@ -68,7 +91,7 @@ const AppBar = ({ pagename, size = 'large', type, iconAttr, buttonAttr, pagename
               )}
             </St.DefalutLayout>
           )
-        }
+        } */}
       </St.AppBarContainer>
     </Fnd.TypographyStyles.Body1>
   );
