@@ -22,7 +22,7 @@ const Wrapper = ({ pagename, size = 'large', type, children, onClick }: IAppBar)
     <Fnd.TypographyStyles.Body1 as={'div'}>
       <St.AppBarContainer size={size}>
         {/* 기본타입 */}
-        {!type && (
+        {type === 'plain' && (
           <St.DefalutLayout>
             <St.FixedItems>
               <St.IconBox>
