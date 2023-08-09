@@ -8,8 +8,21 @@ import { ListDropdownProps } from './type';
  * @type {category: string, items: string[], value: string, onChange: (string) => void, onClose: () => void, width: string}
  */
 export const ListDropdown: FC<ListDropdownProps> = ({ category, items, value, onChange, onClose, width }) => {
+  // Hooks
   const [isVisible, setIsVisible] = useState(false);
 
+  // Validation
+  if (category.trim().length === 0) throw new Error('[ListDropdown] please enter category');
+  if (!Array.isArray(items)) throw new Error('[ListDropdown] items must be an array');
+  if (items.length === 0) throw new Error('[ListDropdown] Please enter at least one item');
+  if (value === undefined) throw new Error('[ListDropdown] value must be specified');
+  if (!onChange) throw new Error('[ListDropdown] onChange must be handled with a value');
+  if (typeof onChange !== 'function') throw new Error('[ListDropdown] onChange must be a function');
+  if (!onClose) throw new Error('[ListDropdown] onClose must be handled with a value');
+  if (typeof onClose !== 'function') throw new Error('[ListDropdown] onClose must be a function');
+  if (!width) throw new Error('[ListDropdown] Please enter at least one item');
+
+  // Custom Func
   const toggleValuesVisible = () => {
     setIsVisible((prevVisibleState) => !prevVisibleState);
   };
