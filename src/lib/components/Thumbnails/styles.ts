@@ -2,12 +2,13 @@ import styled from 'styled-components';
 import { IImage, IVideo } from './type';
 
 export const ThumbnailContainer = styled.div<IVideo | IImage>`
+  display: inline-block;
   position: relative;
 
   width: 10rem;
   height: 10rem;
 
-  margin: ${({ state }) => (state === 'delete' ? '10px 10px 0 0' : null)};
+  margin: ${({ $state }) => ($state === 'delete' ? '1rem 1rem 0 0' : null)};
 
   border-radius: 0.4rem;
   background-image: url(${(props) => props.src});
@@ -15,7 +16,6 @@ export const ThumbnailContainer = styled.div<IVideo | IImage>`
   background-position: center;
 
   color: var(--Bg_300);
-  font-size: 0.75rem;
 `;
 
 export const VideoRunningTime = styled.div`
@@ -33,7 +33,6 @@ export const VideoRunningTime = styled.div`
   border-radius: 0.4rem;
 
   color: var(--Text_Wh);
-  font-size: 0.75rem;
   background-color: rgba(40, 40, 40, 0.6);
 `;
 
@@ -47,8 +46,8 @@ export const BackgroundColor = styled.div<IVideo | IImage>`
   opacity: 0.6;
 
   /* state에 따른 backgorund 색상 변경 */
-  background-color: ${({ state }) => {
-    switch (state) {
+  background-color: ${({ $state }) => {
+    switch ($state) {
       case 'select':
         return 'var(--Pri_500)';
       case 'video_play':
@@ -60,7 +59,7 @@ export const BackgroundColor = styled.div<IVideo | IImage>`
     }
   }};
 
-  cursor: ${({ state }) => (state === 'video_play' ? 'pointer' : null)};
+  cursor: ${({ $state }) => ($state === 'video_play' ? 'pointer' : null)};
 `;
 
 export const DeleteState = styled.div`
