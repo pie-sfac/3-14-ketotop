@@ -1,7 +1,5 @@
 import { Fnd } from '../../index';
-import AppBarButton from './Button';
 import AppBarIcon from './Icon';
-import AppBarPagename from './Page';
 import * as St from './styles';
 import { IAppBar } from './type';
 
@@ -13,7 +11,7 @@ import { IAppBar } from './type';
  * @params
  * {type : {icon : {icon_R : string, icon_L : string}}, {text : {text_R : string, text_L : string}}, {count : {count : number, text : string}}} */
 
-const AppBar = ({ pagename, size = 'large', type, iconAttr, buttonAttr, pagenameAttr, children }: IAppBar) => {
+const AppBar = ({ pagename, size = 'large', type, children, onClick }: IAppBar) => {
   if (!pagename) throw new Error('pagename prop is required');
   if (size !== 'full' && size !== 'large' && size !== 'medium')
     throw new Error(`size prop should be 'large' | 'medium' | 'full'`);
@@ -22,29 +20,67 @@ const AppBar = ({ pagename, size = 'large', type, iconAttr, buttonAttr, pagename
   return (
     <Fnd.TypographyStyles.Body1 as={'div'}>
       <St.AppBarContainer size={size}>
-        {
-          // full (페이지네임 + X 아이콘)
-          size === 'full' ? (
-            <St.FullPopupLayout>
-              {/* 받고싶은 children: 페이지네임 컴포넌트 */}
-              {children}
-            </St.FullPopupLayout>
-          ) : (
-            // large or medium (<뒤로가기아이콘 + 페이지네임 + 아이콘||텍스트)
-            <St.DefalutLayout>
-              <St.FixedItems>
-                <St.IconBox>
-                  <AppBarIcon name={`back`} />
-                </St.IconBox>
-                {/* 받고싶은 children: 페이지네임 컴포넌트 */}
-                {/* <AppBarPagename pagename={pagename} {...pagenameAttr} /> */}
-                {children}
-              </St.FixedItems>
-              {/* 받고싶은 children: 아이콘 컴포넌트 */}
-              <St.IconItems>{children}</St.IconItems>
-            </St.DefalutLayout>
-          )
-        }
+        {/* 기본타입 */}
+        {!type && (
+          <St.DefalutLayout>
+            <St.FixedItems>
+              <St.IconBox>
+                <AppBarIcon name={`back`} onClick={onClick} />
+              </St.IconBox>
+              <div>{pagename}</div>
+            </St.FixedItems>
+          </St.DefalutLayout>
+        )}
+
+        {/* large, medium 사이즈 */}
+        {size !== 'full' && children && (
+          <St.DefalutLayout>
+            <St.FixedItems>
+              <St.IconBox>
+                <AppBarIcon name={`back`} onClick={onClick} />
+              </St.IconBox>
+              <div>{pagename}</div>
+            </St.FixedItems>
+            {/* 아이콘 타입 */}
+            {type === 'icon' && (
+              <St.IconItems>
+                {children.length ? (
+                  <>
+                    <St.IconBox>{children[0]}</St.IconBox>
+                    <St.IconBoxNomargin>{children[1]}</St.IconBoxNomargin>
+                  </>
+                ) : (
+                  <St.IconBoxNomargin>{children}</St.IconBoxNomargin>
+                )}
+              </St.IconItems>
+            )}
+            {/* 버튼 타입 */}
+            {type === 'button' && (
+              <St.IconItems>
+                {children.length ? (
+                  <>
+                    {children[0]}
+                    {children[1]}
+                  </>
+                ) : (
+                  children
+                )}
+              </St.IconItems>
+            )}
+          </St.DefalutLayout>
+        )}
+
+        {/* full 사이즈 */}
+        {size === 'full' && children && (
+          <St.FullPopupLayout>
+            <div>{pagename}</div>
+            <St.IconBoxNomargin>
+              <AppBarIcon name={`delete`} onClick={onClick} />
+            </St.IconBoxNomargin>
+          </St.FullPopupLayout>
+        )}
+
+        {/* 아래는 원본 */}
         {/* {
           // full (페이지네임 + X 아이콘)
           size === 'full' ? (

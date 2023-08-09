@@ -1,17 +1,10 @@
-import { IconName } from '../../foundation/Icon/type';
-
-export interface IAppBar {
+export interface IAppBar extends React.HTMLAttributes<HTMLElement> {
   pagename: string;
   size?: 'large' | 'medium' | 'full';
-  type?: {
-    icon?: { icon_L?: IconName; icon_R?: IconName };
-    text?: { text_L?: string; text_R?: string };
-    count?: { text?: string; count?: number };
-  };
-  iconAttr?: IconProps;
-  pagenameAttr?: PagenameProps;
-  buttonAttr?: ButtonProps;
-  children?: React.ReactNode;
+  type?: 'icon' | 'button';
+  // children?: React.ReactNode[] | React.ReactNode; 오류발생
+  children?: any;
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 export interface IconProps extends React.HTMLAttributes<HTMLElement> {
@@ -24,25 +17,5 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export interface PagenameProps extends React.HTMLAttributes<HTMLElement> {
-  pagename?: string;
+  text?: string;
 }
-
-// 아래 ) 시도했는데 안된 것
-// export interface IAppBar {
-//   type: IAppBarIcon | IAppBarText | IAppBarCount;
-//   pagename: string;
-// }
-
-// export interface IAppBarIcon {
-//   icon_L?: string;
-//   icon_R?: string;
-// }
-
-// export interface IAppBarText {
-//   text_L?: string;
-//   text_R?: string;
-// }
-
-// export interface IAppBarCount {
-//   count?: number;
-// }
