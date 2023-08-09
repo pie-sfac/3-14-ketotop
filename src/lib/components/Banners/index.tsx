@@ -6,15 +6,15 @@ import { useState } from 'react';
  * @params
  * {'fill' | 'outline'} type : 배너의 타입
  * @params
- * { string} normalText : 배너의 일반 텍스트
+ * {string} normalText : 배너의 일반 텍스트
  * @params
  * {string} boldText : 배너의 굵은 텍스트
  * @params
  * {string} src : 배너의 이미지 주소
  * @params
- * { boolean} $manual : 배너의 이미지를 수동으로 넣을지 자동으로 넣을지
+ * {boolean} $manual : 배너의 이미지를 수동으로 넣을지 자동으로 넣을지
  * @params
- * { boolean} $reverse : 배너의 텍스트와 이미지의 위치를 바꿀지 말지
+ * {boolean} $reverse : 배너의 텍스트와 이미지의 위치를 바꿀지 말지
  */
 
 const Banners = ({ type = 'fill', boldText, normalText, src, alt, $reverse = false, $manual = true }: IBanners) => {
