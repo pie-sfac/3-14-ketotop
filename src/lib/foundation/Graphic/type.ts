@@ -1,15 +1,19 @@
 interface ImageStrict {
   name: ImageName;
   extension?: string;
-  height?: number;
-  width?: number;
+  areaHeight?: number;
+  areaWidth?: number;
+  imgHeight?: number;
+  imgWidth?: number;
 }
 
 interface ImageGeneral {
   name: string;
   extension?: string;
-  height?: number;
-  width?: number;
+  areaHeight?: number;
+  areaWidth?: number;
+  imgHeight?: number;
+  imgWidth?: number;
 }
 
 export type Image = ImageStrict | ImageGeneral;
