@@ -114,7 +114,6 @@ const MemberOne = ({
           <St.InfoWrapperStyles>
             <St.LabelWrapperStyles>
               <Cmp.Label type='Rectangle' bgcolor='Gray' fontcolor='Gray'>
-                {/* {attendingPhysician} */}
                 <St.LabelTextFont as={'span'}>{attendingPhysician}</St.LabelTextFont>
               </Cmp.Label>
             </St.LabelWrapperStyles>

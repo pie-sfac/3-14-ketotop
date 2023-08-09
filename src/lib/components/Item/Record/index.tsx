@@ -43,7 +43,6 @@ const Record = ({ publishDate, templateName, attendingPhysician, isOutlined }: I
           </St.ContentStyles>
           <St.LabelWrapperStyles>
             <Cmp.Label type='Rectangle' bgcolor='Gray' fontcolor='Gray'>
-              {/* {attendingPhysician} */}
               <St.LabelTextFont as={'span'}>{attendingPhysician}</St.LabelTextFont>
             </Cmp.Label>
           </St.LabelWrapperStyles>
