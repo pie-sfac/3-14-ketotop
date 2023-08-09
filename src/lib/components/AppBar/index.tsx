@@ -1,5 +1,6 @@
 import { Fnd } from '../../index';
-import AppBarIcon from './Icon';
+import Icon from './Icon';
+import Button from './Button';
 import * as St from './styles';
 import { IAppBar } from './type';
 
@@ -11,7 +12,7 @@ import { IAppBar } from './type';
  * @params
  * {type : {icon : {icon_R : string, icon_L : string}}, {text : {text_R : string, text_L : string}}, {count : {count : number, text : string}}} */
 
-const AppBar = ({ pagename, size = 'large', type, children, onClick }: IAppBar) => {
+const Wrapper = ({ pagename, size = 'large', type, children, onClick }: IAppBar) => {
   if (!pagename) throw new Error('pagename prop is required');
   if (size !== 'full' && size !== 'large' && size !== 'medium')
     throw new Error(`size prop should be 'large' | 'medium' | 'full'`);
@@ -25,7 +26,7 @@ const AppBar = ({ pagename, size = 'large', type, children, onClick }: IAppBar) 
           <St.DefalutLayout>
             <St.FixedItems>
               <St.IconBox>
-                <AppBarIcon name={`back`} onClick={onClick} />
+                <Icon name={`back`} onClick={onClick} />
               </St.IconBox>
               <div>{pagename}</div>
             </St.FixedItems>
@@ -37,7 +38,7 @@ const AppBar = ({ pagename, size = 'large', type, children, onClick }: IAppBar) 
           <St.DefalutLayout>
             <St.FixedItems>
               <St.IconBox>
-                <AppBarIcon name={`back`} onClick={onClick} />
+                <Icon name={`back`} onClick={onClick} />
               </St.IconBox>
               <div>{pagename}</div>
             </St.FixedItems>
@@ -75,7 +76,7 @@ const AppBar = ({ pagename, size = 'large', type, children, onClick }: IAppBar) 
           <St.FullPopupLayout>
             <div>{pagename}</div>
             <St.IconBoxNomargin>
-              <AppBarIcon name={`delete`} onClick={onClick} />
+              <Icon name={`delete`} onClick={onClick} />
             </St.IconBoxNomargin>
           </St.FullPopupLayout>
         )}
@@ -83,5 +84,7 @@ const AppBar = ({ pagename, size = 'large', type, children, onClick }: IAppBar) 
     </Fnd.TypographyStyles.Body1>
   );
 };
+
+const AppBar = { Wrapper, Icon, Button };
 
 export default AppBar;

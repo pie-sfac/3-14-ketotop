@@ -1,4 +1,3 @@
-import React from 'react';
 import { Fnd } from '../../..';
 import { IconProps } from '../type';
 
