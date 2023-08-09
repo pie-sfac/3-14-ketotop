@@ -1,11 +1,11 @@
 import { styled } from 'styled-components';
 import { Fnd } from '../../..';
 
-export const DropdownWrapper = styled.div<{ width: string }>`
+export const DropdownWrapper = styled.div<{ $width: string }>`
   /* Custom Desing from Figma */
   position: relative;
   /* TODO: 너비지정을 어떻게할지 고민 */
-  width: ${({ width }) => width};
+  width: ${({ $width }) => $width};
   /* Reset */
   box-sizing: border-box;
   /* For Test */
@@ -18,9 +18,8 @@ export const DropdownLabel = styled(Fnd.TypographyStyles.Body4)`
 
 export const DropdownButton = styled.button<{ $isVisible: boolean; $value: string }>`
   /* Reset Button CSS */
-  border: none;
   padding: 10px 16px;
-  background: none;
+  background-color: var(--Bgc_Wh);
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
   &::-moz-focus-inner {

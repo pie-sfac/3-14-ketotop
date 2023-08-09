@@ -21,7 +21,7 @@ export const Dropdown: FC<DropdownProps> = ({ items, onChange, value, title, pla
 
   return (
     <>
-      <St.DropdownWrapper width={width}>
+      <St.DropdownWrapper $width={width}>
         <St.DropdownLabel>{title}</St.DropdownLabel>
         <St.DropdownButton as={'button'} onClick={toggleValuesVisible} $value={value} $isVisible={isVisible}>
           <Fnd.TypographyStyles.Body4 as={'span'}>{value ? value : placeholder}</Fnd.TypographyStyles.Body4>
