@@ -20,12 +20,6 @@ export const DropdownButton = styled.button<{ $isVisible: boolean; $value: strin
   /* Reset Button CSS */
   padding: 1rem 1.6rem;
   background-color: var(--Bgc_Wh);
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
   /* Custom Desing from Figma */
   display: flex;
   justify-content: space-between;
@@ -44,7 +38,6 @@ export const DropdownButton = styled.button<{ $isVisible: boolean; $value: strin
 `;
 
 export const DropdownValueWrapper = styled.ul<{ $isVisible: boolean }>`
-  /* Reset */
   box-sizing: border-box;
   /* Custom Desing from Figma */
   width: 100%;
