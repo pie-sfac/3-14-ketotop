@@ -4,12 +4,12 @@ import { IImage, IVideo } from './type';
 export const ThumbnailContainer = styled.div<IVideo | IImage>`
   position: relative;
 
-  width: 100px;
-  height: 100px;
+  width: 10rem;
+  height: 10rem;
 
   margin: ${({ state }) => (state === 'delete' ? '10px 10px 0 0' : null)};
 
-  border-radius: 4px;
+  border-radius: 0.4rem;
   background-image: url(${(props) => props.src});
   background-size: cover;
   background-position: center;
@@ -20,17 +20,17 @@ export const ThumbnailContainer = styled.div<IVideo | IImage>`
 
 export const VideoRunningTime = styled.div`
   position: absolute;
-  bottom: 8px;
-  right: 8px;
+  bottom: 0.8rem;
+  right: 0.8rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 46px;
-  height: 23px;
+  width: 4.6rem;
+  height: 2.3rem;
 
-  border-radius: 4px;
+  border-radius: 0.4rem;
 
   color: var(--Text_Wh);
   font-size: 0.75rem;
@@ -43,7 +43,7 @@ export const BackgroundColor = styled.div<IVideo | IImage>`
   width: 100%;
   height: 100%;
 
-  border-radius: 4px;
+  border-radius: 0.4rem;
   opacity: 0.6;
 
   /* state에 따른 backgorund 색상 변경 */
@@ -65,8 +65,8 @@ export const BackgroundColor = styled.div<IVideo | IImage>`
 
 export const DeleteState = styled.div`
   position: absolute;
-  top: -12px;
-  right: -12px;
+  top: -1.2rem;
+  right: -1.2rem;
   img {
     cursor: pointer;
   }
@@ -90,7 +90,7 @@ export const ErrorState = styled.div`
   justify-content: center;
 
   p {
-    margin: 4px 0 0 0;
+    margin: 0.4rem 0 0 0;
   }
 `;
 
