@@ -33,7 +33,7 @@ export const FullPopupLayout = styled.div`
 
 // 좌:뒤로가기 우:버튼 의 레이아웃 (size: large, medium)
 export const DefalutLayout = styled.div`
-  padding: 1.2rem 1.6rem;
+  padding: 1.6rem 2.4rem 1.6rem 1.2rem;
 
   display: flex;
   justify-content: space-between;
