@@ -8,8 +8,18 @@ import { DropdownProps } from './type';
  * @type {items: string[], onChange: (string) => void, value: string, title: string, placeholder: string, width: string, disabled: boolean}
  */
 export const Dropdown: FC<DropdownProps> = ({ items, onChange, value, title, placeholder, width, disabled }) => {
+  // Hooks
   const [isVisible, setIsVisible] = useState(false);
 
+  // Validation
+  if (!Array.isArray(items)) throw new Error('[Dropdown] items must be an array');
+  if (items.length === 0) throw new Error('[Dropdown] Please enter at least one item');
+  if (value === undefined) throw new Error('[Dropdown] value must be specified');
+  if (!onChange) throw new Error('[Dropdown] onChange must be handled with a value');
+  if (typeof onChange !== 'function') throw new Error('[Dropdown] onChange must be a function');
+  if (!width) throw new Error('[Dropdown] Please enter at least one item');
+
+  // Custom Func
   const toggleValuesVisible = () => {
     setIsVisible((prevVisibleState) => !prevVisibleState);
   };
