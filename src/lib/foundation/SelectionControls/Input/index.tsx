@@ -11,7 +11,7 @@ const SelectionInput = ({ ...inputAttrs }: IInput) => {
 
   return (
     <St.SInputBox>
-      <St.SInput {...inputAttrs} readOnly />
+      <St.SInput {...inputAttrs} />
     </St.SInputBox>
   );
 };
