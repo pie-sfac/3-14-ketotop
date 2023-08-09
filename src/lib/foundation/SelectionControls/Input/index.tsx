@@ -1,16 +1,17 @@
 import * as St from '../styles';
 import { IInput } from '../type';
 
-const SelectionInput = ({ type, disabled, checked, id, ...otherProps }: IInput) => {
-  if (type !== 'checkbox' && type !== 'radio') throw new Error('type name Error. Check your spelling again');
-  if (disabled && disabled !== true && disabled !== false)
+const SelectionInput = ({ ...inputAttrs }: IInput) => {
+  if (inputAttrs.type !== 'checkbox' && inputAttrs.type !== 'radio')
+    throw new Error('type name Error. Check your spelling again');
+  if (inputAttrs.disabled && inputAttrs.disabled !== true && inputAttrs.disabled !== false)
     throw new Error('disabled prop should be true or false. Check your spelling again');
-  if (checked && checked !== true && checked !== false)
+  if (inputAttrs.checked && inputAttrs.checked !== true && inputAttrs.checked !== false)
     throw new Error('checked prop should be true or false. Check your spelling again');
 
   return (
     <St.SInputBox>
-      <St.SInput type={type} disabled={disabled} checked={checked} id={id} {...otherProps} readOnly />
+      <St.SInput {...inputAttrs} readOnly />
     </St.SInputBox>
   );
 };
