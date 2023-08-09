@@ -3,20 +3,19 @@ import * as St from './styles';
 import { useState } from 'react';
 
 /** @description Banner 스타일의 컴포넌트
- * @params 
- * {type : 'fill' | 'outline'}
- * @params 
- * {normalText : string}
- * @params 
- * {boldText : string}
- * @params 
- * {src : string}
- * @params 
- * {$manual : boolean}
- * @params 
- * {$reverse : boolean}
-
- *  */
+ * @params
+ * {'fill' | 'outline'} type : 배너의 타입
+ * @params
+ * { string} normalText : 배너의 일반 텍스트
+ * @params
+ * {string} boldText : 배너의 굵은 텍스트
+ * @params
+ * {string} src : 배너의 이미지 주소
+ * @params
+ * { boolean} $manual : 배너의 이미지를 수동으로 넣을지 자동으로 넣을지
+ * @params
+ * { boolean} $reverse : 배너의 텍스트와 이미지의 위치를 바꿀지 말지
+ */
 
 const Banners = ({ type = 'fill', boldText, normalText, src, alt, $reverse = false, $manual = true }: IBanners) => {
   if (type !== 'fill' && type !== 'outline') throw new Error(`type porp should be 'fill' | 'outline'`);
