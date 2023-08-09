@@ -27,13 +27,23 @@ export const ListDropdown: FC<ListDropdownProps> = ({ category, items, value, on
         <St.SelectionWrapper>
           <St.DropdownButtonWrapper as={'button'} onClick={toggleValuesVisible}>
             <St.DropdownButtonText>{value.length ? value : '선택하세요'}</St.DropdownButtonText>
-            <Fnd.IconStyles
-              name='more_small_24px'
-              extension='svg'
-              $width={2.4}
-              $height={2.4}
-              $iconSize={2.4}
-            ></Fnd.IconStyles>
+            {!isVisible ? (
+              <Fnd.IconStyles
+                name='more_small_24px'
+                extension='svg'
+                $width={2.4}
+                $height={2.4}
+                $iconSize={2.4}
+              ></Fnd.IconStyles>
+            ) : (
+              <Fnd.IconStyles
+                name='less_small_24px'
+                extension='svg'
+                $width={2.4}
+                $height={2.4}
+                $iconSize={2.4}
+              ></Fnd.IconStyles>
+            )}
           </St.DropdownButtonWrapper>
           <St.ItemsWrapper $isVisible={isVisible}>
             {items.map((item: string) => (
