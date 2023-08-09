@@ -49,6 +49,7 @@ export const DropdownValueWrapper = styled.ul<{ $isVisible: boolean }>`
 
   display: ${({ $isVisible }) => ($isVisible ? 'block' : 'none')};
   position: absolute;
+  z-index: 10;
 `;
 
 export const DropdownValue = styled(Fnd.TypographyStyles.Body4)`
