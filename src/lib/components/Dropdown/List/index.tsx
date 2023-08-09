@@ -46,10 +46,10 @@ export const ListDropdown: FC<ListDropdownProps> = ({ category, items, value, on
             )}
           </St.DropdownButtonWrapper>
           <St.ItemsWrapper $isVisible={isVisible}>
-            {items.map((item: string) => (
+            {items.map((item: string, idx) => (
               <St.Item
                 as={'li'}
-                key={item}
+                key={item + idx}
                 onClick={() => onClickValue(item)}
                 className={item === value ? 'selected' : ''}
               >
