@@ -1,5 +1,6 @@
 import { IBanners } from './type';
 import * as St from './styles';
+import { useState } from 'react';
 
 /** @description Banner 스타일의 컴포넌트
  * @params 
@@ -17,7 +18,13 @@ import * as St from './styles';
 
  *  */
 
-const Banners = ({ type = 'fill', boldText, normalText, src, $reverse = false, $manual = true }: IBanners) => {
+const Banners = ({ type = 'fill', boldText, normalText, src, alt, $reverse = false, $manual = true }: IBanners) => {
+  const [loadError, setLoadError] = useState(false);
+  const handleImageError = () => {
+    setLoadError(true);
+  };
+  const altText = loadError ? '이미지로딩 에러' : alt;
+
   return (
     <St.BannersContainer type={type} $reverse={$reverse} $manual={$manual}>
       {/* 실제 주어진 디자인 폰트는 나무고딕으로 되어있음 */}
@@ -28,7 +35,11 @@ const Banners = ({ type = 'fill', boldText, normalText, src, $reverse = false, $
         </St.TextStyles>
       )}
       {/* 이미지와 텍스트 둘 다 없는 경우, 내용이 없다는 문구 출력 */}
-      {src ? <img src={src}></img> : boldText ? null : normalText ? null : <div>내용이 없습니다</div>}
+      {src ? (
+        <img src={src} alt={altText} onError={handleImageError} />
+      ) : boldText ? null : normalText ? null : (
+        <div>내용이 없습니다</div>
+      )}
     </St.BannersContainer>
   );
 };
