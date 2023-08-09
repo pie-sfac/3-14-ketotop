@@ -16,7 +16,7 @@ export const DropdownLabel = styled(Fnd.TypographyStyles.Body4)`
   margin-bottom: 4px;
 `;
 
-export const DropdownButton = styled.button<{ isVisible: boolean; value: string }>`
+export const DropdownButton = styled.button<{ $isVisible: boolean; $value: string }>`
   /* Reset Button CSS */
   border: none;
   padding: 10px 16px;
@@ -31,20 +31,15 @@ export const DropdownButton = styled.button<{ isVisible: boolean; value: string 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid ${({ isVisible }) => (isVisible ? 'var(--Pri_500)' : 'var(--Line_300)')};
+  border: 1px solid ${({ $isVisible }) => ($isVisible ? 'var(--Pri_500)' : 'var(--Line_300)')};
   border-radius: 4px;
   border-radius: 10px;
-  color: ${({ value }) => (value.length ? 'var(--Text_900)' : 'var(--Text_Hold)')};
+  color: ${({ $value }) => ($value.length ? 'var(--Text_900)' : 'var(--Text_Hold)')};
   width: 100%;
   text-align: start;
 `;
-export const IconWrapper = styled.div<{ isVisible: boolean }>`
-  display: block;
-  transform: ${({ isVisible }) => (isVisible ? 'rotate(180deg)' : 'rotate(0)')};
-  /* TODO: animation 필요? */
-`;
 
-export const DropdownValueWrapper = styled.ul<{ isVisible: boolean }>`
+export const DropdownValueWrapper = styled.ul<{ $isVisible: boolean }>`
   /* Reset */
   box-sizing: border-box;
   /* Custom Desing from Figma */
@@ -55,7 +50,7 @@ export const DropdownValueWrapper = styled.ul<{ isVisible: boolean }>`
   margin-top: 4px;
   overflow: hidden;
 
-  display: ${({ isVisible }) => (isVisible ? 'block' : 'none')};
+  display: ${({ $isVisible }) => ($isVisible ? 'block' : 'none')};
   position: absolute;
 `;
 
