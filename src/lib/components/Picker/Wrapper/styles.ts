@@ -36,6 +36,7 @@ const CalendarWrapper = styled.div`
   .react-datepicker__day--range-end {
     background-color: #6691ff;
     box-sizing: border-box;
+    color: #fff;
   }
   .react-datepicker {
     display: inline-flex;
