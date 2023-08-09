@@ -36,6 +36,11 @@ export const DropdownButton = styled.button<{ $isVisible: boolean; $value: strin
   color: ${({ $value }) => ($value.length ? 'var(--Text_900)' : 'var(--Text_Hold)')};
   width: 100%;
   text-align: start;
+
+  &:disabled {
+    background-color: var(--Bg_100);
+    color: var(--Text_400);
+  }
 `;
 
 export const DropdownValueWrapper = styled.ul<{ $isVisible: boolean }>`
