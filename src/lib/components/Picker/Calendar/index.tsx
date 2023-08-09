@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useEffect, useState } from 'react';
+import React, { SyntheticEvent, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { ko } from 'date-fns/locale';
