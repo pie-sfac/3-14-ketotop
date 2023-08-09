@@ -19,6 +19,10 @@ import { useState } from 'react';
  *  */
 
 const Banners = ({ type = 'fill', boldText, normalText, src, alt, $reverse = false, $manual = true }: IBanners) => {
+  if (type !== 'fill' && type !== 'outline') throw new Error(`type porp should be 'fill' | 'outline'`);
+  if ($manual !== true && $manual !== false) throw new Error(`$manual porp should be boolean type`);
+  if ($reverse !== true && $reverse !== false) throw new Error(`$reverse porp should be boolean type`);
+
   const [loadError, setLoadError] = useState(false);
   const handleImageError = () => {
     setLoadError(true);
