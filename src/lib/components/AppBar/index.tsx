@@ -16,7 +16,7 @@ const Wrapper = ({ pagename, size = 'large', type, children, onClick }: IAppBar)
   if (!pagename) throw new Error('pagename prop is required');
   if (size !== 'full' && size !== 'large' && size !== 'medium')
     throw new Error(`size prop should be 'large' | 'medium' | 'full'`);
-  // if (type) throw new Error(`size prop should be 'large' | 'medium' | 'full'`);
+  if (!type) throw new Error(`type prop is required 'plain' | 'icon' | 'button'`);
 
   return (
     <Fnd.TypographyStyles.Body1 as={'div'}>
@@ -26,7 +26,8 @@ const Wrapper = ({ pagename, size = 'large', type, children, onClick }: IAppBar)
           <St.DefalutLayout>
             <St.FixedItems>
               <St.IconBox>
-                <Icon name={`back`} onClick={onClick} />
+                {/* 아이콘 추후 자동완성 되도록 만들기 */}
+                <Icon name={`back_24px`} onClick={onClick} />
               </St.IconBox>
               <div>{pagename}</div>
             </St.FixedItems>
@@ -38,7 +39,7 @@ const Wrapper = ({ pagename, size = 'large', type, children, onClick }: IAppBar)
           <St.DefalutLayout>
             <St.FixedItems>
               <St.IconBox>
-                <Icon name={`back`} onClick={onClick} />
+                <Icon name={`back_24px`} onClick={onClick} />
               </St.IconBox>
               <div>{pagename}</div>
             </St.FixedItems>
@@ -72,11 +73,11 @@ const Wrapper = ({ pagename, size = 'large', type, children, onClick }: IAppBar)
         )}
 
         {/* full 사이즈 */}
-        {size === 'full' && children && (
+        {size === 'full' && (
           <St.FullPopupLayout>
             <div>{pagename}</div>
             <St.IconBoxNomargin>
-              <Icon name={`delete`} onClick={onClick} />
+              <Icon name={`delete_24px`} onClick={onClick} />
             </St.IconBoxNomargin>
           </St.FullPopupLayout>
         )}

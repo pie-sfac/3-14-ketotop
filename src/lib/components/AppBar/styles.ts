@@ -26,8 +26,8 @@ export const FullPopupLayout = styled.div`
 
   :last-child {
     position: absolute;
-    right: 2.4rem;
-    transform: translate(100%, 0);
+    right: 0;
+    transform: translate(-50%, 0);
   }
 `;
 
