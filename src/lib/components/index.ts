@@ -10,6 +10,7 @@ import { SnackBar, useSnackbar } from './SnackBar/index';
 import Tabs from './Tabs/index';
 import { TextField } from './TextField/index';
 import { ImageThumbnail, VideoThumbnail } from './Thumbnails/index';
+import Label from './Label/index';
 
 export {
   AppBar,
@@ -28,4 +29,5 @@ export {
   TextField,
   ImageThumbnail,
   VideoThumbnail,
+  Label,
 };
