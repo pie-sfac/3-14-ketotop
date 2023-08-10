@@ -1,20 +1,24 @@
 import { TypographyStyles } from '../../foundation';
 import { styled } from 'styled-components';
-import { TextFieldType } from './type';
+import { StyledProps } from './type';
 
-interface Temp extends Partial<TextFieldType> {}
+export const Wrapper = styled.div`
+  width: 36.4rem;
+`;
 
-export const TextField = styled.input<Temp>`
-  /* TODO: reset적용시 삭제 */
-  margin: 0;
+export const Label = styled(TypographyStyles.Body4)`
+  display: inline-block;
+  margin-bottom: 0.8rem;
+`;
+
+export const TextField = styled.input<Partial<StyledProps>>`
   /* Layout */
   box-sizing: border-box;
-  width: 100%;
-  padding: 10px 16px;
-  margin-top: 8px;
+  padding: 1rem 1.6rem;
+  width: inherit;
   border-color: ${({ $error }) => ($error ? 'var(--System_Error)' : 'var(--Line_300)')};
-  border-width: 1px;
-  border-radius: 4px;
+  border-width: 0.1rem;
+  border-radius: 0.4rem;
   outline-style: none;
   outline: none;
   border-style: solid;
@@ -33,12 +37,12 @@ export const TextField = styled.input<Temp>`
   &::placeholder {
     color: var(--Text_Hold);
     font-weight: 400;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 144%;
   }
 `;
 
-export const Message = styled(TypographyStyles.Caption2)<{ $error: boolean; $success: boolean }>`
+export const Message = styled(TypographyStyles.Caption2)<StyledProps>`
   color: ${({ $error, $success }) =>
     $error ? 'var(--System_Error)' : $success ? 'var(--System_Positive)' : 'var(--Text_400)'};
   font-weight: 400;

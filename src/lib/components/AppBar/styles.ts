@@ -1,25 +1,23 @@
 import { styled } from 'styled-components';
-import { IAppBar } from './type';
 
-export const AppBarContainer = styled.div<IAppBar>`
+export const AppBarContainer = styled.div<{ size: string }>`
   width: ${(props) => (props.size === 'medium' ? '650px' : '1024px')};
   height: ${(props) => (props.size === 'full' ? '56px' : '48px')};
   box-sizing: border-box;
 
   background-color: white;
 
-  //임시스타일
-  margin-bottom: 10px;
+  border-bottom: 0.1rem solid var(--Line_200);
 `;
 
 // 중간: 페이지네임 우:닫힘 의 레이아웃 (size: full)
-export const FullPopupLayout = styled.div<IAppBar>`
+export const FullPopupLayout = styled.div`
   // 이게 안들어가면 오차가 생김... 추후에 다시 보기
-  height: 56px;
+  height: 5.6rem;
   box-sizing: border-box;
   //
 
-  padding: 16px 24px;
+  padding: 1.6rem 2.4rem;
   position: relative;
 
   display: flex;
@@ -28,14 +26,14 @@ export const FullPopupLayout = styled.div<IAppBar>`
 
   :last-child {
     position: absolute;
-    right: 24px;
-    transform: translate(50%, 0);
+    right: 0;
+    transform: translate(-50%, 0);
   }
 `;
 
 // 좌:뒤로가기 우:버튼 의 레이아웃 (size: large, medium)
-export const DefalutLayout = styled.div<IAppBar>`
-  padding: 12px 16px;
+export const DefalutLayout = styled.div`
+  padding: 1.6rem 2.4rem 1.6rem 1.2rem;
 
   display: flex;
   justify-content: space-between;
@@ -44,28 +42,25 @@ export const DefalutLayout = styled.div<IAppBar>`
 
 // 아이콘 감싸는 박스
 export const IconBox = styled.div`
-  height: 24px;
-  width: 24px;
+  height: 2.4rem;
+  width: 2.4rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin-right: 8px;
-
-  img {
-    cursor: pointer;
-  }
+  margin-right: 0.8rem;
+  cursor: pointer;
 `;
 
 // 아이콘 감싸는 박스 마진 없는 버전
 export const IconBoxNomargin = styled(IconBox)`
-  margin-right: 0px;
+  margin-right: 0;
 `;
 
 // 텍스트 감싸는 박스
 export const TextBox = styled.div`
-  margin-left: 20px;
+  margin-left: 2rem;
   cursor: pointer;
 `;
 
@@ -73,7 +68,10 @@ export const TextBox = styled.div`
 export const FixedItems = styled.div`
   display: flex;
   align-items: center;
-  cursor: pointer;
+`;
+
+export const PageName = styled.div`
+  cursor: default;
 `;
 
 export const IconItems = styled.div`

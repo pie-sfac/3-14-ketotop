@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 export const TabWrapper = styled.section`
   display: flex;
-  width: 1245px;
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-bottom: 28px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2.8rem;
 
   // 스크롤바 숨기기
   overflow-x: auto;

@@ -1,14 +1,29 @@
-// import { Fnd, Cmp } from 'pds-3-14'; // For Testing NPM package
+import { useEffect, useState } from 'react';
 import { Fnd, Cmp } from './lib/index'; // For Testing Local Files
-import Picker from './lib/components/Picker/index1';
+import {CalendarStyle} from './lib/components/Picker';
+import Time from './lib/components/Picker/Time/index';
 
 function App() {
+  const [dates, setDates] = useState<[Date | null, Date | null] | null>([null, null]);
+  useEffect(() => {
+    console.log(dates);
+  }, [dates]);
   return (
     <>
       <Fnd.FoundationGlobalStyles />
       <Fnd.LayoutStyles>
-      <Picker />
-      <h1>hello</h1>
+        {/* <CalendarStyle.CalendarWrapper>
+          <CalendarStyle.Calendar dates={dates} setDates={setDates} />
+          <CalendarStyle.ButtonWrapper>
+            <Cmp.Button.Contained state='normal' size='medium'>
+              {'취소'}
+            </Cmp.Button.Contained>
+            <Cmp.Button.Contained state='enabled' size='medium'>
+              {'완료'}
+            </Cmp.Button.Contained>
+          </CalendarStyle.ButtonWrapper>
+        </CalendarStyle.CalendarWrapper> */}
+        <Time />
       </Fnd.LayoutStyles>
     </>
   );
