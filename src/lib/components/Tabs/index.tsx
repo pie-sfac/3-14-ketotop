@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { TabListProps } from './type';
 import TabComponent from './TabComponent';
 import * as St from './styles';
+import { Fnd } from '../..';
 
 /**
  * @description - Tab 스타일
@@ -26,18 +27,21 @@ const Tabs: FC<TabListProps> = ({ tapList, selected, showMenuIdx, onTabClick }) 
     throw new Error('선택된 탭메뉴가 존재하지 않습니다.');
   }
   return (
-    <St.TabWrapper>
-      {tapList.map((item, index) => {
-        const isVisible = showMenuIdx.includes(index);
-        const instanceType = selected === index ? 'Select' : 'Unselect';
+    <>
+      <Fnd.FoundationGlobalStyles />
+      <St.TabWrapper>
+        {tapList.map((item, index) => {
+          const isVisible = showMenuIdx.includes(index);
+          const instanceType = selected === index ? 'Select' : 'Unselect';
 
-        return (
-          <TabComponent key={index} instance={instanceType} isVisible={isVisible} onClick={() => onTabClick(index)}>
-            {item}
-          </TabComponent>
-        );
-      })}
-    </St.TabWrapper>
+          return (
+            <TabComponent key={index} instance={instanceType} isVisible={isVisible} onClick={() => onTabClick(index)}>
+              {item}
+            </TabComponent>
+          );
+        })}
+      </St.TabWrapper>
+    </>
   );
 };
 

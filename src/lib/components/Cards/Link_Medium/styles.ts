@@ -12,6 +12,15 @@ export const LinkMediumLayOut = styled.div`
   border-radius: 10px;
   border: 1px solid var(--Line_300);
   background: var(--Bg_Wh);
+  cursor: pointer;
+
+  &:hover{
+    color: gray;
+  
+  & > img {
+    filter: brightness(0.8);
+  }
+}
 
   & > img {
     width: 42px;

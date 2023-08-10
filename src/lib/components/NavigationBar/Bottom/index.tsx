@@ -1,60 +1,61 @@
-import { IconStyles, TypographyStyles } from '../../../foundation';
-import { INavBar } from '../type';
-import * as St from './style';
+import { INavBottom } from '../type';
+import { NavItem } from './BottomItem';
+import * as St from './styles';
+import { Fnd } from '../../../';
 
-/** @description NavigationBarBottom 스타일의 컴포넌트
- * @params
- * {page : 'home' | 'reserve' | 'member' | 'center' | 'mypage'}
- *  */
+const PoinTNavBarItems = [
+  {
+    icon: 'home',
+    label: '홈',
+  },
+  {
+    icon: 'reserve',
+    label: '일정관리',
+  },
+  {
+    icon: 'patient',
+    label: '회원관리',
+  },
+  {
+    icon: 'center',
+    label: '센터관리',
+  },
+  {
+    icon: 'mypage',
+    label: '마이페이지',
+  },
+];
 
-const NavigationBarBottom = ({ page = 'home' }: INavBar) => {
+const NavBarBottom = ({ onClickNavItem, selected, isLabel }: INavBottom) => {
+  if (!selected) throw new Error('Please enter the selected');
+  if (!isLabel) throw new Error('Please enter the isLabel');
+  if (!onClickNavItem) throw new Error('Please enter the onClickNavItem function');
+  if (typeof onClickNavItem !== 'function') throw new Error('onClickNavItem must be a function');
+  if (!['home', 'reserve', 'patient', 'center', 'mypage'].includes(selected))
+    throw new Error("selected must be one of ['home', 'reserve', 'patient', 'center', 'mypage']");
+  if (typeof isLabel !== 'boolean') throw new Error('isLabel must be a boolean');
+
   return (
-    <St.NavBottomContainer>
-      <St.MenuList>
-        <St.Menu>
-          {page === 'home' ? (
-            <IconStyles name='appbar_home' extension='svg' />
-          ) : (
-            <IconStyles name='appbar_home_gray' extension='svg' />
-          )}
-          <TypographyStyles.Caption2>홈</TypographyStyles.Caption2>
-        </St.Menu>
-        <St.Menu>
-          {page === 'reserve' ? (
-            <IconStyles name='appbar_reserve' extension='svg' />
-          ) : (
-            <IconStyles name='appbar_reserve_gray' extension='svg' />
-          )}
-          <TypographyStyles.Caption2>일정관리</TypographyStyles.Caption2>
-        </St.Menu>
-        <St.Menu>
-          {page === 'member' ? (
-            <IconStyles name='appbar_patient' extension='svg' />
-          ) : (
-            <IconStyles name='appbar_patient_gray' extension='svg' />
-          )}
-
-          <TypographyStyles.Caption2>회원관리</TypographyStyles.Caption2>
-        </St.Menu>
-        <St.Menu>
-          {page === 'center' ? (
-            <IconStyles name='appbar_center' extension='svg' />
-          ) : (
-            <IconStyles name='appbar_center_gray' extension='svg' />
-          )}
-          <TypographyStyles.Caption2>센터관리</TypographyStyles.Caption2>
-        </St.Menu>
-        <St.Menu>
-          {page === 'mypage' ? (
-            <IconStyles name='appbar_mypage' extension='svg' />
-          ) : (
-            <IconStyles name='appbar_mypage_gray' extension='svg' />
-          )}
-          <TypographyStyles.Caption2>마이페이지</TypographyStyles.Caption2>
-        </St.Menu>
-      </St.MenuList>
-    </St.NavBottomContainer>
+    <>
+      <Fnd.FoundationGlobalStyles />
+      <St.NavBottomContainer>
+        <St.MenuList>
+          {PoinTNavBarItems.map((item) => (
+            <NavItem
+              key={item.icon + item.label}
+              icon={item.icon}
+              label={item.label}
+              isSelected={selected === item.icon}
+              isLabel={isLabel}
+              onClick={() => {
+                onClickNavItem(item.icon);
+              }}
+            />
+          ))}
+        </St.MenuList>
+      </St.NavBottomContainer>
+    </>
   );
 };
 
-export default NavigationBarBottom;
+export default NavBarBottom;

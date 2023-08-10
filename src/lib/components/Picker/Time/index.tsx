@@ -31,35 +31,132 @@
 
 // export default TimePicker;
 
+import * as St from './styles';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import styled from 'styled-components';
 
-const Container = () => {
-  const month = Array(12).fill(0).map((v, i) => v = i + 1);
-  const day = Array(31).fill(0).map((v, i) => v = i + 1);
+const Time = () => {
+  const hour = Array(24).fill(null).map((v, i) => v = i);
+  const minute = Array(60).fill(null).map((v, i) => v = i);
 
+  const TimePickerSelectContainer = styled.div`
+    /* width: 77px; */
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0)),
+      linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-size: 100% 50%;
+    mask-repeat: no-repeat;
+    mask-position: top, bottom;
+    -webkit-mask-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-size: 100% 50%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: top, bottom;
+    display: flex;
+
+    & > div {
+      height: 280px;
+      font-size: 26px;
+      font-weight: 700;
+    }
+    & > span {
+      color: red;
+    }
+`;
   return (
-    <div>
-      {/* <h1>아무거나 나와라 좀</h1> */}
-      <Swiper
+    <St.TimePickerLayOut>
+
+      <h1>아무거나 나와라 좀</h1>
+    <TimePickerSelectContainer>
+      <Swiper 
         direction={'vertical'}
         slidesPerView={5}
         loop={true}
+        // loopAdditionalSlides={5}
         slideToClickedSlide={true}
+        centeredSlides={true}
+        initialSlide={0}
+        onSlideChange={(swiper) => console.log(swiper.realIndex)} //이벤트 사용
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {hour.map(num => <SwiperSlide key={num} >{({ isActive }) => (
+          isActive ? <St.ActiveTimeBg>{num}</St.ActiveTimeBg>:''
+            // <div className={(isActive ? 'underline' : '')}>{num}</div>
+        )}
+        </SwiperSlide>)}
       </Swiper>
-      <span>월</span>
-    </div>
+      <span>시</span>
+      <Swiper 
+        direction={'vertical'}
+        slidesPerView={5}
+        loop={true}
+        // loopAdditionalSlides={5}
+        slideToClickedSlide={true}
+        centeredSlides={true}
+        onSlideChange={(swiper) => console.log(swiper.realIndex)} //이벤트 사용
+      >
+        {minute.map(num => <SwiperSlide key={num} >{({ isActive }) => (
+            isActive ? <St.ActiveTimeBg>{num}</St.ActiveTimeBg>:''
+            // <St.ActiveTimeBg>{num}</St.ActiveTimeBg>
+          
+            // <div className={'p-2.5 text-gray_10 ' + (isActive ? 'underline' : '')}>{num}</div>
+        )}
+        </SwiperSlide>)}
+      </Swiper>
+      <span>분</span>
+    </TimePickerSelectContainer>
+    </St.TimePickerLayOut>
   );
 };
 
-export default Container;
+export default Time;
+
+
+
+// import React from 'react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/css';
+
+// const container = () => {
+//     const month = Array(12).fill().map((v, i) => v = i + 1)
+//     const day = Array(31).fill().map((v, i) => v = i + 1)
+
+//     return (
+//         <div>
+//             <Swiper
+//                 className='h-56'
+//                 direction={'vertical'}
+//                 slidesPerView={4}
+//                 loop={true}
+//                 loopAdditionalSlides={5}
+//                 slideToClickedSlide={true}
+//                 centeredSlides={true}
+//                 onSlideChange={(swiper) => console.log(swiper.realIndex + 1)}
+//             >
+//                 {month.map(no => <SwiperSlide key={no} >{({ isActive }) => (
+//                     <div className={'p-2.5 text-gray_10 ' + (isActive ? 'underline' : '')}>{no}</div>
+//                 )}</SwiperSlide>)}
+//             </Swiper>
+//             <span>월</span>
+//             <Swiper
+//                 direction={'vertical'}
+//                 slidesPerView={4}
+//                 loop={true}
+//                 loopAdditionalSlides={5}
+//                 slideToClickedSlide={true}
+//                 centeredSlides={true}
+//                 onSlideChange={(swiper) => console.log(swiper.realIndex + 1)}
+//             >
+//                 {day.map(no => <SwiperSlide key={no} >{({ isActive }) => (
+//                     <div className={'p-2.5 text-gray_10 ' + (isActive ? 'underline' : '')}>{no}</div>
+//                 )}</SwiperSlide>)}
+//             </Swiper>
+//             <span>일</span>
+//         </div>
+//     );
+// };
+
+// export default container;

@@ -15,24 +15,28 @@ const ImageThumbnail = ({ $state = 'normal', src, ...otherProps }: IImage) => {
   if (!src) throw new Error('src prop is required');
 
   return (
-    <St.ThumbnailContainer src={src} $state={$state}>
-      <Fnd.TypographyStyles.Caption1 as={'div'}>
-        <St.BackgroundColor $state={$state} />
+    <>
+      <Fnd.FoundationGlobalStyles />
 
-        {$state === 'delete' && <DeleteThumbnail name='thumbnails_deletecircle_24px' {...otherProps} />}
-        {$state === 'select' && (
-          <St.SelectState>
-            <Fnd.IconStyles name='thumbnails_checkcircle_32px' />
-          </St.SelectState>
-        )}
-        {$state === 'error' && (
-          <St.ErrorState>
-            <Fnd.IconStyles name='thumbnails_errorcircle_32px' />
-            <p>원본 파일 삭제됨</p>
-          </St.ErrorState>
-        )}
-      </Fnd.TypographyStyles.Caption1>
-    </St.ThumbnailContainer>
+      <St.ThumbnailContainer src={src} $state={$state}>
+        <Fnd.TypographyStyles.Caption1 as={'div'}>
+          <St.BackgroundColor $state={$state} />
+
+          {$state === 'delete' && <DeleteThumbnail name='thumbnails_deletecircle_24px' {...otherProps} />}
+          {$state === 'select' && (
+            <St.SelectState>
+              <Fnd.IconStyles name='thumbnails_checkcircle_32px' />
+            </St.SelectState>
+          )}
+          {$state === 'error' && (
+            <St.ErrorState>
+              <Fnd.IconStyles name='thumbnails_errorcircle_32px' />
+              <p>원본 파일 삭제됨</p>
+            </St.ErrorState>
+          )}
+        </Fnd.TypographyStyles.Caption1>
+      </St.ThumbnailContainer>
+    </>
   );
 };
 

@@ -1,25 +1,19 @@
-import * as St from './styles';
-import { Fnd } from '../..';
-import { FAB_Type } from './type';
-
-const FloatingActionButtons = ({ type, children }: FAB_Type) => {
-  let TypographyComponent;
-  switch (type) {
-    case 'Round':
-      TypographyComponent = Fnd.TypographyStyles.Body2;
-      break;
-    case 'Circle':
-      TypographyComponent = Fnd.TypographyStyles.Body2;
-      break;
-  }
-  return(
-    <>
-    <Fnd.FoundationGlobalStyles />
-      <St.FabWrapper $typename={type}>
-        <TypographyComponent>{children}</TypographyComponent>
-      </St.FabWrapper>
-    </>
-  );
+import Circle from './Circle';
+import Round from './Round';
+/**
+ * @description ButtonFAB 스타일 ( Circle , Round )
+ */
+const ButtonFAB = {
+  /**
+   * @description - Circle 스타일의 버튼.
+   * @params { onClickEffect } 버튼을 누룰 시 실행할 callback 함수
+   */
+  Circle,
+  /**
+   * @description - Round 스타일의 버튼.
+   * @params { onClickEffect } 버튼을 누룰 시 실행할 callback 함수
+   */
+  Round,
 }
 
-export default FloatingActionButtons;
+export default ButtonFAB;
