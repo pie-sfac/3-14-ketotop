@@ -20,7 +20,7 @@ const NavBarTop = ({
   memberName,
 }: INavBar) => {
   if (page !== 'defalut' && page !== 'menulist') throw new Error('page prop is required');
-  if (memberName && typeof memberName !== 'string') throw new Error('memberName prop is string type');
+  if (memberName !== undefined && typeof memberName !== 'string') throw new Error('memberName prop is string type');
 
   return (
     <>

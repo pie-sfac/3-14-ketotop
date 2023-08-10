@@ -11,7 +11,9 @@ import { Fnd } from '../../..';
 const Display: FC<PopupMenuProps> = ({ $headerType, children }) => {
   const childrenArray = Children.toArray(children);
   const childrenLength = childrenArray.length;
-
+  if (children === null || children === undefined) {
+    throw new Error('PopupMenu 의 리스트는 최소 1개 이상이어야 합니다.');
+  }
   if (childrenLength > 5) {
     throw new Error('PopupMenu 의 리스트는 최대 5개까지만 가능합니다.');
   }
