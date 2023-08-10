@@ -1,4 +1,4 @@
-import { styled, css } from "styled-components";
+import { styled } from 'styled-components';
 
 export const LinkMediumLayOut = styled.div`
   display: flex;
@@ -15,13 +15,13 @@ export const LinkMediumLayOut = styled.div`
   cursor: pointer;
   position: relative;
 
-  &:hover{
+  &:hover {
     color: gray;
-  
-  & > img {
-    filter: brightness(0.8);
+
+    & > img {
+      filter: brightness(0.8);
+    }
   }
-}
 
   & > img {
     width: 42px;
@@ -29,7 +29,9 @@ export const LinkMediumLayOut = styled.div`
     flex-shrink: 0;
     border-radius: 4px;
     border: 0.42px solid var(--Line_300);
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    background:
+      url(<path-to-image>),
+      lightgray 50% / cover no-repeat;
   }
 
   & > div {
@@ -42,6 +44,6 @@ export const IconWrapper = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(50%, -50%); 
+  transform: translate(50%, -50%);
   cursor: pointer;
 `;

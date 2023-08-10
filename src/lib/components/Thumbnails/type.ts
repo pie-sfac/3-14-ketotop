@@ -1,5 +1,3 @@
-import { HTMLAttributes, HtmlHTMLAttributes } from 'react';
-
 export interface IVideo extends React.HTMLAttributes<HTMLElement> {
   src?: string;
   $state?: VideoState;

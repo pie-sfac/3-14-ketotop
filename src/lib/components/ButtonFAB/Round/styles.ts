@@ -1,4 +1,4 @@
-import { styled, css } from "styled-components";
+import { styled } from 'styled-components';
 
 /* 버튼 layout */
 export const RoundLayOut = styled.button`
