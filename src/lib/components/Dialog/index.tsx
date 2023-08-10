@@ -3,6 +3,7 @@ import * as St from './styles';
 import { DialogProps } from './type';
 import { FC } from 'react';
 import { DialogButtonWrapper, PriButton, GrayButton } from './DialogButton';
+import { Fnd } from '../..';
 
 /**
  * @description $isOpen 상태에 따라 렌더되는 Dialog 컴포넌트
@@ -14,6 +15,7 @@ const Display: FC<DialogProps> = ({ title, description, onCloseEffect, isOpen, c
 
   return (
     <>
+      <Fnd.FoundationGlobalStyles />
       {isOpen && (
         <St.Dialog>
           <St.Contents>

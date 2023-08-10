@@ -3,6 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { ko } from 'date-fns/locale';
 import CalendarProps from './type';
+import { Fnd } from '../../..';
 
 const prevBtn = 'https://port-0-psd-asset-server-eg4e2alkf2i7md.sel4.cloudtype.app/uploads/icons/back_small_24px.svg';
 const nextBtn = 'https://port-0-psd-asset-server-eg4e2alkf2i7md.sel4.cloudtype.app/uploads/icons/next_small_24px.svg';
@@ -86,18 +87,21 @@ const Calendar: React.FC<CalendarProps> = ({ dates, setDates }): JSX.Element => 
     }
   }, []);
   return (
-    <DatePicker
-      selected={dates?.[0] || null}
-      onChange={handleChange}
-      startDate={dates?.[0] || null}
-      endDate={dates?.[1] || null}
-      selectsRange
-      inline
-      showMonthDropdown
-      showYearDropdown
-      dateFormat='yyyy/MM/dd'
-      locale={ko}
-    />
+    <>
+      <Fnd.FoundationGlobalStyles />
+      <DatePicker
+        selected={dates?.[0] || null}
+        onChange={handleChange}
+        startDate={dates?.[0] || null}
+        endDate={dates?.[1] || null}
+        selectsRange
+        inline
+        showMonthDropdown
+        showYearDropdown
+        dateFormat='yyyy/MM/dd'
+        locale={ko}
+      />
+    </>
   );
 };
 
