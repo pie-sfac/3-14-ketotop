@@ -12,7 +12,7 @@ const LinkMediumDel = ({ description, thumbnail, onClickEffect, onDelEffect }: C
         <typo.Body4>{description}</typo.Body4>
       </div>
       <St.IconWrapper onClick={onDelEffect}>
-        <Icon name={'close'} />
+        <Icon name={'media_delete_24px'} />
       </St.IconWrapper>
     </St.LinkMediumLayOut>
   )
