@@ -1,6 +1,6 @@
 import * as St from './styles';
 import { TypographyStyles as typo } from '../../../foundation';
-import { CardsType } from '../type';
+import { LinkMediumTypeDel } from '../type';
 import Icon from '../../../foundation/Icon';
 
 /** 
@@ -8,9 +8,11 @@ import Icon from '../../../foundation/Icon';
  * @params
  * { 'description' | 'thumbnail' | 'onClickEffect' | 'onDelEffect' } 
  */
-const LinkMediumDel = ({ description, thumbnail, onClickEffect, onDelEffect }: CardsType) => {
+const LinkMediumDel = ({ description, thumbnail, onClickEffect, onDelEffect }: LinkMediumTypeDel) => {
   if (!description) throw new Error('Please enter description!');
+  if (typeof description !== 'string') throw new Error('Please enter string!');
   if (!thumbnail) throw new Error('Please enter thumbnail!');
+  if (typeof thumbnail !== 'string') throw new Error('Please enter string!');
   if (!onClickEffect) throw new Error('Please enter onClickEffect!');
   if (!onDelEffect) throw new Error('Please enter onDelEffect!');
 

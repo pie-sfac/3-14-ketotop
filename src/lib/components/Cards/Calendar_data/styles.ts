@@ -12,3 +12,7 @@ export const CalendarDataLayOut = styled.div`
   border: 1px solid var(--Line_200);
   background: var(--Bg_Wh);
 `;
+
+export const FontWrapper = styled.div`
+  color: var(--Pri_500);
+`
