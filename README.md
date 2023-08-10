@@ -22,14 +22,14 @@
 ```bash
 npm i pds-3-14
 ```
+
  <br/> 
  
 ## 📖 라이브러리 사용법
 
-> 📎 <a href='https://pds-usage-site.vercel.app/'>사용법 사이트 URL</a> 
+> 📎 <a href='https://pds-usage-site.vercel.app/'>사용법 사이트 URL</a>
 
 <br/>
-
 
 ## 💛 팀원 소개
 
@@ -103,6 +103,30 @@ npm i pds-3-14
 - 리포트에 의거한 작업 : 21개
 
 <br/>
+
+## 👨‍🔧 곽성재 의 업무
+
+### 🗄 프로젝트 참여
+
+- 커뮤니케이션
+  - 공유오피스에 상주하며 매일 [데일리 스크럼 참여](https://www.notion.so/sniperfactory1/4a9cf689c2a2481eab0357a145a24922?v=03c9cd47ab0e4decb3436b10d6bd1468)
+- 프로젝트 참여
+  - 부여받은 역할에 대한 적극적인 참여 및 수행 [참고: 역할분담 문서](https://www.notion.so/sniperfactory1/0e08d321b91c4ff28e09b85518bb71ca)
+  - [버그 리포트](https://www.notion.so/sniperfactory1/d54252bbb2a8462f92f46358ef75e20d) 작성 및 버그 관리 프로세스 공유
+- 수월한 프로젝트 진행을 위한 작업
+  - [협업 컨벤션](https://www.notion.so/sniperfactory1/d893ba0a34e8467c8d9e5c42a926bb8c)에 대한 확실한 숙지 및 이행
+
+### 🤖 기능 개발
+
+- Foundation
+  - Typography 총 1개의 파트
+- Component
+  - Dialog, Dropdown, Snackbar, TextField 총 4개의 파트
+
+### ♻️ 버그 수정 및 리팩토링 작업
+
+- 버그 및 리팩토링 작업 리포트 작성 : 39개
+- 리포트에 의거한 작업 : 21개
 
 <details>
 <summary>사용법 (임시)</summary>
