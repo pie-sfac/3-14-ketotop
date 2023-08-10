@@ -8,29 +8,16 @@ export const NavBottomContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  border-top: 1px solid var(--Line_200);
+  border-top: 0.1rem solid var(--Line_200);
   background-color: white;
 
-  padding-bottom: 36px;
-  // 임시 스타일
-  margin-bottom: 10px;
+  padding-bottom: 3.6rem;
 `;
 
 // 메뉴 목록
 export const MenuList = styled.div`
-  width: 408px;
+  width: 40.8rem;
 
   display: flex;
   justify-content: space-between;
-`;
-
-// 각
-export const Menu = styled.div`
-  width: 56px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  cursor: pointer;
 `;
