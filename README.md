@@ -83,7 +83,7 @@ npm i pds-3-14
     - 팀 컨벤션에 맞춰 ESLint & Prettier 적용
     - tsconfig, vite.config, package.json 설정
     - 작업후 모듈화 가능하도록 index.ts 파일 설정
-  - 블로그 작성을 통해, 팀의 현재상황 및 개선사항 기록
+  - [블로그](https://velog.io/@yedol1) 작성을 통해, 팀의 현재상황 및 개선사항 기록
   - NPM 지속적인 관리 ( 업데이트 )
   - 각 컴포넌트에 JSDoc 설정 및 공유
   - 이미지 [업로드 서버](https://port-0-psd-asset-server-eg4e2alkf2i7md.sel4.cloudtype.app/) 제작 및 배포 ( node.js )
