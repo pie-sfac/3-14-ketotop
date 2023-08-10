@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { ko } from 'date-fns/locale';
@@ -19,7 +19,7 @@ const Calendar: React.FC<CalendarProps> = ({ dates, setDates }): JSX.Element => 
     throw new Error("'setDates' prop 이 잘못되었습니다. 함수 타입이어야 합니다. (useState()의 setState)");
   }
 
-  const handleChange = (updatedDates: [Date | null, Date | null], event: SyntheticEvent<any, Event> | undefined) => {
+  const handleChange = (updatedDates: [Date | null, Date | null]) => {
     setDates(updatedDates);
   };
 
