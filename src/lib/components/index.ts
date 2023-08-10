@@ -13,6 +13,7 @@ import { ImageThumbnail, VideoThumbnail } from './Thumbnails/index';
 import Label from './Label/index';
 import { CalendarStyle, TimeStyle } from './Picker';
 import ButtonFAB from './ButtonFAB';
+import Cards from './Cards/index';
 
 export {
   AppBar,
@@ -35,4 +36,5 @@ export {
   CalendarStyle,
   TimeStyle,
   ButtonFAB,
+  Cards,
 };
