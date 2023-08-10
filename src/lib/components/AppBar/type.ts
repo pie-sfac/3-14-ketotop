@@ -1,30 +1,17 @@
-import { IconName } from '../../foundation/Icon/type';
-
-export interface IAppBar {
+export interface IAppBar extends React.HTMLAttributes<HTMLElement> {
+  pagename: string;
+  type: 'icon' | 'button' | 'plain';
   size?: 'large' | 'medium' | 'full';
-  type?: {
-    icon?: { icon_L?: IconName; icon_R?: IconName };
-    text?: { text_L?: string; text_R?: string };
-    count?: { text?: string; count?: number };
-  };
-  pagename?: string;
+  // children?: React.ReactNode[] | React.ReactNode; 오류발생
+  children?: any;
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
-// export interface IAppBar {
-//   type: IAppBarIcon | IAppBarText | IAppBarCount;
-//   pagename: string;
-// }
+export interface IconProps extends React.HTMLAttributes<HTMLElement> {
+  name: string;
+}
 
-// export interface IAppBarIcon {
-//   icon_L?: string;
-//   icon_R?: string;
-// }
-
-// export interface IAppBarText {
-//   text_L?: string;
-//   text_R?: string;
-// }
-
-// export interface IAppBarCount {
-//   count?: number;
-// }
+export interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
+  text: string;
+  count?: string;
+}

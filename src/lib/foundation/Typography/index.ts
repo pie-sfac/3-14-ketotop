@@ -1,4 +1,4 @@
-import * as Typography from './Style/typoStyle';
-import { FontFamilyStyle } from './FontFamily/font';
+import * as Typography from './styles';
+import { FontFamilyStyle } from './FontFamily';
 
 export { Typography, FontFamilyStyle };
