@@ -21,6 +21,8 @@ const NavBarTop = ({
 }: INavBar) => {
   if (page !== 'defalut' && page !== 'menulist') throw new Error('page prop is required');
   if (memberName && typeof memberName !== 'string') throw new Error('memberName prop is string type');
+  if (typeof memberName === 'string' && memberName.length === 0)
+    throw new Error('memberName should be more than 1 letter');
 
   return (
     <>

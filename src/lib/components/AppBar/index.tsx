@@ -17,6 +17,8 @@ const Wrapper = ({ pagename, size = 'large', type, children, onClick }: IAppBar)
   if (size !== 'full' && size !== 'large' && size !== 'medium')
     throw new Error(`size prop should be 'large' | 'medium' | 'full'`);
   if (!type) throw new Error(`type prop is required 'plain' | 'icon' | 'button'`);
+  if (type === 'button' && !children) throw new Error(`Wrapper의 자식으로 Button 컴포넌트가 필요합니다.`);
+  if (type === 'icon' && !children) throw new Error(`Wrapper의 자식으로 Icon 컴포넌트가 필요합니다.`);
 
   return (
     <>
