@@ -11,6 +11,8 @@ import Tabs from './Tabs/index';
 import { TextField } from './TextField/index';
 import { ImageThumbnail, VideoThumbnail } from './Thumbnails/index';
 import Label from './Label/index';
+import { CalendarStyle, TimeStyle } from './Picker';
+import ButtonFAB from './ButtonFAB';
 
 export {
   AppBar,
@@ -30,4 +32,7 @@ export {
   ImageThumbnail,
   VideoThumbnail,
   Label,
+  CalendarStyle,
+  TimeStyle,
+  ButtonFAB,
 };
