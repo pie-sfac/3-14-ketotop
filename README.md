@@ -128,6 +128,36 @@ npm i pds-3-14
 - 버그 및 리팩토링 작업 리포트 작성 : 39개
 - 리포트에 의거한 작업 : 21개
 
+<br/>
+
+## 🌍 안태경 의 업무
+
+### 프로젝트 진행
+
+- 커뮤니케이션
+  - 한달 간(7/17 ~ 8/11) 공유오피스 출근
+  - 오후 1시 ~ 3시 코어타임 참석률 100%
+  - 협업 메신저를 이용한 소통 응답률 100%
+  - 매일 [데일리스크럼](https://www.notion.so/sniperfactory1/4a9cf689c2a2481eab0357a145a24922?v=03c9cd47ab0e4decb3436b10d6bd1468) 참여
+- 프로젝트 참여
+  - 부여받은 역할에 대한 적극적인 참여 및 수행 [(참고: 역할분담 문서)](https://www.notion.so/sniperfactory1/0e08d321b91c4ff28e09b85518bb71ca)
+  - [버그 리포트](https://www.notion.so/sniperfactory1/d54252bbb2a8462f92f46358ef75e20d) 작성 및 버그 관리 프로세스 이해
+- 수월한 프로젝트 진행을 위한 작업
+  - [개인 블로그](https://velog.io/@forntweb_tk/series/10%EC%A3%BC%EC%99%84%EC%84%B1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%BA%A0%ED%94%84) 작성을 통한 에러사항 인식 및 개선
+  - 상세한 [Issue](https://github.com/pie-sfac/3-14-ketotop/issues) 및 [Pull Request](https://github.com/pie-sfac/3-14-ketotop/pulls) 작성
+
+### 🤖 기능 개발
+
+- Foundation
+  - Layout, Icon, SelectionControls 총 3개의 파트
+- Component
+  - AppBar, Banners, Thumbnails, NavigationBar 총 4개의 파트
+
+### ♻️ 버그 수정 및 리팩토링 작업
+
+- 버그 및 리팩토링 작업 리포트 작성 : 8개
+- 리포트에 의거한 작업 : 33개
+
 <details>
 <summary>사용법 (임시)</summary>
 
