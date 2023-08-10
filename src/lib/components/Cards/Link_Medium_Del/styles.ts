@@ -1,5 +1,4 @@
 import { styled, css } from "styled-components";
-import Icon from "../../../foundation/Icon";
 
 export const LinkMediumLayOut = styled.div`
   display: flex;

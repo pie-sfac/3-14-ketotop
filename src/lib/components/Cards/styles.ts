@@ -116,17 +116,6 @@ export const OptionLayOut = css`
   flex-shrink: 0;
 `;
 
-const LinkMediumLayOut = css`
-
-`
-
-const StOptionTitle = css`
-  ${Typo.Body3}
-`;
-const StOptionDescription = css`
-  ${Typo.Caption1}
-`;
-
 export const LinkImageThumbnail = css`
   display: flex;
   width: 100px;

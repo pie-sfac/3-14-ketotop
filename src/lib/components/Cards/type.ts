@@ -5,8 +5,6 @@ export interface CardsType {
   thumbnail?: string;
   onClickEffect?: () => void;
   onDelEffect?: () => void;
-  // isOpen: Boolean;
-  // children: React.ReactNode;
 }
 
 export type TypeName = 
