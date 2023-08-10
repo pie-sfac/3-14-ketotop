@@ -3,6 +3,7 @@ import * as St from './style';
 import { INavBar } from '../type';
 import Icon from '../../../foundation/Icon';
 import { useState } from 'react';
+import NavTopMenu from './Menu';
 
 /** @description NavigationBarTop 스타일의 컴포넌트
  * @params
@@ -20,7 +21,7 @@ const NavigationBarTop = ({ page = 'home' }: INavBar) => {
     <St.NavTopContainer>
       <GraphicStyles name='logo' extension='svg' />
 
-      <TypographyStyles.Body3 as={'div'}>
+      {/* <TypographyStyles.Body3 as={'div'}>
         <St.ItemsList>
           {page === 'center' &&
             centerList.map((item, index) => (
@@ -35,7 +36,8 @@ const NavigationBarTop = ({ page = 'home' }: INavBar) => {
               </li>
             ))}
         </St.ItemsList>
-      </TypographyStyles.Body3>
+      </TypographyStyles.Body3> */}
+      <NavTopMenu page={page} />
 
       <TypographyStyles.Body4 as={'div'}>
         <St.FixedItems>
