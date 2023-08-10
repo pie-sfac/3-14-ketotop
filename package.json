@@ -1,7 +1,7 @@
 {
   "name": "pds-3-14",
-  "version": "1.1.3",
-  "description": "Point Design System 3분류 14팀 라이브러리 ( 업데이트 1.1.3 : 버그 수정 및 리팩토링 작업 2023.08.10 )",
+  "version": "1.1.4",
+  "description": "Point Design System 3분류 14팀 라이브러리 ( 업데이트 1.1.4 : 옵셔널 props 유효성 검사 추가 2023.08.11 )",
   "main": "dist/src/lib/index.js",
   "module": "dist/src/lib/index.js",
   "types": "dist/src/lib/index.d.ts",
