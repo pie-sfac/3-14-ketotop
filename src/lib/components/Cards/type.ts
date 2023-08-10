@@ -3,6 +3,8 @@ export interface CardsType {
   title?: string;
   description?: string;
   thumbnail?: string;
+  onClickEffect?: () => void;
+  onDelEffect?: () => void;
   // isOpen: Boolean;
   // children: React.ReactNode;
 }
