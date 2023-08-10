@@ -5,23 +5,15 @@
 **포인티 디자인 시스템 라이브러리을 개발하여 배포하는 프로젝트 입니다.**
 
 - PDS(포인티 디자인 시스템)에 정의된 컬러, 타이포,
-  컴포넌트를 라이브러리 형태로 개발하여 배포<br/>
+  컴포넌트를 라이브러리 형태로 개발하여 배포
 
-<br/>
-
-<p align="right"><a href="#top">(Top)</a></p>
-
-<br/>
+</br>
 
 ## 🏷️ 환경변수
 
 - **VITE_SERVER_URL** : 이미지 업로드 서버 URL
 
-<br/>
-
-<p align="right"><a href="#top">(Top)</a></p>
-
-<br/>
+  </br>
 
 ## 💜 적용 방법
 
@@ -30,6 +22,90 @@
 ```bash
 npm i pds-3-14
 ```
+ <br/> 
+ 
+## 📖 라이브러리 사용법
+
+> 📎 <a href='https://pds-demo-site.vercel.app/'>사용법 사이트 URL</a> 
+
+<br/>
+
+
+## 💛 팀원 소개
+
+|                                 **FE 이광렬**                                 |                                  **FE 곽성재**                                   |                                   **FE 안태경**                                   |                                   **FE 최락현**                                   |
+| :---------------------------------------------------------------------------: | :------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: |
+| <img src="https://avatars.githubusercontent.com/yedol1" height=180 width=180> | <img src="https://avatars.githubusercontent.com/ssssssjay" height=180 width=180> | <img src="https://avatars.githubusercontent.com/TaekyungAn" height=180 width=180> | <img src="https://avatars.githubusercontent.com/chasura416" height=180 width=180> |
+|               [🔗 GitHub](https://github.com/yedol1)<br/> 팀장                |               [🔗 GitHub](https://github.com/ssssssjay)<br/> 팀원                |               [🔗 GitHub](https://github.com/TaekyungAn)<br/> 팀원                |               [🔗 GitHub](https://github.com/chasura416)<br/> 팀원                |
+
+<br/>
+
+<p align="right"><a href="#top">(Top)</a></p>
+
+<br/>
+
+## 💚 공통 업무
+
+### 컨벤션 설립
+
+- 커밋 메시지 컨벤션, 코드 컨벤션, 네이밍 컨벤션, 디렉토리 구조 컨벤션 설립
+
+### 프로젝트 관리
+
+- 이슈 관리
+- 이슈 진행 상황 관리
+- 작업 진행 상황 관리
+- 버그 및 리팩토링 관리
+
+### 문서 작성
+
+- README 작성
+
+<br/>
+
+## 🌸 이광렬 의 업무
+
+### 🗄 프로젝트 주도
+
+- 커뮤니케이션
+  - 공유오피스에서 매일 1시 [데일리스크럼 진행](https://www.notion.so/sniperfactory1/4a9cf689c2a2481eab0357a145a24922?v=03c9cd47ab0e4decb3436b10d6bd1468)
+- 프로젝트 관리
+  - [기능 리스트 및 기능별 작업 상황 관리 문서](https://www.notion.so/sniperfactory1/0e08d321b91c4ff28e09b85518bb71ca) 작성
+  - [버그 리포트](https://www.notion.so/sniperfactory1/d54252bbb2a8462f92f46358ef75e20d) 작성 및 버그 관리 프로세스 공유
+  - NPM 을 이용해 [라이브러리 배포](https://www.npmjs.com/package/pds-3-14)
+- 수월한 프로젝트 진행을 위한 작업
+  - 이슈 관리 프로세스 도입
+  - GitHub 이슈 템플릿, PR 템플릿 등록
+    - 협업 전 모의 테스트 주도
+  - 빠른 커뮤니케이션을 위해 협업 메신저(Discord)와 GitHub 알림 연동
+  - 프로젝트 초기 세팅 작업
+    - 폴더 트리 구성 및 기본 파일 포함
+    - 팀 컨벤션에 맞춰 ESLint & Prettier 적용
+    - 작업후 모듈화 가능하도록 index.ts 파일 설정
+  - NPM 지속적인 관리 ( 업데이트 )
+  - 각 컴포넌트에 JSDoc 설정 및 공유
+  - 이미지 [업로드 서버](https://port-0-psd-asset-server-eg4e2alkf2i7md.sel4.cloudtype.app/) 제작 및 배포 ( node.js )
+  - 라이브러리 사용법 [데모 사이트](https://pds-demo-site.vercel.app/) 제작 ( Next.js )
+  - [성과 발표회](https://humane-vegetarian-392.notion.site/Ketotop-Point-Design-System-2a37a6b3d9e143db9dc452ae1b6b5b54?pvs=4) 준비 및 발표
+
+### 🤖 기능 개발
+
+- Foundation
+  - 파일 모듈화 작업
+  - Color, Graphic, Shadow 총 3개의 파트
+- Component
+  - 파일 모듈화 작업
+  - PopupMenu, Tabs, Button, Item, DatePicker 총 5개의 파트
+
+### ♻️ 버그 수정 및 리팩토링 작업
+
+- 버그 및 리팩토링 작업 리포트 작성 : 33개
+- 리포트에 의거한 작업 : 21개
+
+<br/>
+
+<details>
+<summary>사용법 (임시)</summary>
 
 **📌 Foundation 과 Component 파트 나누어 제작하였습니다**
 
@@ -627,18 +703,7 @@ const App = () => {
 ...
 ```
 
-<br/>
-
-<p align="right"><a href="#top">(Top)</a></p>
-
-<br/>
-
-## 💛 팀원 소개
-
-|                                 **FE 이광렬**                                 |                                  **FE 곽성재**                                   |                                   **FE 안태경**                                   |                                   **FE 최락현**                                   |
-| :---------------------------------------------------------------------------: | :------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: |
-| <img src="https://avatars.githubusercontent.com/yedol1" height=180 width=180> | <img src="https://avatars.githubusercontent.com/ssssssjay" height=180 width=180> | <img src="https://avatars.githubusercontent.com/TaekyungAn" height=180 width=180> | <img src="https://avatars.githubusercontent.com/chasura416" height=180 width=180> |
-|               [🔗 GitHub](https://github.com/yedol1)<br/> 팀장                |               [🔗 GitHub](https://github.com/ssssssjay)<br/> 팀원                |               [🔗 GitHub](https://github.com/TaekyungAn)<br/> 팀원                |               [🔗 GitHub](https://github.com/chasura416)<br/> 팀원                |
+</details>
 
 <br/>
 

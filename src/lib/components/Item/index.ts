@@ -82,7 +82,7 @@ const Item = {
    * @params
    * {string} name 이름
    * @params
-   * {[string, string, string]} phoneNumber 전화번호
+   * {string} phoneNumber 전화번호
    * @params
    * {number} starRating 별점
    * @params
