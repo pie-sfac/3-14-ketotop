@@ -12,7 +12,7 @@ export const ListDropdown: FC<ListDropdownProps> = ({ category, items, value, on
   const [isVisible, setIsVisible] = useState(false);
 
   // Validation
-  if (category.trim().length === 0) throw new Error('[ListDropdown] please enter category');
+  if (!category || category.trim().length === 0) throw new Error('[ListDropdown] please enter category');
   if (!Array.isArray(items)) throw new Error('[ListDropdown] items must be an array');
   if (items.length === 0) throw new Error('[ListDropdown] Please enter at least one item');
   if (value === undefined) throw new Error('[ListDropdown] value must be specified');
