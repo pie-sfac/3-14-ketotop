@@ -23,4 +23,8 @@ export type DropdownProps = {
    * 컴포넌트의 너비, 필수값이므로 디자인 시안에 맞게 설정
    */
   width: string;
+  /**
+   * 드롭다운이 유저가 핸들링 가능한지 여부, 값에 따라 클릭가능여부와 배경색상등이 바뀐다
+   */
+  disabled?: boolean;
 };

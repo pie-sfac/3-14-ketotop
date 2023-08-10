@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 import { ICommon } from './type';
 
 export const IconContainer = styled.div<ICommon>`
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 

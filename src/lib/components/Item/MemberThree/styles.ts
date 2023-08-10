@@ -10,43 +10,51 @@ export const ContentWrapperStyles = styled(OriginalStyles.ContentWrapperStyles)`
   // 필요한 경우 여기에 오버라이딩 스타일을 작성
 `;
 export const StarRatingTextWrapper = styled.div`
-  width: 65px;
+  width: 6.5rem;
 `;
 
 export const PhoneNumberWrapperStyles = styled.div`
-  width: 130px;
+  width: 13rem;
 `;
 
 export const StarRatingWrapperStyles = styled.div`
   display: flex;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.4rem;
 `;
 
 export const InfoWrapperStyles = styled.div`
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 0.8rem;
 `;
+
 export const LabelWrapperStyles = styled.div`
   display: flex;
-  width: 81px;
+  width: 8.1rem;
+  height: 2.8rem;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  label {
+    height: 100%;
+    width: auto;
+  }
 `;
+
 export const LabelStyles = styled.div`
   display: flex;
-  padding: 4px 10px;
+  width: 100%;
+  padding: 0.4rem 1rem;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  border-radius: 4px;
+  gap: 1rem;
+  border-radius: 0.4rem;
   background: var(--Bg_100);
 `;
 
 export const NameTextFont = styled(Fnd.TypographyStyles.Body2)`
-  width: 64px;
+  width: 6.4rem;
   color: var(--Text_900);
   overflow: hidden;
   white-space: nowrap;
@@ -63,27 +71,27 @@ export const TextFont = styled(Fnd.TypographyStyles.Body4)`
 
 export const TextFieldsStyles = styled.div`
   display: flex;
-  width: 383px;
+  width: 38.3rem;
   align-items: center;
-  gap: 24px;
+  gap: 2.4rem;
 `;
 
 export const ContentStyles = styled.div`
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 3.2rem;
   flex: 1 0 0;
 `;
 
 export const ProfileStyles = styled.div`
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1.6rem;
 `;
 
 export const ProfileGraphicStyles = styled.div`
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -101,7 +109,7 @@ export const ProfileGraphicStyles = styled.div`
     display: block;
     width: 100%;
     height: 100%;
-    border: 0.75px solid var(--Line_300);
+    border: 0.7.5rem solid var(--Line_300);
     border-radius: 50%;
     box-sizing: border-box;
     position: absolute;
