@@ -26,10 +26,18 @@ const PoinTNavBarItems = [
 ];
 
 const NavBarBottom = ({ onClickNavItem, selected, isLabel }: INavBottom) => {
+  if (!selected) throw new Error('Please enter the selected');
+  if (!isLabel) throw new Error('Please enter the isLabel');
+  if (!onClickNavItem) throw new Error('Please enter the onClickNavItem function');
+  if (typeof onClickNavItem !== 'function') throw new Error('onClickNavItem must be a function');
+  if (!['home', 'reserve', 'patient', 'center', 'mypage'].includes(selected))
+    throw new Error("selected must be one of ['home', 'reserve', 'patient', 'center', 'mypage']");
+  if (typeof isLabel !== 'boolean') throw new Error('isLabel must be a boolean');
+
   return (
     <St.NavBottomContainer>
       <St.MenuList>
-        {PoinTNavBarItems.map((item, index) => (
+        {PoinTNavBarItems.map((item) => (
           <NavItem
             key={item.icon + item.label}
             icon={item.icon}
