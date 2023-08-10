@@ -1,6 +1,4 @@
 export interface FAB_Type {
-  type: TypeName;
   children: React.ReactNode;
+  onClickEffect?: () => void;
 }
-
-export type TypeName = 'Round' | 'Circle';

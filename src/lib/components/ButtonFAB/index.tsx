@@ -1,25 +1,9 @@
-import * as St from './styles';
-import { Fnd } from '../..';
-import { FAB_Type } from './type';
+import Circle from './Circle';
+import Round from './Round';
 
-const FloatingActionButtons = ({ type, children }: FAB_Type) => {
-  let TypographyComponent;
-  switch (type) {
-    case 'Round':
-      TypographyComponent = Fnd.TypographyStyles.Body2;
-      break;
-    case 'Circle':
-      TypographyComponent = Fnd.TypographyStyles.Body2;
-      break;
-  }
-  return(
-    <>
-    <Fnd.FoundationGlobalStyles />
-      <St.FabWrapper $typename={type}>
-        <TypographyComponent>{children}</TypographyComponent>
-      </St.FabWrapper>
-    </>
-  );
+const ButtonFAB = {
+  Circle,
+  Round,
 }
 
-export default FloatingActionButtons;
+export default ButtonFAB;
