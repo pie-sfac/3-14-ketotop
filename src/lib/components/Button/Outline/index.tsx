@@ -11,6 +11,9 @@ import { ButtonType } from '../type';
  */
 const Outline = ({ size, state, children, ...rest }: ButtonType) => {
   let TypographyComponent;
+  if (!size) throw new Error('size props는 필수입니다.');
+  if (!state) throw new Error('state props는 필수입니다.');
+  if (!children) throw new Error('children props는 필수입니다.');
 
   switch (size) {
     case 'x-small':
