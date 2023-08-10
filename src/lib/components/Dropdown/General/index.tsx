@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
-import * as St from './styles';
 import { Fnd } from '../../..';
+import * as St from './styles';
 import { DropdownProps } from './type';
 
 /**
@@ -32,6 +32,7 @@ export const Dropdown: FC<DropdownProps> = ({ items, onChange, value, title, pla
 
   return (
     <>
+      <Fnd.FoundationGlobalStyles />
       <St.DropdownWrapper $width={width}>
         <St.DropdownLabel>{title}</St.DropdownLabel>
         <St.DropdownButton
