@@ -85,7 +85,7 @@ npm i pds-3-14
   - NPM 지속적인 관리 ( 업데이트 )
   - 각 컴포넌트에 JSDoc 설정 및 공유
   - 이미지 [업로드 서버](https://port-0-psd-asset-server-eg4e2alkf2i7md.sel4.cloudtype.app/) 제작 및 배포 ( node.js )
-  - 라이브러리 사용법 [데모 사이트](https://pds-demo-site.vercel.app/) 제작 ( Next.js )
+  - 라이브러리 사용법 [데모 사이트](https://pds-usage-site.vercel.app/) 제작 ( Next.js )
   - [성과 발표회](https://humane-vegetarian-392.notion.site/Ketotop-Point-Design-System-2a37a6b3d9e143db9dc452ae1b6b5b54?pvs=4) 준비 및 발표
 
 ### 🤖 기능 개발
