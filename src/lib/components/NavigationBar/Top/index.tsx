@@ -19,13 +19,8 @@ const NavBarTop = ({
   page,
   memberName,
 }: INavBar) => {
-  // if (!tapList || tapList.length === 0) {
-  //   throw new Error('탭메뉴 리스트는 배열 안에 하나 이상 있어야 합니다.');
-  // }
-
-  // if (selected && (selected > tapList.length - 1 || selected < 0)) {
-  //   throw new Error('선택된 탭메뉴가 존재하지 않습니다.');
-  // }
+  if (page !== 'defalut' && page !== 'menulist') throw new Error('page prop is required');
+  if (typeof memberName !== 'string') throw new Error('memberName prop is string type');
 
   return (
     <St.NavTopContainer>
