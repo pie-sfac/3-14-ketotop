@@ -19,70 +19,73 @@ const Wrapper = ({ pagename, size = 'large', type, children, onClick }: IAppBar)
   if (!type) throw new Error(`type prop is required 'plain' | 'icon' | 'button'`);
 
   return (
-    <Fnd.TypographyStyles.Body1 as={'div'}>
-      <St.AppBarContainer size={size}>
-        {/* 기본타입 */}
-        {type === 'plain' && (
-          <St.DefalutLayout>
-            <St.FixedItems>
-              <St.IconBox>
-                {/* 아이콘 추후 자동완성 되도록 만들기 */}
-                <Icon name={`back_24px`} onClick={onClick} />
-              </St.IconBox>
-              <St.PageName>{pagename}</St.PageName>
-            </St.FixedItems>
-          </St.DefalutLayout>
-        )}
+    <>
+      <Fnd.FoundationGlobalStyles />
+      <Fnd.TypographyStyles.Body1 as={'div'}>
+        <St.AppBarContainer size={size}>
+          {/* 기본타입 */}
+          {type === 'plain' && (
+            <St.DefalutLayout>
+              <St.FixedItems>
+                <St.IconBox>
+                  {/* 아이콘 추후 자동완성 되도록 만들기 */}
+                  <Icon name={`back_24px`} onClick={onClick} />
+                </St.IconBox>
+                <St.PageName>{pagename}</St.PageName>
+              </St.FixedItems>
+            </St.DefalutLayout>
+          )}
 
-        {/* large, medium 사이즈 */}
-        {size !== 'full' && children && (
-          <St.DefalutLayout>
-            <St.FixedItems>
-              <St.IconBox>
-                <Icon name={`back_24px`} onClick={onClick} />
-              </St.IconBox>
-              <St.PageName>{pagename}</St.PageName>
-            </St.FixedItems>
-            {/* 아이콘 타입 */}
-            {type === 'icon' && (
-              <St.IconItems>
-                {children.length ? (
-                  <>
-                    <St.IconBox>{children[0]}</St.IconBox>
-                    <St.IconBoxNomargin>{children[1]}</St.IconBoxNomargin>
-                  </>
-                ) : (
-                  <St.IconBoxNomargin>{children}</St.IconBoxNomargin>
-                )}
-              </St.IconItems>
-            )}
-            {/* 버튼 타입 */}
-            {type === 'button' && (
-              <St.IconItems>
-                {children.length ? (
-                  <>
-                    {children[0]}
-                    {children[1]}
-                  </>
-                ) : (
-                  children
-                )}
-              </St.IconItems>
-            )}
-          </St.DefalutLayout>
-        )}
+          {/* large, medium 사이즈 */}
+          {size !== 'full' && children && (
+            <St.DefalutLayout>
+              <St.FixedItems>
+                <St.IconBox>
+                  <Icon name={`back_24px`} onClick={onClick} />
+                </St.IconBox>
+                <St.PageName>{pagename}</St.PageName>
+              </St.FixedItems>
+              {/* 아이콘 타입 */}
+              {type === 'icon' && (
+                <St.IconItems>
+                  {children.length ? (
+                    <>
+                      <St.IconBox>{children[0]}</St.IconBox>
+                      <St.IconBoxNomargin>{children[1]}</St.IconBoxNomargin>
+                    </>
+                  ) : (
+                    <St.IconBoxNomargin>{children}</St.IconBoxNomargin>
+                  )}
+                </St.IconItems>
+              )}
+              {/* 버튼 타입 */}
+              {type === 'button' && (
+                <St.IconItems>
+                  {children.length ? (
+                    <>
+                      {children[0]}
+                      {children[1]}
+                    </>
+                  ) : (
+                    children
+                  )}
+                </St.IconItems>
+              )}
+            </St.DefalutLayout>
+          )}
 
-        {/* full 사이즈 */}
-        {size === 'full' && (
-          <St.FullPopupLayout>
-            <St.PageName>{pagename}</St.PageName>
-            <St.IconBoxNomargin>
-              <Icon name={`delete_24px`} onClick={onClick} />
-            </St.IconBoxNomargin>
-          </St.FullPopupLayout>
-        )}
-      </St.AppBarContainer>
-    </Fnd.TypographyStyles.Body1>
+          {/* full 사이즈 */}
+          {size === 'full' && (
+            <St.FullPopupLayout>
+              <St.PageName>{pagename}</St.PageName>
+              <St.IconBoxNomargin>
+                <Icon name={`delete_24px`} onClick={onClick} />
+              </St.IconBoxNomargin>
+            </St.FullPopupLayout>
+          )}
+        </St.AppBarContainer>
+      </Fnd.TypographyStyles.Body1>
+    </>
   );
 };
 

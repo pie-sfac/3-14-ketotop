@@ -23,25 +23,28 @@ const NavBarTop = ({
   if (typeof memberName !== 'string') throw new Error('memberName prop is string type');
 
   return (
-    <St.NavTopContainer>
-      <div onClick={onLogoClick}>
-        <Fnd.GraphicStyles name='logo' />
-      </div>
-      {page === 'menulist' &&
-        menuList &&
-        onMenuClick &&
-        menuList.map((item, index) => {
-          const instanceType = selected === index ? 'select' : 'unselect';
+    <>
+      <Fnd.FoundationGlobalStyles />
+      <St.NavTopContainer>
+        <div onClick={onLogoClick}>
+          <Fnd.GraphicStyles name='logo' />
+        </div>
+        {page === 'menulist' &&
+          menuList &&
+          onMenuClick &&
+          menuList.map((item, index) => {
+            const instanceType = selected === index ? 'select' : 'unselect';
 
-          return (
-            <NavTopMenu key={index} instance={instanceType} onClick={() => onMenuClick(index)}>
-              {item}
-            </NavTopMenu>
-          );
-        })}
+            return (
+              <NavTopMenu key={index} instance={instanceType} onClick={() => onMenuClick(index)}>
+                {item}
+              </NavTopMenu>
+            );
+          })}
 
-      <NavTopProfile memberName={memberName} onMypageClick={onMypageClick} onNoticeClick={onNoticeClick} />
-    </St.NavTopContainer>
+        <NavTopProfile memberName={memberName} onMypageClick={onMypageClick} onNoticeClick={onNoticeClick} />
+      </St.NavTopContainer>
+    </>
   );
 };
 export default NavBarTop;

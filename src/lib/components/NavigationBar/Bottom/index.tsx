@@ -1,6 +1,7 @@
 import { INavBottom } from '../type';
 import { NavItem } from './BottomItem';
 import * as St from './styles';
+import { Fnd } from '../../../';
 
 const PoinTNavBarItems = [
   {
@@ -35,22 +36,25 @@ const NavBarBottom = ({ onClickNavItem, selected, isLabel }: INavBottom) => {
   if (typeof isLabel !== 'boolean') throw new Error('isLabel must be a boolean');
 
   return (
-    <St.NavBottomContainer>
-      <St.MenuList>
-        {PoinTNavBarItems.map((item) => (
-          <NavItem
-            key={item.icon + item.label}
-            icon={item.icon}
-            label={item.label}
-            isSelected={selected === item.icon}
-            isLabel={isLabel}
-            onClick={() => {
-              onClickNavItem(item.icon);
-            }}
-          />
-        ))}
-      </St.MenuList>
-    </St.NavBottomContainer>
+    <>
+      <Fnd.FoundationGlobalStyles />
+      <St.NavBottomContainer>
+        <St.MenuList>
+          {PoinTNavBarItems.map((item) => (
+            <NavItem
+              key={item.icon + item.label}
+              icon={item.icon}
+              label={item.label}
+              isSelected={selected === item.icon}
+              isLabel={isLabel}
+              onClick={() => {
+                onClickNavItem(item.icon);
+              }}
+            />
+          ))}
+        </St.MenuList>
+      </St.NavBottomContainer>
+    </>
   );
 };
 
