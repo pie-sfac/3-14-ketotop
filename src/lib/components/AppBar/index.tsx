@@ -29,7 +29,7 @@ const Wrapper = ({ pagename, size = 'large', type, children, onClick }: IAppBar)
                 {/* 아이콘 추후 자동완성 되도록 만들기 */}
                 <Icon name={`back_24px`} onClick={onClick} />
               </St.IconBox>
-              <div>{pagename}</div>
+              <St.PageName>{pagename}</St.PageName>
             </St.FixedItems>
           </St.DefalutLayout>
         )}
@@ -41,7 +41,7 @@ const Wrapper = ({ pagename, size = 'large', type, children, onClick }: IAppBar)
               <St.IconBox>
                 <Icon name={`back_24px`} onClick={onClick} />
               </St.IconBox>
-              <div>{pagename}</div>
+              <St.PageName>{pagename}</St.PageName>
             </St.FixedItems>
             {/* 아이콘 타입 */}
             {type === 'icon' && (
@@ -75,7 +75,7 @@ const Wrapper = ({ pagename, size = 'large', type, children, onClick }: IAppBar)
         {/* full 사이즈 */}
         {size === 'full' && (
           <St.FullPopupLayout>
-            <div>{pagename}</div>
+            <St.PageName>{pagename}</St.PageName>
             <St.IconBoxNomargin>
               <Icon name={`delete_24px`} onClick={onClick} />
             </St.IconBoxNomargin>

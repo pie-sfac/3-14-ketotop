@@ -50,10 +50,7 @@ export const IconBox = styled.div`
   justify-content: center;
 
   margin-right: 0.8rem;
-
-  img {
-    cursor: pointer;
-  }
+  cursor: pointer;
 `;
 
 // 아이콘 감싸는 박스 마진 없는 버전
@@ -71,7 +68,10 @@ export const TextBox = styled.div`
 export const FixedItems = styled.div`
   display: flex;
   align-items: center;
-  cursor: pointer;
+`;
+
+export const PageName = styled.div`
+  cursor: default;
 `;
 
 export const IconItems = styled.div`
