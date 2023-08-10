@@ -9,12 +9,6 @@
 
 </br>
 
-## 🏷️ 환경변수
-
-- **VITE_SERVER_URL** : 이미지 업로드 서버 URL
-
-  </br>
-
 ## 💜 적용 방법
 
 라이브러리를 다운 받아서 사용하시면 됩니다.
@@ -25,11 +19,18 @@ npm i pds-3-14
 
  <br/> 
  
-## 📖 라이브러리 사용법
+## 🏷️ 라이브러리 사용법
 
-> 📎 <a href='https://pds-usage-site.vercel.app/'>사용법 사이트 URL</a>
+> 📖 <a href='https://pds-usage-site.vercel.app/'>사용법 사이트 URL</a>
 
 <br/>
+
+## 🏷️ 이미지 업로드 서버
+
+> 🌠 <a href='https://port-0-psd-asset-server-eg4e2alkf2i7md.sel4.cloudtype.app/'>이미지 업로드 사이트 URL</a>
+
+  </br>
+
 
 ## 💛 팀원 소개
 
