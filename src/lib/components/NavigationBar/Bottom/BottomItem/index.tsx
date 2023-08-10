@@ -1,7 +1,8 @@
 import { Fnd } from '../../../..';
+import { INavBottomItem } from '../../type';
 import * as St from './styles';
 
-export const NavItem = ({ icon, label, isSelected, isLabel, onClick }) => {
+export const NavItem = ({ icon, label, isSelected, isLabel, onClick }: INavBottomItem) => {
   const selectedIconName = `appbar_${icon}_24px`;
   const generalIconName = `appbar_${icon}_gray_24px`;
 
