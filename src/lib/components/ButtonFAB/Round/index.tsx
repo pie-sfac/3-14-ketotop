@@ -7,6 +7,7 @@ import { FAB_Type } from '../type';
  * @type {onClickEffect: () => void}
  */
 const Round = ({ children, onClickEffect }:FAB_Type) => {
+  if (!onClickEffect) throw new Error('Please enter onClickEffect');
   return (
     <St.FabWrapper>
       <St.RoundLayOut onClick={onClickEffect}>

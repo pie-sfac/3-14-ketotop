@@ -6,5 +6,5 @@ export interface FAB_Type {
   /**
    * 버튼을 클릭할 시 실행될 callback 함수
    */
-  onClickEffect?: () => void;
+  onClickEffect: () => void;
 }
