@@ -1,6 +1,6 @@
 export interface INavBar {
   page: 'menulist' | 'defalut';
-  tapList?: (string | undefined)[];
+  menuList?: (string | undefined)[];
   selected?: number;
   onMenuClick?: (idx: number) => void;
   onLogoClick?: () => void;

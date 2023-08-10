@@ -10,7 +10,7 @@ import NavTopProfile from './TopProfile';
  *  */
 
 const NavBarTop = ({
-  tapList,
+  menuList,
   selected,
   onMenuClick,
   onLogoClick,
@@ -28,9 +28,9 @@ const NavBarTop = ({
         <Fnd.GraphicStyles name='logo' />
       </div>
       {page === 'menulist' &&
-        tapList &&
+        menuList &&
         onMenuClick &&
-        tapList.map((item, index) => {
+        menuList.map((item, index) => {
           const instanceType = selected === index ? 'select' : 'unselect';
 
           return (
