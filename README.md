@@ -26,7 +26,7 @@ npm i pds-3-14
  
 ## 📖 라이브러리 사용법
 
-> 📎 <a href='https://pds-demo-site.vercel.app/'>사용법 사이트 URL</a> 
+> 📎 <a href='https://pds-usage-site.vercel.app/'>사용법 사이트 URL</a> 
 
 <br/>
 
