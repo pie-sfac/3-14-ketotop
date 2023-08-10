@@ -1,5 +1,11 @@
 export interface INavBar {
-  children?: React.ReactNode;
+  page: 'menulist' | 'defalut';
+  tapList?: (string | undefined)[];
+  selected?: number;
+  onMenuClick?: (idx: number) => void;
+  onLogoClick?: () => void;
+  onMypageClick?: () => void;
+  onNoticeClick?: () => void;
   memberName?: string;
 }
 
@@ -14,4 +20,17 @@ export interface INavBottomItem extends React.HTMLAttributes<HTMLElement> {
   label: string;
   isSelected: boolean;
   isLabel: boolean;
+}
+
+export interface INavTopMenu {
+  instance: 'select' | 'unselect';
+  children?: any;
+  onClick: () => void;
+}
+
+export interface INavTopProfile {
+  children?: React.ReactNode;
+  memberName?: string;
+  onMypageClick?: () => void;
+  onNoticeClick?: () => void;
 }

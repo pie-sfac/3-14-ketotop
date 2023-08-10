@@ -4,7 +4,7 @@ import Button from './Button/index';
 import { Dialog } from './Dialog/index';
 import { Dropdown, ListDropdown } from './Dropdown/index';
 import Item from './Item/index';
-import { NavigationBarBottom, NavigationBarTop } from './NavigationBar';
+import { NavBarBottom, NavBarTop } from './NavigationBar';
 import PopupMenu from './PopupMenu/index';
 import { SnackBar, useSnackbar } from './SnackBar/index';
 import Tabs from './Tabs/index';
@@ -20,8 +20,8 @@ export {
   Dropdown,
   ListDropdown,
   Item,
-  NavigationBarBottom,
-  NavigationBarTop,
+  NavBarBottom,
+  NavBarTop,
   PopupMenu,
   SnackBar,
   useSnackbar,

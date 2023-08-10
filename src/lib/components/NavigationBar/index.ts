@@ -1,4 +1,4 @@
-import NavigationBarBottom from './Bottom';
-import NavigationBarTop from './Top';
+import NavBarBottom from './Bottom';
+import NavBarTop from './Top';
 
-export { NavigationBarBottom, NavigationBarTop };
+export { NavBarBottom, NavBarTop };

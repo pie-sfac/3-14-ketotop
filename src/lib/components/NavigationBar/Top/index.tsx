@@ -1,60 +1,52 @@
-import { GraphicStyles, TypographyStyles } from '../../../foundation';
 import * as St from './style';
 import { INavBar } from '../type';
-import Icon from '../../../foundation/Icon';
-import { useState } from 'react';
-import NavTopMenu from './Menu';
+import { Fnd } from '../../../';
+import NavTopMenu from './TopMenu';
+import NavTopProfile from './TopProfile';
 
-/** @description NavigationBarTop 스타일의 컴포넌트
+/** @description NavBarTop 스타일의 컴포넌트
  * @params
  * {page : 'home' | 'reserve' | 'member' | 'center' | 'mypage'}
  *  */
 
-const NavigationBarTop = ({ page = 'home' }: INavBar) => {
-  const centerList = ['직원 관리', '수강권 관리', '기록 관리', '미디어 관리', '운영 데이터', '알림메시지', '센터 정보'];
-  const mypageList = ['내 정보', '공지사항', '앱 설정', '운영데이터'];
-  const memberName = '박관리자01';
+const NavBarTop = ({
+  tapList,
+  selected,
+  onMenuClick,
+  onLogoClick,
+  onMypageClick,
+  onNoticeClick,
+  page,
+  memberName,
+}: INavBar) => {
+  // if (!tapList || tapList.length === 0) {
+  //   throw new Error('탭메뉴 리스트는 배열 안에 하나 이상 있어야 합니다.');
+  // }
 
-  const [currentTab, setCurrentTab] = useState(0);
+  // if (selected && (selected > tapList.length - 1 || selected < 0)) {
+  //   throw new Error('선택된 탭메뉴가 존재하지 않습니다.');
+  // }
 
   return (
     <St.NavTopContainer>
-      <GraphicStyles name='logo' extension='svg' />
+      <div onClick={onLogoClick}>
+        <Fnd.GraphicStyles name='logo' />
+      </div>
+      {page === 'menulist' &&
+        tapList &&
+        onMenuClick &&
+        tapList.map((item, index) => {
+          const instanceType = selected === index ? 'select' : 'unselect';
 
-      {/* <TypographyStyles.Body3 as={'div'}>
-        <St.ItemsList>
-          {page === 'center' &&
-            centerList.map((item, index) => (
-              <li key={item} onClick={() => setCurrentTab(index)} className={currentTab === index ? ' focused' : ''}>
-                {item}
-              </li>
-            ))}
-          {page === 'mypage' &&
-            mypageList.map((item, index) => (
-              <li key={item} onClick={() => setCurrentTab(index)} className={currentTab === index ? ' focused' : ''}>
-                {item}
-              </li>
-            ))}
-        </St.ItemsList>
-      </TypographyStyles.Body3> */}
-      <NavTopMenu page={page} />
+          return (
+            <NavTopMenu key={index} instance={instanceType} onClick={() => onMenuClick(index)}>
+              {item}
+            </NavTopMenu>
+          );
+        })}
 
-      <TypographyStyles.Body4 as={'div'}>
-        <St.FixedItems>
-          <St.Line100 />
-          <St.UserInfo>
-            <GraphicStyles name='Profile_24px' extension='svg' />
-            <span>{memberName}</span>
-            <div>플랜 이용중</div>
-          </St.UserInfo>
-          <St.Line100 />
-
-          <St.IconWrapper>
-            <Icon name='notice' extension='svg' />
-          </St.IconWrapper>
-        </St.FixedItems>
-      </TypographyStyles.Body4>
+      <NavTopProfile memberName={memberName} onMypageClick={onMypageClick} onNoticeClick={onNoticeClick} />
     </St.NavTopContainer>
   );
 };
-export default NavigationBarTop;
+export default NavBarTop;
