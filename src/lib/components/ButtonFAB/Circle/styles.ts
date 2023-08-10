@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+/* 버튼 layout */
 export const CircleLayOut = styled.button`
   display: flex;
   width: 4rem;
@@ -15,6 +16,7 @@ export const CircleLayOut = styled.button`
   cursor: pointer;
 `;
 
+/* FAB버튼의 위치 고정 값 */
 export const FabWrapper = styled.div`
   position: absolute;
   bottom: 3.2rem;
