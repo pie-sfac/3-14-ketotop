@@ -8,15 +8,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 /**
  * @description TimePicker 컴포넌트
  * @params
- * { 'onClickEffect', 'onCanselEffect' }
+ * { 'onClickEffect', 'onCancelEffect' }
  */
-const Time = ({ onClickEffect, onCanselEffect, onChangeHour, onChangeMinute }: TimePickerType) => {
+const Time = ({ onClickEffect, onCancelEffect, onChangeHour, onChangeMinute }: TimePickerType) => {
   const hour = Array(24)
     .fill(null)
-    .map((v, i) => (i.toString().length < 2 ? '0' + i.toString() : i));
+    .map((_, i) => (i.toString().length < 2 ? '0' + i.toString() : i));
   const minute = Array(60)
     .fill(null)
-    .map((v, i) => (i.toString().length < 2 ? '0' + i.toString() : i));
+    .map((_, i) => (i.toString().length < 2 ? '0' + i.toString() : i));
 
   return (
     <St.TimePickerLayOut>
@@ -79,7 +79,7 @@ const Time = ({ onClickEffect, onCanselEffect, onChangeHour, onChangeMinute }: T
         </St.TimePickerSelectContainer>
       </St.Layout>
       <St.ButtonContainer>
-        <Cmp.Button.Contained state='normal' size='medium' onClick={onCanselEffect}>
+        <Cmp.Button.Contained state='normal' size='medium' onClick={onCancelEffect}>
           {'취소'}
         </Cmp.Button.Contained>
         <Cmp.Button.Contained state='enabled' size='medium' onClick={onClickEffect}>
