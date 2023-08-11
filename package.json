@@ -1,11 +1,16 @@
 {
   "name": "pds-3-14",
-  "version": "1.1.4",
-  "description": "Point Design System 3분류 14팀 라이브러리 ( 업데이트 1.1.4 : 옵셔널 props 유효성 검사 추가 2023.08.11 )",
+  "version": "1.1.5",
+  "description": "Point Design System 3분류 14팀 라이브러리 ( 업데이트 1.1.5 : 타입 수정 및 Time Picker 추가 업데이트 2023.08.11 )",
   "main": "dist/src/lib/index.js",
   "module": "dist/src/lib/index.js",
   "types": "dist/src/lib/index.d.ts",
   "private": false,
+  "author": {
+    "name" : "3-14-Ketotop",
+    "email" : "yedol1@naver.com",
+    "url" : "https://github.com/pie-sfac/3-14-ketotop/"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsc ",
@@ -38,5 +43,6 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.7",
     "vite-tsconfig-paths": "^4.2.0"
-  }
+  },
+  "license": "MIT"
 }
