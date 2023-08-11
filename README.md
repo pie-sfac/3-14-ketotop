@@ -29,7 +29,13 @@ npm i pds-3-14
 
 > 🌠 <a href='https://port-0-psd-asset-server-eg4e2alkf2i7md.sel4.cloudtype.app/'>이미지 업로드 사이트 URL</a>
 
-  </br>
+</br>
+
+## 🏷️ 프로젝트 소개서
+
+> 📎 <a href='https://humane-vegetarian-392.notion.site/Ketotop-Point-Design-System-2a37a6b3d9e143db9dc452ae1b6b5b54?pvs=4'>이미지 업로드 사이트 URL</a>
+
+</br>
 
 
 ## 💛 팀원 소개
