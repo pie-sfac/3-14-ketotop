@@ -167,3 +167,21 @@
 </Cmp.Label>
 ...
 ```
+
+### 👉 TimePicker
+
+선택하고 싶은 시간을 지정하여 사용할 수 있는 컴포넌트 입니다.
+|props | value | meaning |
+|------|-------|---------|
+|**onClickEffect**|`() => void`|확인 버튼을 클릭 시 해당 값을 인자로 받는 함수입니다.( 필수⭕ )|
+|**onCancelEffect**|`() => void`|취소 버튼을 클릭 시 해당 값을 인자로 받는 함수입니다.( 필수⭕ )|
+
+
+```jsx
+...
+<Cmp.Picker.time
+  onClickEffect={() => void}
+  onCancelEffect={() => void}
+/>
+...
+```
