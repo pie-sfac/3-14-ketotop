@@ -1,18 +1,32 @@
 {
-  "name": "3-14-ketotop",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "pds-3-14",
+  "version": "1.1.5",
+  "description": "Point Design System 3분류 14팀 라이브러리 ( 업데이트 1.1.5 : 타입 수정 및 Time Picker 추가 업데이트 2023.08.11 )",
+  "main": "dist/src/lib/index.js",
+  "module": "dist/src/lib/index.js",
+  "types": "dist/src/lib/index.d.ts",
+  "private": false,
+  "author": {
+    "name" : "3-14-Ketotop",
+    "email" : "yedol1@naver.com",
+    "url" : "https://github.com/pie-sfac/3-14-ketotop/"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build && tsc ",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/react-datepicker": "^4.15.0",
+    "date-fns": "^2.30.0",
+    "pretendard": "^1.3.8",
     "react": "^18.2.0",
+    "react-datepicker": "^4.16.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^6.0.4"
+    "roboto-fontface": "^0.10.0",
+    "styled-components": "^6.0.4",
+    "swiper": "^10.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",
@@ -27,6 +41,8 @@
     "eslint-plugin-react-refresh": "^0.4.1",
     "prettier": "^3.0.0",
     "typescript": "^5.0.2",
-    "vite": "^4.4.0"
-  }
+    "vite": "^4.4.7",
+    "vite-tsconfig-paths": "^4.2.0"
+  },
+  "license": "MIT"
 }
