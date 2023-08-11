@@ -1,6 +1,7 @@
 import { CalendarWrapper } from './Wrapper/styles';
 import Calendar from './Calendar';
 import { ButtonWrapper } from './Button/styles';
+import Time from './Time';
 
 const CalendarStyle = {
   /**
@@ -20,6 +21,6 @@ const CalendarStyle = {
   ButtonWrapper,
 };
 
-const TimeStyle = {};
+const TimeStyle = Time;
 
 export { CalendarStyle, TimeStyle };
