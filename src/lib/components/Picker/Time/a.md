@@ -1,79 +1,169 @@
-### 👉 Dialog
+### 👉 ButtonFAB
 
-지정된 너비와 텍스트에 따라 가변 높이값을 가지는 **Dialog**를 사용할 수 있습니다.<br/>
-넘치는 텍스트의 경우 말줄임 스타일을 주어 일정 높이를 벗어나지 못합니다.(마우스 오버시 모든 내용을 확인할 수 있습니다.)<br/>
-**Dialog**의 버튼을 사용하여, 유저가 커스텀 이벤트를 발생시킬 수 있습니다.<br/>
-우측 상단의 닫기버튼을 클릭 시 실행할 로직은 함수의 형태로 넘겨주어야 합니다.
+두가지 스타일의 Floating Action Button을 선택하여 사용할 수 있습니다.
 |props | value | meaning |
 |------|-------|---------|
-|**title**|`string`|볼드체의 텍스트가 표시됩니다.( 필수⭕ )|
-|**description**|`string`|`title` 밑으로 텍스트가 표시됩니다.( 필수❌ )|
-|**onCloseEffect**|`() => void`|우측 상단에 닫기 버튼을 누르면 실행됩니다.( 필수⭕ )|
-|**isOpen**|`boolean`|해당 상태에 따라 다이얼로그의 렌더 여부가 결정됩니다.( 필수⭕ )|
+| **onClickEffect** | `() => void` | 버튼을 클릭 시 해당 값을 인자로 받는 함수입니다.( 필수⭕ ) |
+
+#### Circle 스타일
+```jsx
+...
+<Cmp.ButtonFAB.Circle 
+  onClickEffect={() => void}
+/>
+...
+```
+
+#### Round 스타일
+```jsx
+...
+<Cmp.ButtonFAB.Round onClickEffect={() => void}>
+  { '버튼' }
+</Cmp.ButtonFAB.Round>
+...
+```
+
+### 👉 Cards
+
+사용자가 원하는 스타일의 Cards 컴포넌트를 지정하여 불러와 사용합니다.
+#### CalendarData
+|props | value | meaning |
+|------|-------|---------|
+| **month** | `string` | Data의 해당 달을 표기합니다.( 필수⭕ ) |
+| **name** | `string` | 고객의 이름을 표기합니다.( 필수⭕ ) |
+| **totalschadule** | `number` | 고객의 해당 달의 총 스케쥴 건을 표기합니다.( 필수⭕ ) |
+| **cancelschadule** | `number` | 고객의 해당 달의 총 스케쥴 취소 건을 표기합니다.( 필수⭕ ) |
+| **cancel** | `number` | 고객의 해당 달의 총 스케쥴 취소 퍼센트를 표기합니다.( 필수⭕ ) |
 
 ```jsx
 ...
-<Cmp.Dialog.Display
-  isOpen={BooleanState}
-  title={'Title'}
-  description={'Description'}
-  onCloseEffect={onCloseDialog} // Custom Function
->
-  <Cmp.Dialog.GrayButton onClick={...something custom logic...}>GrayBtn</Cmp.Dialog.GrayButton>
-  <Cmp.Dialog.PriButton>PriBtn</Cmp.Dialog.PriButton>
-</Cmp.Dialog.Display>
+<Cmp.Cards.CalendarData 
+  month='이번 달'
+  name='홍길동'
+  totalschadule={100}
+  cancelschadule={100}
+  cancel={100}
+/>
+...
+```
+
+
+#### LinkLarge
+|props | value | meaning |
+|------|-------|---------|
+|**title**|`string`|볼드체의 텍스트가 표시됩니다.( 필수⭕ )|
+|**description**|`string`|`title` 밑으로 텍스트가 표시됩니다.( 필수⭕ )|
+| **thumbnail** | `string` | 썸네일에 사용될 이미지 주소 값을 넣어줍니다.( 필수⭕ ) |
+| **onClickEffect** | `() => void` | LinkCard를 클릭 시 해당 값을 인자로 받는 함수입니다.( 필수⭕ ) |
+
+```jsx
+...
+<Cmp.Cards.LinkLarge 
+  title='제목'
+  description='설명'
+  thumbnail='이미지 링크 주소'
+  onClickEffect={() => void}
+/>
+...
+```
+
+#### LinkMedium
+|props | value | meaning |
+|------|-------|---------|
+|**description**|`string`| 텍스트가 표시됩니다.( 필수⭕ )|
+| **thumbnail** | `string` | 썸네일에 사용될 이미지 주소 값을 넣어줍니다.( 필수⭕ ) |
+| **onClickEffect** | `() => void` | LinkCard를 클릭 시 해당 값을 인자로 받는 함수입니다.( 필수⭕ ) |
+
+```jsx
+...
+<Cmp.Cards.LinkMedium 
+  description='설명'
+  thumbnail='이미지 링크 주소'
+  onClickEffect={() => void}
+/>
+...
+```
+
+#### LinkMediumDel
+|props | value | meaning |
+|------|-------|---------|
+|**description**|`string`| 텍스트가 표시됩니다.( 필수⭕ )|
+| **thumbnail** | `string` | 썸네일에 사용될 이미지 주소 값을 넣어줍니다.( 필수⭕ ) |
+| **onClickEffect** | `() => void` | LinkCard를 클릭 시 해당 값을 인자로 받는 함수입니다.( 필수⭕ ) |
+| **onDelEffect** | `() => void` | 닫기버튼을 클릭 시 해당 값을 인자로 받는 함수입니다.( 필수⭕ ) |
+
+```jsx
+...
+<Cmp.Cards.LinkMediumDel 
+  description='설명'
+  thumbnail='이미지 링크 주소'
+  onClickEffect={() => void}
+  onDelEffect={() => void}
+/>
+...
+```
+
+#### OptionIn
+|props | value | meaning |
+|------|-------|---------|
+|**title**|`string`|볼드체의 텍스트가 표시됩니다.( 필수⭕ )|
+|**description**|`string`|`title` 밑으로 텍스트가 표시됩니다.( 필수⭕ )|
+
+```jsx
+...
+<Cmp.Cards.OptionIn 
+  title='제목'
+  description='설명'
+/>
+...
+```
+
+#### OptionAc
+|props | value | meaning |
+|------|-------|---------|
+|**title**|`string`|볼드체의 텍스트가 표시됩니다.( 필수⭕ )|
+|**description**|`string`|`title` 밑으로 텍스트가 표시됩니다.( 필수⭕ )|
+
+```jsx
+...
+<Cmp.Cards.OptionAc 
+  title='제목'
+  description='설명'
+/>
 ...
 ```
 
 ### 👉 Label
 
-유저의 클릭이벤트와 상호작용하는 **Dropdown** 컴포넌트입니다.<br/>
-두가지 유형의 **Dropdown** 컴포넌트를 사용할 수 있습니다.
+사용자가 원하는 모양과 색깔을 지정하여 Label 컴포넌트를 불러와 사용할 수 있습니다.
+|props | value | meaning |
+|------|-------|---------|
+|**type**|`Rectangle`, `Round`|라벨의 모양을 선택합니다.( 필수⭕ )|
+|**bgcolor**|`Blue`, `Gray`, `Green`|라벨의 배경색을 선택합니다.( 필수⭕ )|
+|**fontcolor**|`Blue`, `Gray`, `Green`, `Red`|라벨의 글씨색을 선택합니다.( 필수⭕ )|
 
-- 첫번째 유형의 **Dropdown**
-  | props | value | meaning |
-  | --------------- | -------------------------- | ----------------------------------------------------------------------------- |
-  | **value** | `string` | 유저가 선택한 값과 바인딩되는 값입니다.( 필수⭕ ) |
-  | **items** | `string[]` | 선택해야하는 목록의 값들 입니다.( 필수⭕ ) |
-  | **title** | `string` | 어떤 드롭다운인지 설명해주는 상단에 표시되는 텍스트입니다.( 필수⭕ ) |
-  | **placeholder** | `string` | 초기에 표시 될 텍스트입니다. **value**가 있다면 **value**가 표시됩니다.( 필수⭕ ) |
-  | **onChange** | `(params: string) => void` | 리스트를 클릭 시 해당 값을 인자로 받는 함수입니다.( 필수⭕ ) |
-  | **width** | `string` | 사용자가 지정해주는 너비값입니다.( 필수⭕ ) |
-  | **disabled** | `boolean` | 사용가능 여부를 나타내는 값입니다. **true**이면 스타일도 바뀝니다.( 필수❌ ) |
-
+#### Rectangle 스타일
 ```jsx
 ...
-<Cmp.Dropdown
-  title={'title'}
-  placeholder={'placeholder'}
-  value={value}
-  items={items}
-  onChange={(selected) => setValue(selected)}
-  width='30rem'
-  disabled={false}
-></Cmp.Dropdown>
+<Cmp.Label
+  type='Rectangle'
+  bgcolor='Blue'
+  fontcolor='Blue'
+>
+  { '라벨' }
+</Cmp.Label>
 ...
 ```
 
-- 두번째 유형의 `ListDropdown`
-  |props | value | meaning |
-  |------|-------|---------|
-  |**category**|`string`|좌측에 표시 될 대분류를 알려주는 텍스트입니다.( 필수⭕ )|
-  |**items**|`string[]`|좌측에 표시 된 대분류에 속하는 값들입니다.( 필수⭕ )|
-  |**value**|`string`|유저가 선택한 값과 바인딩되는 값입니다.( 필수⭕ )|
-  |**width**|`string`|사용자가 지정해주는 너비값입니다.( 필수⭕ )|
-  |**onChange**|`(params: string) => void`|리스트를 클릭 시 해당 값을 인자로 받는 함수입니다.( 필수⭕ )|
-  |**onClose**|`(params: string) => void`|우측의 닫기 버튼 클릭 시 해당 리스트의 값을 인자로 받는 함수입니다.( 필수⭕ )|
-
+#### Round 스타일
 ```jsx
 ...
-<Cmp.ListDropdown
-  category={'오른쪽 다리'}
-  items={itemList}
-  value={value}
-  onChange={(selected) => onSelect(selected)}
-  onClose={(selected) => onClose(selected)}
-  width='31.3rem'
-></Cmp.ListDropdown>
+<Cmp.Label
+  type='Round'
+  bgcolor='Blue'
+  fontcolor='Blue'
+>
+  { '라벨' }
+</Cmp.Label>
 ...
 ```

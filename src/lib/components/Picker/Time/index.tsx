@@ -65,6 +65,7 @@ const Time = () => {
     }
     & > span {
       color: red;
+      z-index: 100;
     }
 `;
   return (
