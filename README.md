@@ -164,6 +164,27 @@ npm i pds-3-14
 
 <br/>
 
+## 🚀 최락현 의 업무
+
+### 🗄 프로젝트 참여
+
+- 커뮤니케이션
+  - 공유오피스에서 매일 1시 [데일리스크럼 진행](https://www.notion.so/sniperfactory1/4a9cf689c2a2481eab0357a145a24922?v=03c9cd47ab0e4decb3436b10d6bd1468)
+- 프로젝트 관리
+  - 부여받은 역할에 대한 적극적인 참여 및 수행 [참고: 역할분담 문서](https://www.notion.so/sniperfactory1/0e08d321b91c4ff28e09b85518bb71ca)
+  - [협업 컨벤션](https://www.notion.so/sniperfactory1/d893ba0a34e8467c8d9e5c42a926bb8c)에 대한 확실한 숙지 및 이행
+
+
+### 🤖 기능 개발
+
+- Foundation
+  - Graphic, Shadow 총 2개의 파트
+- Component
+  - Label, Button, ButtonFAB, TimePicker 총 4개의 파트
+
+
+<br/>
+
 <p align="right"><a href="#top">(Top)</a></p>
 
 <br/>
